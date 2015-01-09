@@ -85,7 +85,7 @@
 
             <a href="javascript:;" id="friend_dropdown" onclick="return openFriendList('$url(_part/toolbar_friend)?default=true',this,'menu-friend',0,0)"><span>好友</span></a>
             <!--[if $My.CanLoginConsole]-->
-            <a href="$root/max-admin/" target="_blank">管理</a>
+            <a href="$root/max-admin/default.aspx" target="_blank">管理</a>
             <!--[/if]-->
             <a href="$url(logout/$My.ID)">退出</a>
     <!--[else]-->
