@@ -3,7 +3,7 @@
 <div class="footer">
     <div class="clearfix footer-inner">
         <div class="copyright">
-            <p>Powered by <a href="http://www.bbsmax.com/" rel="bookmark" target="_blank"><strong>$Version</strong></a> 2002-2010 MaxLabs.</p>
+            <p>Powered by <a href="http://www.bbsmax.com/" rel="bookmark" target="_blank"><strong>$Version</strong></a> 2002-2011 MaxLabs.</p>
             <p>Processed in $ProcessTime seconds, $QueryTimes Queries 
             <!--[if EnablePassportClient]-->
             & Passport Server $RemoteCallCount Queries
@@ -14,10 +14,10 @@
             <a href="$url(archiver/default)">简洁版</a>
             <!--[if $ForumIcp!=""]--><a rel="nofollow" href="http://www.miibeian.gov.cn/">$ForumIcp</a><!--[/if]-->
             <span class="skinswitcher">
-                <select class="skinlist" name="theme" onchange="if(this.value!=''){location.replace('$url(handler/changeskin)?skin='+this.value+'&u='+encodeURIComponent(location.href));}">
-                    <option value="">界面风格</option>
+                <select class="skinlist" name="theme" onchange="location.replace('$handler(changeskin)?skin='+this.value+'&u='+encodeURIComponent(location.href))">
+                    <option value="">默认界面</option>
                     <!--[loop $TheSkin in $TheSkinList]-->
-                    <option <!--[if $theskin.SkinID == $CurrentSkinID]-->selected="selected" <!--[/if]--> value="$theskin.SkinID">$theskin.Name</option>
+                    <option <!--[if $theskin.SkinID == $my.SkinID]-->selected="selected" <!--[/if]--> value="$theskin.SkinID">$theskin.Name</option>
                     <!--[/loop]-->
                 </select>
             </span>
@@ -43,15 +43,15 @@
     </div>
 </div>
 <script type="text/javascript">
-    new popup("menu_sitemap", ["forumboard_menu", "max_nav_root_0", "max_nav_root_1"], true);
+	new popup("menu_sitemap", ["forumboard_menu", "max_nav_root_0", "max_nav_root_1"], true);
 </script>
 
 <!--[if $StatCode != ""]-->
 <div class="siteanalytics">$StatCode</div>
 <!--[/if]-->
 <script type="text/javascript">
-    page_end();
-    addHandler(document.getElementsByTagName("html")[0], "click", function (e) { window.isClickDialog = 0;});
+	page_end();
+	addHandler(document.getElementsByTagName("html")[0], "click", function (e) { window.isClickDialog = 0; });
 </script>
 <!--
 {=HttpContext.Current.Items["max_update_time"]}
