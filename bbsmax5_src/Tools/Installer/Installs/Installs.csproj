@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0F4CB48-FB96-46FC-A1B1-8AEB2BE892A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Max.Installs</RootNamespace>
+    <AssemblyName>Max.Installs</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SQLSERVER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;SQLSERVER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_Sqlite|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Sqlite\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SQLITE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release_Sqlite|AnyCPU' ">
+    <OutputPath>bin\Release_Sqlite\</OutputPath>
+    <DefineConstants>TRACE;SQLITE</DefineConstants>
+    <Optimize>true</Optimize>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaxLabs.DatabaseDeployTool">
+      <HintPath>..\Vendor\MaxLabs.DatabaseDeployTool.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Settings.cs" />
+    <Compile Include="Entities\Progress.cs" />
+    <Compile Include="Entities\SetupMode.cs" />
+    <Compile Include="Entities\TempForum.cs" />
+    <Compile Include="Globals.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Install_Bin.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Install_Bin.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SetupManager.cs" />
+    <Compile Include="Utility\AvatarBuilder.cs" />
+    <Compile Include="Utility\ConnectionTester.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\GifDecoder.cs" />
+    <Compile Include="Utility\GifEncoder.cs" />
+    <Compile Include="Utility\LastestApplicationTester.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\LZWEncoder.cs" />
+    <Compile Include="Utility\NeuQuant.cs" />
+    <Compile Include="Utility\PermissionTester.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Web References\VersionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <Content Include="Resources\sqlserver\upGrade\5.0.0.0926.sql" />
+    <None Include="Web References\VersionService\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://update.bbsmax.com/Service.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\VersionService\</RelPath>
+      <UpdateFromURL>http://update.bbsmax.com/Service.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Max_Installs_VersionService_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\VersionService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\VersionService\Service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\checkconnect.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images\max_install.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sqlserver\clean_all.sql" />
+    <None Include="Resources\sqlserver\clean_upgrade.sql" />
+    <None Include="Resources\sqlserver\upGrade\3.0.0730.0000.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Install_Bin.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Install_Bin.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sqlserver\upGrade\2.3.0229.0000.sql" />
+    <None Include="Resources\sqlserver\upGrade\3.0.0.0820.sql" />
+    <None Include="Resources\sqlserver\upGrade\3.0.0.0825.sql" />
+    <None Include="Resources\sqlserver\upGrade\3.0.0.0909.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bbsmax.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\sqlserver\scheme.xml" />
+    <None Include="Resources\bbsMax.zip" />
+    <None Include="Resources\sqlserver\upGrade\2.0beta-2.0.sql" />
+    <None Include="Resources\sqlserver\upGrade\3.0.0.1122.sql" />
+    <None Include="Resources\sqlserver\upGrade\3.0.0.1201.sql" />
+    <None Include="Resources\sqlserver\upGrade\3.0.0.1127.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.0.0.0803.sql" />
+    <None Include="Resources\sqlserver\create.sql" />
+    <Content Include="Resources\filelist.txt" />
+    <Content Include="Resources\images\alert.gif" />
+    <Content Include="Resources\Global.asax" />
+    <Content Include="Resources\images\maxInstall.gif" />
+    <Content Include="Resources\images\no.gif" />
+    <Content Include="Resources\images\ok.gif" />
+    <None Include="Resources\sqlserver\upGrade\4.0.0.0914.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.1.0.1218.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.1.0.1130.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.2.0.1218.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.2.2.0130.sql" />
+    <None Include="Resources\sqlserver\upGrade\5.0.0.0331.sql" />
+    <None Include="Resources\sqlserver\upGrade\first.sql" />
+    <None Include="Resources\sqlserver\upGrade\first_2000.sql" />
+    <None Include="Resources\sqlserver\clean_upgrade_2000.sql" />
+    <None Include="Resources\sqlserver\clean_all_2000.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.1.0.1116.sql" />
+    <None Include="Resources\sqlserver\upGrade\last.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.0.3.0914.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.0.0.0901.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.0.0.0826.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.0.0.0824.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.0.0.0902.sql" />
+    <None Include="Resources\sqlserver\upGrade\4.0.0.0908.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MaxLabs.bbsMax\MaxLabs.bbsMax.csproj">
+      <Project>{7BB4B70C-E194-47F9-989A-72A222FE6D2E}</Project>
+      <Name>MaxLabs.bbsMax</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

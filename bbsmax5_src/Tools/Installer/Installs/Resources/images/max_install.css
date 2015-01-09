@@ -1,0 +1,146 @@
+﻿body, ul, p, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: #222;
+    font: 100%/1.5 "Segoe UI", Helvetica, Arial, sans-serif;
+}
+a:link, a:visited {
+    color: #06c;
+    text-decoration: none;
+}
+input {
+    font-family: inherit;
+}
+body {
+    text-align: center;
+}
+.container {
+    width: 750px;
+    text-align: left; 
+    margin: 40px auto 0;
+    border: 1px solid #cde;
+    background: #e3f3ff;
+    font-size: 75%;
+}
+.footer {
+    width: 750px;
+    margin: 10px auto 0;
+    font-size: 70%;
+    color: #999;
+}
+.head {
+    height: 70px;
+    height: 40px;
+    padding: 20px 30px 10px 20px;
+    background: #fff;
+}
+.head h1 {
+    float: left;
+    width: 170px;
+    height: 40px;
+    text-indent: -9999px;
+    background: url(Install.aspx?fileName=maxInstall.gif) no-repeat;
+}
+.head p {
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    font-size: 2em;
+}
+.head p span {
+    color: #078dd6;
+}
+.progressbar {
+    background: #fff;
+    border-top: 1px solid #cde;
+}
+.progressbar p {
+    position: relative;
+    background: #e3f3ff;
+    font-size: 9px;
+    height: 11px;
+    line-height: 11px;
+}
+.progressbar span {
+    position: absolute;
+    right: 5px;
+}
+.content {
+    height: auto !important;
+    height: 290px;
+    min-height: 290px;
+    padding: 20px 30px;
+    border-top: 1px solid #cde;
+    border-bottom: 1px solid #cde;
+    background: #f6fbff;
+    font-size: 110%;
+    position: relative;
+}
+.content h3 {
+    font-size: 130%;
+    margin-bottom: 0.8em;
+}
+.content h4 {
+    font-size: 100%;
+    margin-bottom: 0.5em;
+}
+.content p, .content li {
+    margin-bottom: 5px;
+}
+.content .license {
+    font-size: 90%;
+}
+.operate {
+    padding: 10px 35px;
+}
+.operate input {
+    font-size: 120%;
+    padding: 2px 5px;
+}
+input.text {
+    width: 160px;
+    padding: 1px;
+    height: 1.5em;
+    line-height: 1.5;
+    border: 1px solid #7f9db9;
+}
+label.fl {
+    float: left;
+    width: 5em;
+}
+.ok, .no, .wa, .loader,.space {
+    float: left;
+    display: block;
+    width: 16px;
+    height: 16px;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin: 2px 5px 0 0;
+}
+.space{text-indent:0;}
+.space .space,.space .ok,.space .no,.space .wa,.space .loader{margin:0;}
+.ok { background: url(Install.aspx?fileName=ok.gif) no-repeat center; }
+.no { background: url(Install.aspx?fileName=no.gif) no-repeat center; }
+.wa { background: url(Install.aspx?fileName=alert.gif) no-repeat center; }
+.loader { background: url(Install.aspx?fileName=loader.gif) no-repeat center; }
+.space img { vertical-align: middle; }
+.desc{color:#666;}
+
+/* bbsmax-convert */
+.bbsmax-convert .content label {
+    float: left;
+    width: 11em;
+    margin-right: 10px;
+    text-align: right;
+}
+.bbsmax-convert .content p {
+    clear: both;
+}
+.bbsmax-convert .operate {
+    text-align: right;
+}
+.bbsmax-convert .head h1 {
+    background-position: 0 0;
+    width: 185px;
+}

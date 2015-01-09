@@ -1,0 +1,109 @@
+﻿<html>
+<head>
+    <title></title>
+    <style type="text/css">
+    body
+    {
+        font-size:9pt;
+        padding:0;
+        margin:0;
+        overflow :hidden;
+    }
+    a
+    {
+        text-decoration:none;
+    }
+    hr
+    {
+        line-height:1px;
+    }
+    #leftcell
+    {
+        padding-top:10px;
+    }
+    #navlist
+    {
+        list-style:none;
+        padding:0;
+        margin:0;
+    }
+    #navlist li
+    {
+        list-style:none;
+        padding:0;
+        line-height:150%;
+        margin:0;
+    }
+    #navlist a
+    {
+
+    }
+     #navlist .current
+    {
+        background-color:White;
+    }
+    </style>
+</head>
+<body style=" height:100%">
+<table cellpadding="0" cellspacing="0" style=" height:100%; width:100%">
+<tr>
+<td valign="top" id="leftcell" style=" width:160px; background-color:#EDFFFF">
+<ul id="navlist">
+<li class="current"><a target="contentframe" href="html/home.html">关于bbsmax</a></li>
+<li><a target="contentframe" href="html/codehelp.html">项目说明</a></li>
+<li><a target="contentframe" href="html/develop.html">如何运行源码</a></li>
+<!--li><a target="contentframe" href="html/package.html">打包自己的bbsmax</a></li-->
+<li><hr /></li>
+<li><a href="#">模板</a>
+<ul>
+<li><a target="contentframe" href="html/mbyf.html">模板语法</a></li>
+<li><a target="contentframe" href="html/pifu.html">皮肤制作入门</a></li>
+</ul>
+</li>
+<li>
+<a href="#">系统整合</a>
+<ul>
+<li><a target="contentframe" href="html/zhenghe.html">Web service接口</a></li>
+<li><a target="contentframe" href="html/cookie.html">用户身份验证</a></li>
+</ul>
+</li>
+<li>
+<a href="#">扩展与插件</a>
+<ul>
+<li><a target="contentframe" href="html/plugin.html">插件机制</a></li>
+<li><a target="contentframe" href="html/sms.html">短信插件</a></li>
+</ul>
+</li>
+</ul>
+</td>
+<td valign="top" style="">
+<iframe name="contentframe" src="html/home.html" frameborder="0" style="width:100%; height:100%;"></iframe>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+var nav = document.getElementById("navlist");
+var navlinks = nav.getElementsByTagName("li");
+
+
+for (var i = 0; i < navlinks.length; i++) {
+    navlinks[i].onclick = onClickLink;
+}
+
+function onClickLink(e) {
+    e = window.event || e;
+    var t = e.srcElement || e.target;
+    t = t.parentNode;
+    for (var i = 0; i < navlinks.length; i++) {
+        if (t == navlinks[i]) {
+            navlinks[i].className = "current";
+        }
+        else {
+            navlinks[i].className = "";
+        }
+    }
+}
+
+</script>
+</body>
+</html>

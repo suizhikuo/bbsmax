@@ -1,0 +1,14 @@
+﻿--CREATE FUNCTION [bx_UpdateSortOrder]
+--(
+	--@PostType tinyint,--1正常,2置顶,3总置顶,4待审核,5回收站 
+	--@OldSortOrder bigint
+--)
+--RETURNS @ItemTable TABLE 
+--(
+	--SortOrder bigint
+--)
+--AS
+--BEGIN
+	--INSERT @ItemTable (SortOrder) values( CAST(SUBSTRING(CAST(@OldSortOrder AS varchar(16)),2,15) AS bigint)+@PostType*1000000000000000);
+	--RETURN;
+--END

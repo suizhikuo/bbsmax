@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<language>
+	<word key="Log in" value="登陆" />
+	<word key="User Name" value="用户名" />
+	<word key="Password"	value="密码" />
+	<word key="Remember Me" value="记住登陆状态"/>
+	<word key="Lost your password" value="忘记密码了"/>
+	<word key="Back To" value="返回"/>
+	<word key="Error" value="错误"/>
+	<word key="Start" value="开始"/>
+</language>

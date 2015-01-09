@@ -1,0 +1,1846 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7BB4B70C-E194-47F9-989A-72A222FE6D2E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaxLabs.bbsMax</RootNamespace>
+    <AssemblyName>MaxLabs.bbsMax</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Publish|AnyCPU' ">
+    <OutputPath>bin\Publish\</OutputPath>
+    <DefineConstants>TRACE;Publish</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Vender\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NUniversalCharDet, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Vender\NUniversalCharDet.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu">
+      <HintPath>..\Vender\PanGu.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\UBB\Tags\FLV.cs" />
+    <Compile Include="Features\Album\Errors\ExistsAlbumNameError.cs" />
+    <Compile Include="Features\Forum\Entities\ThreadExchange.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionRepairTotalReplyCountError.cs" />
+    <Compile Include="Features\Passport\Interface\IInstructEngine.cs" />
+    <Compile Include="Features\Passport\ProxyConverter.cs" />
+    <Compile Include="Features\PointLog\DataAccess\PointLogDao.cs" />
+    <Compile Include="Features\PointLog\Entities\PointLog.cs" />
+    <Compile Include="Features\PointLog\Entities\PointLogType.cs" />
+    <Compile Include="Features\PointLog\Filters\PointLogFilter.cs" />
+    <Compile Include="Features\PointLog\PointLogBO.cs" />
+    <Compile Include="Features\User\Entities\RecoverPasswordLog.cs" />
+    <Compile Include="Features\User\Entities\UserBannedInfo.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidAttachmentNameError.cs" />
+    <Compile Include="Features\Forum\Errors\MoveThreadHadMovedError.cs" />
+    <Compile Include="Features\Prop\Entity\PropFlag.cs" />
+    <Compile Include="Features\User\Filters\RecoverPasswordLogFilter.cs" />
+    <Compile Include="Features\User\Interface\ISMSSender.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\AvatarHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\TempDataHandler.cs" />
+    <Compile Include="Globals\Entities\Sys.cs" />
+    <Compile Include="Globals\Errors\APIError.cs" />
+    <Compile Include="Globals\Jobs\Types\ClearPointLogJob.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\BannedSpiders.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\KeywordReplaceRegulation.cs" />
+    <Compile Include="Globals\Settings\Types\BlogSettings.cs" />
+    <Compile Include="Features\Comment\Enums\CommentType.cs" />
+    <Compile Include="Features\Comment\Errors\InvalidCommentLengthError.cs" />
+    <Compile Include="Features\Comment\Errors\KeywordBannedError.cs" />
+    <Compile Include="Features\Doing\Enums\DoingType.cs" />
+    <Compile Include="Features\Doing\Errors\InvalidDoingContentLengthError.cs" />
+    <Compile Include="Features\Friend\Enums\FindType.cs" />
+    <Compile Include="Features\Friend\Enums\HotType.cs" />
+    <Compile Include="Features\Friend\Errors\AlreadyFriendError.cs" />
+    <Compile Include="Features\Friend\Errors\InVerifyError.cs" />
+    <Compile Include="Features\Friend\Errors\InBlacklistError.cs" />
+    <Compile Include="Globals\Entities\TextReverter.cs" />
+    <Compile Include="Globals\Enums\KeywordType.cs" />
+    <Compile Include="Globals\Providers\ProviderManager.cs" />
+    <Compile Include="Common\Utils\CacheUtil.cs" />
+    <Compile Include="Common\Utils\CookieUtil.cs" />
+    <Compile Include="Common\Utils\DateTimeUtil.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\EmailRegulation.cs" />
+    <Compile Include="Common\Types\Int32Scope.cs" />
+    <Compile Include="Common\Utils\IOUtil.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\IPMatchRegulation.cs" />
+    <Compile Include="Common\Utils\IPUtil.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\KeywordRegulation.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\LineCollection.cs" />
+    <Compile Include="Features\Share\Extensions\Actions\CreateShare.cs" />
+    <Compile Include="Features\Share\IShareProvider.cs" />
+    <Compile Include="Common\Utils\PageCacheUtil.cs" />
+    <Compile Include="Common\Utils\SecurityUtil.cs" />
+    <Compile Include="Common\Types\StringBuffer.cs" />
+    <Compile Include="Common\Types\StringTable.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\UsernameCharRegulation.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\UsernameKeywordRegulation.cs" />
+    <Compile Include="Common\Utils\StringUtil.cs" />
+    <Compile Include="Common\Consts.cs" />
+    <Compile Include="Globals\Enums\PrivacyType.cs" />
+    <Compile Include="Features\Blog\Enums\SearchArticleMethod.cs" />
+    <Compile Include="Features\Blog\Enums\BlogArticleOwnerType.cs" />
+    <Compile Include="Common\Booter.cs" />
+    <Compile Include="Globals\DataAccess\DaoBase.cs" />
+    <Compile Include="Globals\DataAccess\DaoFactory.cs" />
+    <Compile Include="Globals\Entities\AppAction.cs" />
+    <Compile Include="Globals\Entities\AppBase.cs" />
+    <Compile Include="Globals\Entities\EntityCollectionBase.cs" />
+    <Compile Include="Globals\Enums\ContentType.cs" />
+    <Compile Include="Globals\Providers\IDataProvider.cs" />
+    <Compile Include="Globals\Settings\AllSettings.cs" />
+    <Compile Include="Globals\Settings\Types\ContentKeywordSettings.cs" />
+    <Compile Include="Globals\Settings\Types\EmailSettings.cs" />
+    <Compile Include="Globals\Settings\Types\PointLogClearSetting.cs" />
+    <Compile Include="Globals\Settings\Types\SiteSettings.cs" />
+    <Compile Include="Globals\Settings\Types\FriendSettings.cs" />
+    <Compile Include="Globals\Settings\Types\HailSettings.cs" />
+    <Compile Include="Features\Album\Entities\Album.cs" />
+    <Compile Include="Globals\Entities\App.cs" />
+    <Compile Include="Features\Friend\Entities\Blacklist.cs" />
+    <Compile Include="Features\Blog\Entities\BlogArchive.cs" />
+    <Compile Include="Features\Blog\Entities\BlogArticle.cs" />
+    <Compile Include="Features\Blog\Entities\BlogArticleVisitor.cs" />
+    <Compile Include="Features\Blog\Entities\BlogCategory.cs" />
+    <Compile Include="Features\Comment\Entities\Comment.cs" />
+    <Compile Include="Features\Doing\Entities\Doing.cs" />
+    <Compile Include="Features\Blog\BlogDao.cs" />
+    <Compile Include="Features\Comment\DataAccess\CommentDao.cs" />
+    <Compile Include="Globals\DataAccess\DatabaseInfoDao.cs" />
+    <Compile Include="Features\Doing\DoingDao.cs" />
+    <Compile Include="Globals\AppManager.cs" />
+    <Compile Include="Features\Blog\BlogBO.cs" />
+    <Compile Include="Features\Comment\CommentBO.cs" />
+    <Compile Include="Features\Doing\DoingBO.cs" />
+    <Compile Include="Features\Feed\FeedBO.cs" />
+    <Compile Include="Features\Friend\FriendBO.cs" />
+    <Compile Include="Features\Notify\NotifyBO.cs" />
+    <Compile Include="Globals\Settings\SettingManager.cs" />
+    <Compile Include="Features\Share\ShareBO.cs" />
+    <Compile Include="Features\Feed\DataAccess\FeedDao.cs" />
+    <Compile Include="Features\Friend\DataAccess\FriendDao.cs" />
+    <Compile Include="Features\Notify\DataAccess\NotifyDao.cs" />
+    <Compile Include="Globals\Settings\DataAccess\SettingDao.cs" />
+    <Compile Include="Features\Share\DataAccess\ShareDao.cs" />
+    <Compile Include="Features\Feed\Entities\Feed.cs" />
+    <Compile Include="Features\Feed\Entities\FeedFilter.cs" />
+    <Compile Include="Features\Feed\Entities\FeedTemplate.cs" />
+    <Compile Include="Features\Friend\Entities\Friend.cs" />
+    <Compile Include="Features\Friend\Entities\FriendGroup.cs" />
+    <Compile Include="Features\Share\Entities\Share.cs" />
+    <Compile Include="Features\Share\Entities\ShareContent.cs" />
+    <Compile Include="Features\Feed\Entities\UserNoAddFeedApp.cs" />
+    <Compile Include="Features\Share\Entities\Video.cs" />
+    <Compile Include="Features\Space\Entities\Visitor.cs" />
+    <Compile Include="Features\Friend\Errors\BlacklistSelfError.cs" />
+    <Compile Include="Features\Friend\Errors\FriendGroupLengthError.cs" />
+    <Compile Include="Features\Friend\Errors\FriendNumberError.cs" />
+    <Compile Include="Globals\Settings\Types\NetDiskSettings.cs" />
+    <Compile Include="Globals\DataAccess\DataReaderWrap.cs" />
+    <Compile Include="Common\Utils\HashUtil.cs" />
+    <Compile Include="Common\Utils\ReflectionUtil.cs" />
+    <Compile Include="Features\Blog\Templates\BlogTemplateMembers.cs" />
+    <Compile Include="Features\Comment\Templates\CommentTemplateMembers.cs" />
+    <Compile Include="Features\Doing\Templates\DoingTemplateMembers.cs" />
+    <Compile Include="Features\Feed\Templates\FeedTemplateMembers.cs" />
+    <Compile Include="Globals\Settings\Types\CacheSettings.cs" />
+    <Compile Include="Globals\Settings\Types\TopLinkSettings2.cs" />
+    <Compile Include="Globals\Settings\Types\NavigationSettingsBase.cs" />
+    <Compile Include="Globals\Templates\GlobalTemplateMembers.cs" />
+    <Compile Include="Features\Notify\Templates\NotifyTemplateMembers.cs" />
+    <Compile Include="Common\Globals.cs" />
+    <Compile Include="Globals\XCmd\Types\RecodeTodayPostsCmd.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaxLabs.bbsMax.RegExp\MaxLabs.bbsMax.RegExp.csproj">
+      <Project>{9ED331A4-22AF-436E-8FF0-5CC138E73B86}</Project>
+      <Name>MaxLabs.bbsMax.RegExp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MaxLabs.bbsMax.Rescourses\MaxLabs.bbsMax.Rescourses.csproj">
+      <Project>{035716FE-D39E-4CD8-8322-36DCAD488049}</Project>
+      <Name>MaxLabs.bbsMax.Rescourses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MaxLabs.Passport.Proxy\MaxLabs.Passport.Proxy.csproj">
+      <Project>{C13D2D10-AD36-4BAD-A72A-94895A31AE37}</Project>
+      <Name>MaxLabs.Passport.Proxy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\Album\Errors\BannedKeywordsAlbumNameError.cs" />
+    <Compile Include="Features\Album\Errors\BannedKeywordsPhotoDescriptionError.cs" />
+    <Compile Include="Features\Album\Errors\BannedKeywordsPhotoNameError.cs" />
+    <Compile Include="Features\Blog\Errors\BlogArticleContentBannedKeywordsError.cs" />
+    <Compile Include="Features\Blog\Errors\BlogArticleSubjectBannedKeywordsError.cs" />
+    <Compile Include="Globals\Errors\EmptyIPError.cs" />
+    <Compile Include="Common\Runtime\BbsRouter.cs" />
+    <Compile Include="Common\Utils\ValidateUtil.cs" />
+    <Compile Include="Features\Blog\Errors\BlogArticleContentLengthError.cs" />
+    <Compile Include="Features\Blog\Errors\BlogArticleSubjectLengthError.cs" />
+    <Compile Include="Features\Blog\Errors\BlogArticleContentEmptyError.cs" />
+    <Compile Include="Features\Blog\Errors\BlogArticleSubjectEmptyError.cs" />
+    <Compile Include="Features\Blog\Errors\BlogCategoryNameEmptyError.cs" />
+    <Compile Include="Features\Mission\Errors\InvalidInviteSerialCountError.cs" />
+    <Compile Include="Features\Mission\Errors\MissionBeginDateFormatError.cs" />
+    <Compile Include="Features\Mission\Errors\MissionEndDateFormatError.cs" />
+    <Compile Include="Features\Mission\Errors\MissionOnlineTimeFormatError.cs" />
+    <Compile Include="Features\Denouncing\Errors\EmptyReportError.cs" />
+    <Compile Include="Features\Mission\Errors\UserGroupTimeFormatError.cs" />
+    <Compile Include="Features\Mission\Errors\MedalTimeFormatError.cs" />
+    <Compile Include="Features\Mission\Errors\MissionSortOrderFormatError.cs" />
+    <Compile Include="Features\Mission\Errors\NeedPrizeUserGroupError.cs" />
+    <Compile Include="Features\Mission\Errors\NeedPrizeMedalError.cs" />
+    <Compile Include="Common\Types\MessageDisplay.cs" />
+    <Compile Include="Globals\Emails\ActiveEmail.cs" />
+    <Compile Include="Globals\Emails\EmailBase.cs" />
+    <Compile Include="Globals\Emails\InviteEmail.cs" />
+    <Compile Include="Globals\Emails\InviteSerialEmail.cs" />
+    <Compile Include="Globals\Emails\RecoverPasswordEmail.cs" />
+    <Compile Include="Globals\Emails\WelcomeEmail.cs" />
+    <Compile Include="Common\Runtime\BbsContext.cs" />
+    <Compile Include="Features\Album\AlbumBO.cs" />
+    <Compile Include="Features\Album\DataAccess\AlbumDao.cs" />
+    <Compile Include="Features\Album\Entities\Photo.cs" />
+    <Compile Include="Features\Album\Enums\UploadMode.cs" />
+    <Compile Include="Features\Album\Errors\EmptyAlbumNameError.cs" />
+    <Compile Include="Features\Album\Errors\AlbumNameLengthError.cs" />
+    <Compile Include="Features\Album\Errors\InvalidAlbumTargetError.cs" />
+    <Compile Include="Features\Album\Errors\NotSelectedAlbumsError.cs" />
+    <Compile Include="Features\Album\Errors\EmptyPhotoNameError.cs" />
+    <Compile Include="Features\Album\Errors\PhotoNameLengthError.cs" />
+    <Compile Include="Features\Album\Errors\PhotoDescriptionLengthError.cs" />
+    <Compile Include="Features\Album\Errors\NotSelectedPhotosError.cs" />
+    <Compile Include="Globals\Settings\Types\AlbumSettings.cs" />
+    <Compile Include="Features\Album\Templates\AlbumTemplateMembers.cs" />
+    <Compile Include="Features\Comment\Errors\EmptyCommentError.cs" />
+    <Compile Include="Features\Doing\Errors\EmptyDoingContentError.cs" />
+    <Compile Include="Features\Feed\Enums\FeedType.cs" />
+    <Compile Include="Features\Feed\Enums\FilterType.cs" />
+    <Compile Include="Features\Friend\Errors\DuplicateFriendGroupNameError.cs" />
+    <Compile Include="Features\Friend\Errors\NotExistsFriendGroupError.cs" />
+    <Compile Include="Features\Friend\Errors\EmptyFriendGroupNameError.cs" />
+    <Compile Include="Globals\BOBase.cs" />
+    <Compile Include="Globals\Enums\BasePageType.cs" />
+    <Compile Include="Globals\Enums\SQLServerVersion.cs" />
+    <Compile Include="Globals\Enums\TimeUnit.cs" />
+    <Compile Include="Globals\Errors\EmptyEmailError.cs" />
+    <Compile Include="Globals\Errors\EmailFormatError.cs" />
+    <Compile Include="Globals\Errors\EmptyPasswordError.cs" />
+    <Compile Include="Globals\Errors\BaseErrors\NoLoginError.cs" />
+    <Compile Include="Globals\Errors\LostFormItemError.cs" />
+    <Compile Include="Globals\Errors\BaseErrors\ParamError.cs" />
+    <Compile Include="Globals\Errors\BaseErrors\UnknownError.cs" />
+    <Compile Include="Globals\Errors\UrlFormatError.cs" />
+    <Compile Include="Globals\Errors\BaseErrors\InvalidParamError.cs" />
+    <Compile Include="Globals\Errors\BaseErrors\CustomError.cs" />
+    <Compile Include="Globals\Filters\FilterBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Globals\Filters\FilterItemAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Globals\Settings\Types\PrivacySettings.cs" />
+    <Compile Include="Globals\Templates\BackendTemplateMembers.cs" />
+    <Compile Include="Globals\Templates\MethodBasedTemplateTag.cs" />
+    <Compile Include="Globals\Templates\TemplateExtensions.cs" />
+    <Compile Include="Features\Mission\MissionBO.cs" />
+    <Compile Include="Features\Mission\DataAccess\MissionDao.cs" />
+    <Compile Include="Features\Mission\Entities\Mission.cs" />
+    <Compile Include="Features\Mission\Entities\UserMission.cs" />
+    <Compile Include="Features\Mission\Entities\ApplyMissionCondition.cs" />
+    <Compile Include="Features\Mission\Entities\FinishConditionItem.cs" />
+    <Compile Include="Features\Mission\Entities\MissionPrize.cs" />
+    <Compile Include="Features\Mission\Enums\MissionStatus.cs" />
+    <Compile Include="Features\Mission\Enums\InputType.cs" />
+    <Compile Include="Features\Mission\Entities\MissionBase.cs" />
+    <Compile Include="Features\Mission\Enums\MissionPrizeType.cs" />
+    <Compile Include="Features\Mission\Errors\MissionBaseNotExistsError.cs" />
+    <Compile Include="Features\Mission\Errors\EmptyMissionNameError.cs" />
+    <Compile Include="Features\Mission\Errors\MissionNameLengthError.cs" />
+    <Compile Include="Features\Mission\Errors\MissionIconUrlLengthError.cs" />
+    <Compile Include="Features\Mission\Errors\NotHaveMissionBaseError.cs" />
+    <Compile Include="Features\Mission\Templates\MissionTemplateMembers.cs" />
+    <Compile Include="Features\Denouncing\DenouncingBO.cs" />
+    <Compile Include="Features\Denouncing\DataAccess\DenouncingDao.cs" />
+    <Compile Include="Features\Denouncing\Entities\Denouncing.cs" />
+    <Compile Include="Features\Denouncing\Enums\DenouncingReason.cs" />
+    <Compile Include="Features\Denouncing\Enums\DenouncingType.cs" />
+    <Compile Include="Features\Denouncing\Errors\InvalidReportLengthError.cs" />
+    <Compile Include="Features\Denouncing\Templates\ReportTemplateMembers.cs" />
+    <Compile Include="Features\Share\Enums\ShareCatagory.cs" />
+    <Compile Include="Globals\Errors\EmptyUrlError.cs" />
+    <Compile Include="Features\Share\Errors\ShareDescriptionLengthError.cs" />
+    <Compile Include="Features\Share\Errors\ShareDescriptionBannedKeywordError.cs" />
+    <Compile Include="Features\Share\Errors\InvalidShareContentError.cs" />
+    <Compile Include="Features\Space\SpaceBO.cs" />
+    <Compile Include="Features\Space\DataAccess\SpaceDao.cs" />
+    <Compile Include="Features\Space\Enums\SpacePrivacyType.cs" />
+    <Compile Include="Features\Space\Enums\SpaceElement.cs" />
+    <Compile Include="Features\Space\Templates\SpaceTemplateMembers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\Mission\Errors\MissionMaxApplyCountFormatError.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\Album\Filters\AdminAlbumFilter.cs" />
+    <Compile Include="Features\Blog\Filters\AdminBlogArticleFilter.cs" />
+    <Compile Include="Features\Feed\Errors\FeedIconUrlLengthError.cs" />
+    <Compile Include="Features\Feed\Errors\FeedDescriptionLengthError.cs" />
+    <Compile Include="Features\Friend\Errors\FriendGroupNumberError.cs" />
+    <Compile Include="Globals\Errors\AllSettingsLostPropertyError.cs" />
+    <Compile Include="Globals\Errors\CycleTimeFormatError.cs" />
+    <Compile Include="Globals\Errors\InvalidInt32ScopeError.cs" />
+    <Compile Include="Globals\Errors\InvalidIPMatchRegulationError.cs" />
+    <Compile Include="Globals\Errors\InvalidLineCollectionError.cs" />
+    <Compile Include="Globals\Errors\InvalidUrlExtensionError.cs" />
+    <Compile Include="Globals\Errors\IPIsLimitAccessError.cs" />
+    <Compile Include="Globals\Errors\SettingTypeNotFoundError.cs" />
+    <Compile Include="Globals\Errors\TryParseFailedError.cs" />
+    <Compile Include="Globals\Errors\TryParseTypeNotSupportError.cs" />
+    <Compile Include="Features\Mission\Errors\ApplyMissionNeedTotalTopicsError.cs" />
+    <Compile Include="Globals\Settings\Types\FriendlyUrlSettings.cs" />
+    <Compile Include="Features\Mission\Errors\MissionTotalPostsFormatError.cs" />
+    <Compile Include="Features\Mission\Errors\MissionNotFinishError.cs" />
+    <Compile Include="Features\Mission\Errors\AbandonMissionError.cs" />
+    <Compile Include="Features\Mission\Errors\MissionNotExistsError.cs" />
+    <Compile Include="Features\Mission\Errors\ApplyMissionNeedUserGroupError.cs" />
+    <Compile Include="Features\Mission\Errors\ApplyMissionNeedOnlineTimeError.cs" />
+    <Compile Include="Features\Mission\Errors\ExceededMaxApplyError.cs" />
+    <Compile Include="Features\Mission\Errors\ApplyMissionNeedFinishOtherMissionError.cs" />
+    <Compile Include="Features\Mission\Errors\MissionHadAppliedError.cs" />
+    <Compile Include="Features\Notify\Errors\NoSelectedNotifiesError.cs" />
+    <Compile Include="Features\Notify\Filters\AdminNotifyFilter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals\Emails\EmailValidateEmail.cs" />
+    <Compile Include="Common\Types\StringList.cs" />
+    <Compile Include="Common\Types\MessageRender.cs" />
+    <Compile Include="Common\Utils\UrlUtil.cs" />
+    <Compile Include="Features\Advert\Enums\ADPosition.cs" />
+    <Compile Include="Features\Album\Errors\NoPermissionDeleteAlbumError.cs" />
+    <Compile Include="Globals\Entities\DeleteResultItem.cs" />
+    <Compile Include="Globals\Errors\EmailDisabledError.cs" />
+    <Compile Include="Globals\Enums\NullEnum.cs" />
+    <Compile Include="Features\Notify\Errors\NoPermissionDeleteNotifyError.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\PointAction.cs" />
+    <Compile Include="Features\Tag\TagBO.cs" />
+    <Compile Include="Features\Tag\DataAccess\TagDao.cs" />
+    <Compile Include="Features\Tag\Entities\Tag.cs" />
+    <Compile Include="Features\Tag\Enums\TagOrderKey.cs" />
+    <Compile Include="Features\Tag\Filters\AdminTagFilter.cs" />
+    <Compile Include="Features\Tag\Templates\TagTemplateMembers.cs" />
+    <Compile Include="Globals\Settings\Types\PointActionSettings.cs" />
+    <Compile Include="Globals\Settings\Types\PointSettings.cs" />
+    <Compile Include="Features\Album\Errors\OverMaxAlbumCapacityError.cs" />
+    <Compile Include="Features\Album\Errors\InvalidImageFileError.cs" />
+    <Compile Include="Features\Feed\Errors\ShieldFeedNotFriendError.cs" />
+    <Compile Include="Features\Feed\Filters\FeedSearchFilter.cs" />
+    <Compile Include="Features\Friend\Errors\NotFriendError.cs" />
+    <Compile Include="Globals\Errors\FailedToUploadFileError.cs" />
+    <Compile Include="Globals\Errors\InvalidValidateCodeError.cs" />
+    <Compile Include="Features\Blog\Filters\AdminBlogCategoryFilter.cs" />
+    <Compile Include="Features\Blog\Enums\BlogSearchPageMode.cs" />
+    <Compile Include="Globals\Errors\EmailSendError.cs" />
+    <Compile Include="Globals\Errors\MassEmailingError.cs" />
+    <Compile Include="Globals\Errors\PrivacyContentError.cs" />
+    <Compile Include="Features\Mission\Errors\ApplyMissionNoEnoughPointError.cs" />
+    <Compile Include="Globals\Errors\PrivacyError.cs" />
+    <Compile Include="Features\Album\Filters\AlbumFilter.cs" />
+    <Compile Include="Features\Blog\Errors\BlogCategoryNameLengthError.cs" />
+    <Compile Include="Features\Blog\Filters\UserBlogArticleFilter.cs" />
+    <Compile Include="Features\Album\Filters\AdminPhotoFilter.cs" />
+    <Compile Include="Features\Album\Filters\PhotoFilter.cs" />
+    <Compile Include="Features\Comment\Filters\AdminCommentFilter.cs" />
+    <Compile Include="Features\Doing\Filters\AdminDoingFilter.cs" />
+    <Compile Include="Features\Feed\Errors\FeedTitleLengthError.cs" />
+    <Compile Include="Features\Feed\Errors\SiteFeedCreateDateFormatError.cs" />
+    <Compile Include="Features\Feed\Errors\FeedNotExistsError.cs" />
+    <Compile Include="Features\Feed\Errors\NotSiteFeedError.cs" />
+    <Compile Include="Features\Feed\Errors\EmptySiteFeedTitleError.cs" />
+    <Compile Include="Features\Feed\Errors\EmptySiteFeedContentError.cs" />
+    <Compile Include="Globals\Errors\NetworkPublicError.cs" />
+    <Compile Include="Globals\Errors\NetworkShowError.cs" />
+    <Compile Include="Globals\Errors\BaseErrors\NotSelectError.cs" />
+    <Compile Include="Features\Mission\Errors\NeedPrizePointError.cs" />
+    <Compile Include="Features\Mission\Errors\ApplyMissionNoEnoughTotalPointError.cs" />
+    <Compile Include="Features\Mission\Errors\ApplyMissionNoEnoughDeductPointtError.cs" />
+    <Compile Include="Features\Notify\Errors\SendNotifyToSelfError.cs" />
+    <Compile Include="Features\Denouncing\Filters\DenouncingFilter.cs" />
+    <Compile Include="Features\Share\Filters\ShareFilter.cs" />
+    <Compile Include="Features\PointShow\PointShowBO.cs" />
+    <Compile Include="Features\PointShow\DataAccess\ShowDao.cs" />
+    <Compile Include="Features\PointShow\Entities\PointShow.cs" />
+    <Compile Include="Features\PointShow\Errors\InvalidPointError.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\UserPoint.cs" />
+    <Compile Include="Globals\Settings\Types\AccessLimitSettings.cs" />
+    <Compile Include="Globals\Settings\Types\ExtendedFieldSettings.cs" />
+    <Compile Include="Globals\Settings\Types\InvitationSettings.cs" />
+    <Compile Include="Globals\Settings\Types\NameCheckSettings.cs" />
+    <Compile Include="Globals\Settings\Types\RecoverPasswordSettings.cs" />
+    <Compile Include="Globals\Settings\Types\RegisterLimitSettings.cs" />
+    <Compile Include="Globals\Settings\Types\RegisterSettings.cs" />
+    <Compile Include="Web References\PassportServerInterface\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References Extend\PassportServerService.cs" />
+    <Compile Include="WebEngine\WebEngineConfig.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Utils\MathUtil.cs" />
+    <Compile Include="Globals\Enums\UserAvatarType.cs" />
+    <Compile Include="Features\Notify\Errors\NoManageNotifyPermissionError.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\PointExchangeRule.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\PointExchangeProportion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCodeAction.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\ValidateCode.cs" />
+    <Compile Include="Globals\Settings\Types\ValidateCodeSettings.cs" />
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style1.cs" />
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style2.cs" />
+    <Compile Include="Globals\ValidateCodes\ValidateCodeManager.cs" />
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCodeType.cs" />
+    <Compile Include="Globals\Settings\ISettingItem.cs" />
+    <Compile Include="Globals\Settings\SettingBase.cs" />
+    <Compile Include="Globals\Settings\SettingItemAttribute.cs" />
+    <Compile Include="Common\Utils\UbbUtil.cs" />
+    <Compile Include="Common\Interfaces\IPrimaryKey.cs" />
+    <Compile Include="Common\Interfaces\IStringConverter.cs" />
+    <Compile Include="Features\Tag\Permission\TagPO.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\Role.cs" />
+    <Compile Include="Globals\Settings\Types\RoleSettings.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\PointIcon.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\PointTransferRule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style5.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style6.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style7.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style8.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style9.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style10.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style11.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style12.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style3.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Runtime\AppConfig.cs" />
+    <Compile Include="Common\Runtime\PassportClientConfig.cs" />
+    <Compile Include="Features\Doing\Errors\NotExistsDoingError.cs" />
+    <Compile Include="Features\Forum\Enums\ThreadAttachType.cs" />
+    <Compile Include="Features\Forum\Enums\StickSortType.cs" />
+    <Compile Include="Features\Forum\Errors\CategoryForumCannotCreateThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NotEnoughPointBuyAttachment.cs" />
+    <Compile Include="Features\Forum\Errors\NotEnoughPointBuyThread.cs" />
+    <Compile Include="Features\Forum\Templates\ThreadTemplateMembers.cs" />
+    <Compile Include="Features\Notify\Entities\AdminManageNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Notify\Entities\CommentNotify.cs" />
+    <Compile Include="Features\Notify\Entities\CommentNotify\BlogCommentNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Notify\Entities\CommentNotify\BoardCommentNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Notify\Entities\CommentNotify\DoingCommentNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Notify\Entities\CommentNotify\ImpressionNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Notify\Entities\CommentNotify\PhotoCommentNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Notify\Entities\CommentNotify\ShareCommentNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Notify\Entities\FriendNotify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Notify\Entities\HailNotify.cs" />
+    <Compile Include="Features\Notify\Entities\Notify.cs" />
+    <Compile Include="Features\Notify\Entities\NotifyType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Notify\Entities\CommentNotify\PostNotify.cs" />
+    <Compile Include="Features\Notify\Entities\PropGivenNotify.cs" />
+    <Compile Include="Features\Notify\Entities\PropNotify.cs" />
+    <Compile Include="Features\Notify\Entities\PropSaledNotify.cs" />
+    <Compile Include="Features\Notify\Entities\PropUsedNotify.cs" />
+    <Compile Include="Features\Notify\Entities\CommentNotify\RatePost.cs" />
+    <Compile Include="Features\Notify\Entities\SystemNoyify.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Notify\Entities\UnreadNotifies.cs" />
+    <Compile Include="Features\Notify\Enums\FixNotifies.cs" />
+    <Compile Include="Features\Notify\Passport_NotifyBO.cs" />
+    <Compile Include="Features\Passport\Errors\PassportClientError.cs" />
+    <Compile Include="Features\PointShow\Entities\PointShowUser.cs" />
+    <Compile Include="Features\Prop\Entity\UserGetProp.cs" />
+    <Compile Include="Features\Prop\Enums\GetPropType.cs" />
+    <Compile Include="Features\Role\DataAccess\RoleDao.cs" />
+    <Compile Include="Features\Role\Entities\RoleUser.cs" />
+    <Compile Include="Features\Role\RoleBO.cs" />
+    <Compile Include="Features\Share\Errors\NotExistsShareError.cs" />
+    <Compile Include="Features\Share\ShareProviders\ShareAlbumProvider.cs" />
+    <Compile Include="Features\Share\ShareProviders\ShareBlogArticleProvider.cs" />
+    <Compile Include="Features\Share\ShareProviders\SharePhotoProvider.cs" />
+    <Compile Include="Features\Share\ShareProviders\ShareThreadProvider.cs" />
+    <Compile Include="Features\Share\ShareProviders\ShareUserProvider.cs" />
+    <Compile Include="Features\User\BannedUserBO.cs" />
+    <Compile Include="Features\User\DataAccess\BannedUserDao.cs" />
+    <Compile Include="Features\User\Entities\UserMobileLog.cs" />
+    <Compile Include="Features\User\Entities\UserMobilePhone.cs" />
+    <Compile Include="Features\User\Entities\AuthenticUser.cs" />
+    <Compile Include="Features\User\Entities\UserExtendedValue.cs" />
+    <Compile Include="Features\User\Enums\ActiveEmailType.cs" />
+    <Compile Include="Features\User\Enums\BannedUserPrimaryKeyMode.cs" />
+    <Compile Include="Features\User\Enums\MobilePhoneAction.cs" />
+    <Compile Include="Features\User\Enums\UserIPLogSortOrder.cs" />
+    <Compile Include="Features\User\Enums\ActiveUserType.cs" />
+    <Compile Include="Features\User\Enums\LoginReferrer.cs" />
+    <Compile Include="Features\User\Enums\ExtendedFieldDisplayType.cs" />
+    <Compile Include="Features\User\Errors\AttachAvatarExistsError.cs" />
+    <Compile Include="Features\User\Errors\BindEmailError.cs" />
+    <Compile Include="Features\User\Errors\EmailNotExistError.cs" />
+    <Compile Include="Features\User\Errors\EmailNoValidatedError.cs" />
+    <Compile Include="Features\User\Errors\EmptyMobilePhoneError.cs" />
+    <Compile Include="Features\User\Errors\EmptyPhoneCodeError.cs" />
+    <Compile Include="Features\User\Errors\MobileBindClosedError.cs" />
+    <Compile Include="Features\User\Errors\MobileBoundAlreadyError.cs" />
+    <Compile Include="Features\User\Errors\MobileCodeError.cs" />
+    <Compile Include="Features\User\Errors\MobileUnBoundAlreadyError.cs" />
+    <Compile Include="Features\User\Errors\NoPermissionRealnameCheckError.cs" />
+    <Compile Include="Features\User\Errors\PhoneNumError.cs" />
+    <Compile Include="Features\User\Errors\PhoneNumSameError.cs" />
+    <Compile Include="Features\User\Errors\PhoneRepeatError.cs" />
+    <Compile Include="Features\User\Errors\PhoneValidateLimitError.cs" />
+    <Compile Include="Features\User\Errors\SendEmailTimesLimitError.cs" />
+    <Compile Include="Features\User\Errors\UserEmailLoginRepeatError.cs" />
+    <Compile Include="Features\User\Filters\AuthenticUserFilter.cs" />
+    <Compile Include="Features\User\Filters\UserMobileSearchFilter.cs" />
+    <Compile Include="Features\User\UserBO_Avatar.cs" />
+    <Compile Include="Features\User\Filters\UserIPSearchFilter.cs" />
+    <Compile Include="Features\User\UserBO_Realname.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\AjaxHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Globals\DateTimeScope.cs" />
+    <Compile Include="Globals\Emails\EmailLinkInfo.cs" />
+    <Compile Include="Globals\Entities\JsInvoker.cs" />
+    <Compile Include="Globals\Entities\InvokerType.cs" />
+    <Compile Include="Globals\Enums\BanType.cs" />
+    <Compile Include="Globals\Enums\ForumState.cs" />
+    <Compile Include="Globals\Enums\NavigationType.cs" />
+    <Compile Include="Features\User\Entities\UserIPLogs.cs" />
+    <Compile Include="Globals\Enums\SpiderType.cs" />
+    <Compile Include="Globals\Enums\UserLoginType.cs" />
+    <Compile Include="Globals\Logs\BanUserLogFilter.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\EmailSendServer.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\NavigationItem.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\PointRecharge.cs" />
+    <Compile Include="Globals\Settings\Types\BbsSettings.cs" />
+    <Compile Include="Globals\Settings\Types\LoginSettings.cs" />
+    <Compile Include="Globals\Settings\Types\NavigationSettings.cs" />
+    <Compile Include="Globals\Settings\Types\PhoneValidateSettings.cs" />
+    <Compile Include="Globals\Settings\Types\ShieldSpiderSettings.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\BatchDeleteUser.cs" />
+    <Compile Include="Globals\XCmd\Types\ResetAuthUserCacheCmd.cs" />
+    <Compile Include="WebEngine\CompressFilter.cs" />
+    <Compile Include="Common\Exceptions\TemplateParseException.cs" />
+    <Compile Include="Common\Exceptions\TemplateTagNotCloseException.cs" />
+    <Compile Include="Common\Exceptions\TemplateVariableNotExistsException.cs" />
+    <Compile Include="Common\HtmlToUbb\HtmlTags\HtmlTags.cs" />
+    <Compile Include="Common\HtmlToUbb\HtmlToUbbConverter.cs" />
+    <Compile Include="Common\Interfaces\IFillSimpleUser.cs" />
+    <Compile Include="Common\Interfaces\IParentable.cs" />
+    <Compile Include="Common\Interfaces\ITextRevertable.cs" />
+    <Compile Include="Common\Interfaces\ITextRevertable2.cs" />
+    <Compile Include="Common\Interfaces\ITimeLimit.cs" />
+    <Compile Include="Features\User\Entities\AdminSessionStruct.cs" />
+    <Compile Include="Common\Types\HttpValueCollection.cs" />
+    <Compile Include="Common\Types\JsonBuilder.cs" />
+    <Compile Include="Common\Types\JsonItemAttribute.cs" />
+    <Compile Include="Common\Types\JumpLink.cs" />
+    <Compile Include="Common\Types\ProcessKeywordMode.cs" />
+    <Compile Include="Common\Types\ReplacedWord.cs" />
+    <Compile Include="Common\Types\Revertable.cs" />
+    <Compile Include="Common\Types\Revertable2.cs" />
+    <Compile Include="Common\Types\StringCollectionIgnoreCase.cs" />
+    <Compile Include="Common\Types\UrlScheme.cs" />
+    <Compile Include="Common\UBB\Parses\BlogArticleUbbParser.cs" />
+    <Compile Include="Common\UBB\Parses\CommentUbbParser.cs" />
+    <Compile Include="Common\UBB\Parses\HtmlToUbbParser.cs">
+    </Compile>
+    <Compile Include="Common\UBB\Parses\SignatureParser.cs" />
+    <Compile Include="Common\UBB\Parses\PostUbbParserV5.cs" />
+    <Compile Include="Common\UBB\Tags\ALIGN.cs" />
+    <Compile Include="Common\UBB\Tags\B.cs" />
+    <Compile Include="Common\UBB\Tags\BGCOLOR.cs" />
+    <Compile Include="Common\UBB\Tags\BR.cs" />
+    <Compile Include="Common\UBB\Tags\CODE.cs" />
+    <Compile Include="Common\UBB\Tags\COLOR.cs" />
+    <Compile Include="Common\UBB\Tags\EMAIL.cs" />
+    <Compile Include="Common\UBB\Tags\FLASH.cs" />
+    <Compile Include="Common\UBB\Tags\FONT.cs" />
+    <Compile Include="Common\UBB\Tags\I.cs" />
+    <Compile Include="Common\UBB\Tags\IMG.cs" />
+    <Compile Include="Common\UBB\Tags\INDENT.cs" />
+    <Compile Include="Common\UBB\Tags\LIST.cs" />
+    <Compile Include="Common\UBB\Tags\MaxHideTag.cs" />
+    <Compile Include="Common\UBB\Tags\MSN.cs" />
+    <Compile Include="Common\UBB\Tags\QQ.cs" />
+    <Compile Include="Common\UBB\Tags\QUOTE.cs" />
+    <Compile Include="Common\UBB\Tags\RM.cs" />
+    <Compile Include="Common\UBB\Tags\S.cs" />
+    <Compile Include="Common\UBB\Tags\SIZE.cs" />
+    <Compile Include="Common\UBB\Tags\SUB.cs" />
+    <Compile Include="Common\UBB\Tags\SUP.cs" />
+    <Compile Include="Common\UBB\Tags\TABLE.cs" />
+    <Compile Include="Common\UBB\Tags\U.cs" />
+    <Compile Include="Common\UBB\Tags\UbbTagHandler.cs" />
+    <Compile Include="Common\UBB\Tags\URL.cs" />
+    <Compile Include="Common\UBB\Tags\WMV.cs" />
+    <Compile Include="Common\UBB\UbbParser.cs" />
+    <Compile Include="Common\UBB\Parses\EmoticonParser.cs" />
+    <Compile Include="Common\Interfaces\ICloneable.cs" />
+    <Compile Include="Common\Utils\ConvertUtil.cs" />
+    <Compile Include="Common\Utils\ImageUtil.cs" />
+    <Compile Include="Common\Types\Pool.cs" />
+    <Compile Include="Common\Utils\RequestUtil.cs" />
+    <Compile Include="Common\Utils\NetUtil.cs" />
+    <Compile Include="Common\Runtime\UrlHelper.cs" />
+    <Compile Include="Features\Advert\AdvertBO.cs" />
+    <Compile Include="Features\Advert\DataAccess\AdvertDao.cs" />
+    <Compile Include="Features\Advert\Entities\ADCategory.cs" />
+    <Compile Include="Features\Advert\Entities\ADTarget.cs" />
+    <Compile Include="Features\Advert\Entities\Advert.cs" />
+    <Compile Include="Features\Advert\Entities\AdvertDeferItem.cs" />
+    <Compile Include="Features\Advert\Enums\AdShowType.cs" />
+    <Compile Include="Features\Advert\Enums\ADType.cs" />
+    <Compile Include="Features\Advert\Errors\EmptyAdvertCodeError.cs" />
+    <Compile Include="Features\Advert\Errors\EmptyAdvertHeightError.cs" />
+    <Compile Include="Features\Advert\Errors\EmptyAdvertHrefError.cs" />
+    <Compile Include="Features\Advert\Errors\EmptyAdvertResourceError.cs" />
+    <Compile Include="Features\Advert\Errors\EmptyAdvertTextError.cs" />
+    <Compile Include="Features\Advert\Errors\EmptyAdvertWidthError.cs" />
+    <Compile Include="Features\Advert\Errors\NoPermissionManageAdvertError.cs" />
+    <Compile Include="Features\Album\Errors\AlbumNameFormatError.cs" />
+    <Compile Include="Features\Album\Errors\NoPermissionDeletePhotoError.cs" />
+    <Compile Include="Features\Album\Errors\NoPermissionEditAlbumError.cs" />
+    <Compile Include="Features\Album\Errors\NoPermissionManageAlbumError.cs" />
+    <Compile Include="Features\Album\Errors\NoPermissionMovePhotoError.cs" />
+    <Compile Include="Features\Album\Errors\NoPermissionUpdateAlbumLogoError.cs" />
+    <Compile Include="Features\Album\Errors\NoPermissionUpdatePhotoError.cs" />
+    <Compile Include="Features\Album\Errors\NoPermissionUseAlbumError.cs" />
+    <Compile Include="Features\Album\Errors\NoPermissionVisitAlbumBeacuseNeedPasswordError.cs" />
+    <Compile Include="Features\Album\Errors\NoPermissionVisitAlbumBeacuseNotFriendError.cs" />
+    <Compile Include="Features\Album\Errors\NoPermissionVisitAlbumBeacuseNotOwnerError.cs" />
+    <Compile Include="Features\Album\Errors\NotExistsAlbumError.cs" />
+    <Compile Include="Features\Album\Errors\NotExistsPhotoError.cs" />
+    <Compile Include="Features\Album\Errors\PhotoNameFormatError.cs" />
+    <Compile Include="Features\Announcement\AnnouncementBO.cs" />
+    <Compile Include="Features\Announcement\DataAccess\AnnouncementDao.cs" />
+    <Compile Include="Features\Announcement\Delegates\Delegates.cs" />
+    <Compile Include="Features\Announcement\Entities\Announcement.cs" />
+    <Compile Include="Features\Announcement\Enums\AnnouncementType.cs" />
+    <Compile Include="Features\Announcement\Errors\EmptyAnnouncementContentError.cs" />
+    <Compile Include="Features\Announcement\Errors\EmptyAnnouncementSubjectError.cs" />
+    <Compile Include="Features\Announcement\Errors\NoPermissionManageAnnouncementError.cs" />
+    <Compile Include="Features\Blog\Errors\BlogArticlePasswordEmptyError.cs" />
+    <Compile Include="Features\Blog\Errors\BlogArticleSubjectFormatError.cs" />
+    <Compile Include="Features\Blog\Errors\BlogCategoryNameBannedKeywordsError.cs" />
+    <Compile Include="Features\Blog\Errors\BlogCategoryNameFormatError.cs" />
+    <Compile Include="Features\Blog\Errors\NoPermissionVisitBlogArticleBeacuseNeedPasswordError.cs" />
+    <Compile Include="Features\Blog\Errors\NoPermissionVisitBlogArticleBeacuseNotFriendError.cs" />
+    <Compile Include="Features\Blog\Errors\NoPermissionVisitBlogArticleBeacuseNotOwnerError.cs" />
+    <Compile Include="Features\Blog\Errors\NoPermissionUseBlogError.cs" />
+    <Compile Include="Features\Blog\Errors\NoPermissionEditBlogArticleError.cs" />
+    <Compile Include="Features\Blog\Errors\NoPermissionEditAdminEditedBlogError.cs" />
+    <Compile Include="Features\Blog\Errors\NoPermissionDeleteBlogArticleError.cs" />
+    <Compile Include="Features\Blog\Errors\NoPermissionEditBlogCategoryError.cs" />
+    <Compile Include="Features\Blog\Errors\NoPermissionDeleteBlogCategoryError.cs" />
+    <Compile Include="Features\Blog\Errors\NoPermissionManageBlogError.cs" />
+    <Compile Include="Features\Blog\Errors\NotExistsBlogArticleError.cs" />
+    <Compile Include="Features\Blog\Errors\NotExistsBlogCategoryError.cs" />
+    <Compile Include="Features\Blog\Errors\NotSelectedBlogArticlesError.cs" />
+    <Compile Include="Features\Blog\Errors\NotSelectedBlogCategoriesError.cs" />
+    <Compile Include="Features\Chat\ChatBO.cs" />
+    <Compile Include="Features\Chat\Delegates\Delegates.cs" />
+    <Compile Include="Features\Chat\Errors\InBlackListError.cs" />
+    <Compile Include="Features\Chat\Errors\MessageContentWithBannedKeyWordError.cs" />
+    <Compile Include="Features\Chat\Errors\ChatMessageBannedKeywordsError.cs" />
+    <Compile Include="Features\Chat\Filter\ChatSessionFilter.cs" />
+    <Compile Include="Features\Chat\DataAccess\ChatDao.cs" />
+    <Compile Include="Features\Chat\Entities\ChatMessage.cs" />
+    <Compile Include="Features\Chat\Entities\ChatSession.cs" />
+    <Compile Include="Features\Chat\Errors\EmptyMessageContentError.cs" />
+    <Compile Include="Features\Chat\Errors\MessageContentLengthError.cs" />
+    <Compile Include="Features\Chat\Errors\MessageContentRowsError.cs" />
+    <Compile Include="Features\Chat\Errors\NotExistsChatSessionError.cs" />
+    <Compile Include="Features\ClickLog\ClickLogBO.cs" />
+    <Compile Include="Features\ClickLog\ClickSourceType.cs" />
+    <Compile Include="Features\ClickLog\DataAccess\ClickLogDao.cs" />
+    <Compile Include="Features\Club\ClubBO.cs" />
+    <Compile Include="Features\Club\ClubDao.cs" />
+    <Compile Include="Features\Club\Entities\Club.cs" />
+    <Compile Include="Features\Club\Entities\ClubCategory.cs" />
+    <Compile Include="Features\Club\Entities\ClubMember.cs" />
+    <Compile Include="Features\Club\Enums\ClubAccessMode.cs" />
+    <Compile Include="Features\Club\Enums\ClubJoinMethod.cs" />
+    <Compile Include="Features\Club\Enums\ClubMemberStatus.cs" />
+    <Compile Include="Features\Club\Enums\CreateClubResult.cs" />
+    <Compile Include="Features\Club\Errors\ClubNameEmptyError.cs" />
+    <Compile Include="Features\Club\Errors\NoPermissionEditClubError.cs" />
+    <Compile Include="Features\Comment\Errors\NoPermissionAddCommentError.cs" />
+    <Compile Include="Features\Comment\Errors\NoPermissionDeleteCommentError.cs" />
+    <Compile Include="Features\Comment\Errors\NoPermissionApproveCommentError.cs" />
+    <Compile Include="Features\Comment\Errors\NoPermissionEditCommentError.cs" />
+    <Compile Include="Features\Comment\Errors\NoPermissionEditSelfCommentError.cs" />
+    <Compile Include="Features\Comment\Errors\NoPermissionManageCommentError.cs" />
+    <Compile Include="Features\Comment\Errors\NotSelectedCommentsError.cs" />
+    <Compile Include="Features\Comment\Errors\UnapprovedCommentError.cs" />
+    <Compile Include="Features\Emoticon\DataAccess\EmoticonDao.cs" />
+    <Compile Include="Features\Emoticon\Decoder\CFC\CFCAnalyser.cs" />
+    <Compile Include="Features\Emoticon\Decoder\CFC\CFCBuilder.cs" />
+    <Compile Include="Features\Emoticon\Decoder\CFC\Struct\Struct_CFCConstants.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\BATBlock.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Common\Check.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Common\Contrast.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Common\CreateFile.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Common\GetBytes.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Common\MD5.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\EIPAnalyser.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\GetIndexFromBAT.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\HeadReader.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Model\Model_Property.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Model\Model_XML.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\ParseBAT.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Property\PropertyReader.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Struct\Struct_Header_Offset.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Struct\Struct_POIFSConstants.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Struct\Struct_PropertyConstants.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Struct\Struct_Property_Offset.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\Struct\Struct_TypeSize.cs" />
+    <Compile Include="Features\Emoticon\Decoder\EIP\XML\AnalyseXML.cs" />
+    <Compile Include="Features\Emoticon\Decoder\Entitys\EmoticonItem.cs" />
+    <Compile Include="Features\Emoticon\Decoder\Enums\EmoticonPackType.cs" />
+    <Compile Include="Features\Forum\Entities\PostAuthorExtendInfo.cs" />
+    <Compile Include="Features\Pay\99Bill.cs" />
+    <Compile Include="Features\Pay\AliPay.cs" />
+    <Compile Include="Features\Pay\DataAccess\PayDao.cs" />
+    <Compile Include="Features\Pay\Entities\UserPay.cs" />
+    <Compile Include="Features\Pay\Filters\PaylogFilter.cs" />
+    <Compile Include="Features\Pay\Md5Pay.cs" />
+    <Compile Include="Features\Pay\PayBO.cs" />
+    <Compile Include="Features\Friend\Delegates\Delegates.cs" />
+    <Compile Include="Features\Notify\Delegates\Delegates.cs" />
+    <Compile Include="Features\Passport\DataAccess\PassportDao.cs" />
+    <Compile Include="Features\Passport\Entities\Instruct.cs" />
+    <Compile Include="Features\Passport\Enums\InstructType.cs" />
+    <Compile Include="Features\Passport\PassportBO.cs" />
+    <Compile Include="Features\Share\Enums\HotShareTimeType.cs" />
+    <Compile Include="Features\Share\Enums\HotShareSortType.cs" />
+    <Compile Include="Features\User\Delegates\Delegates.cs" />
+    <Compile Include="Features\User\Entities\AuthUser.cs" />
+    <Compile Include="Features\User\Entities\UserPassword.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\PostAuthorInfoHandler.cs" />
+    <Compile Include="Globals\Enums\FileType.cs" />
+    <Compile Include="Features\Emoticon\Decoder\FileTools\FileHelper.cs" />
+    <Compile Include="Features\Emoticon\Decoder\FileTools\ImageHelper.cs" />
+    <Compile Include="Features\Emoticon\Decoder\HashTools\CRC32Hash.cs" />
+    <Compile Include="Features\Emoticon\Decoder\HashTools\HashModule.cs" />
+    <Compile Include="Features\Emoticon\Decoder\HashTools\MD5Hash.cs" />
+    <Compile Include="Features\Emoticon\Decoder\Interface\IAnalyser.cs" />
+    <Compile Include="Features\Denouncing\Enums\CheckDenouncingStateResult.cs" />
+    <Compile Include="Features\Denouncing\Errors\NoPermissionDeleteDenouncingError.cs" />
+    <Compile Include="Features\Denouncing\Errors\NoPermissionIgnoreDenouncingError.cs" />
+    <Compile Include="Features\Doing\Errors\DoingContentBannedKeywordsError.cs" />
+    <Compile Include="Features\Doing\Errors\DoingPostCountLimitedError.cs" />
+    <Compile Include="Features\Doing\Errors\NoPermissionDeleteDoingError.cs" />
+    <Compile Include="Features\Doing\Errors\NoPermissionManageDoingError.cs" />
+    <Compile Include="Features\Doing\Errors\NoPermissionUseDoingError.cs" />
+    <Compile Include="Features\Emoticon\EmoticonBO.cs" />
+    <Compile Include="Features\Emoticon\Entities\Emoticon.cs" />
+    <Compile Include="Features\Emoticon\Entities\EmoticonGroup.cs" />
+    <Compile Include="Features\Emoticon\Entities\UserEmoticonInfo.cs" />
+    <Compile Include="Features\Emoticon\Enums\EmoticonSaveStatus.cs" />
+    <Compile Include="Features\Emoticon\Errors\EmoticonFileCountOverflow.cs" />
+    <Compile Include="Features\Emoticon\Errors\EmoticonSpaceOverflow.cs" />
+    <Compile Include="Features\Emoticon\Errors\EmptyEmoticonGroupNameError.cs" />
+    <Compile Include="Features\Emoticon\Errors\InvalidEmoticonGroupNameError.cs" />
+    <Compile Include="Features\Emoticon\Errors\InvalidEmoticonShortcutError.cs" />
+    <Compile Include="Features\Emoticon\Errors\NoPermissionManageEmoticonError.cs" />
+    <Compile Include="Features\Emoticon\Errors\NoPermissionManageUserEmoticonSettings.cs" />
+    <Compile Include="Features\Emoticon\Errors\NoPermissionUseEmoticonError.cs" />
+    <Compile Include="Features\Emoticon\Errors\NoPermissonExportEmoticonError.cs" />
+    <Compile Include="Features\Feed\Errors\NoPermissionManageSiteFeedError.cs" />
+    <Compile Include="Features\Feed\Errors\NoPermissionSetFeedTemplateError.cs" />
+    <Compile Include="Features\Feed\Errors\NoPermissionDeleteFeedError.cs" />
+    <Compile Include="Features\Feed\Errors\NoPermissionCreateSiteFeedError.cs" />
+    <Compile Include="Features\Feed\Errors\NotSelectedFeedsError.cs" />
+    <Compile Include="Features\Emoticon\Filters\EmoticonFilter.cs" />
+    <Compile Include="Features\Forum\DataAccess\ForumDao.cs" />
+    <Compile Include="Features\Forum\DataAccess\PostDao.cs" />
+    <Compile Include="Features\Forum\DataAccess\ThreadCateDao.cs" />
+    <Compile Include="Features\Forum\Entities\Forum.cs" />
+    <Compile Include="Features\Forum\Entities\ForumThreadCatalog.cs" />
+    <Compile Include="Features\Forum\Entities\Moderator.cs" />
+    <Compile Include="Features\Forum\Entities\BasicThead.cs" />
+    <Compile Include="Features\Forum\Entities\Post.cs" />
+    <Compile Include="Features\Forum\Entities\ThreadCatalog.cs" />
+    <Compile Include="Features\Forum\Entities\ThreadCollection.cs" />
+    <Compile Include="Features\Forum\Entities\ThreadWithContent.cs" />
+    <Compile Include="Features\Forum\Entities\ThreadWithReplies.cs" />
+    <Compile Include="Features\Forum\Entities\TopicStatus.cs" />
+    <Compile Include="Features\Forum\Entities\PollThread.cs" />
+    <Compile Include="Features\Forum\Entities\Attachment.cs" />
+    <Compile Include="Features\Forum\Entities\PostMark.cs" />
+    <Compile Include="Features\Forum\Entities\PollItem.cs" />
+    <Compile Include="Features\Forum\Entities\QuestionThread.cs" />
+    <Compile Include="Features\Forum\Entities\PolemizeThread.cs" />
+    <Compile Include="Features\Forum\Entities\ThreadRank.cs" />
+    <Compile Include="Features\Forum\Entities\AttachmentExchange.cs" />
+    <Compile Include="Features\Forum\Entities\PollItemDetails.cs" />
+    <Compile Include="Features\Forum\Entities\ThreadCate.cs" />
+    <Compile Include="Features\Forum\Entities\ThreadCateModel.cs" />
+    <Compile Include="Features\Forum\Entities\ThreadCateModelField.cs" />
+    <Compile Include="Features\Forum\Enums\AttachType.cs" />
+    <Compile Include="Features\Forum\Entities\StickThread.cs" />
+    <Compile Include="Features\Forum\Enums\ForumStatus.cs" />
+    <Compile Include="Features\Forum\Enums\ForumType.cs" />
+    <Compile Include="Features\Forum\Enums\ThreadCatalogStatus.cs" />
+    <Compile Include="Features\Forum\Enums\TopicStatuType.cs" />
+    <Compile Include="Features\Forum\Enums\ThreadSortField.cs" />
+    <Compile Include="Features\Forum\Errors\DuplicateForumCodeNameError.cs" />
+    <Compile Include="Features\Forum\Errors\EmptyForumCodeNameError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidForumCodeNameError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidForumCodeNameLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\EmptyForumNameError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidForumNameLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidForumLogoSrcLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidForumPasswordLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\EmptyForumThemeIDError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidForumCatalogParentIDError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidForumParentIDError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionDeletePostError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionDeleteThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionGlobalStickAnyThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionJoinThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionLockThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionMoveThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionRecycleOwnThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionSetThreadNotUpdateSortOrderError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionSetThreadSubjectStyleError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionSetThreadsUpError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionSetThreadsValuedError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionSplitThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionUpdateThreadCatalogError.cs" />
+    <Compile Include="Features\Forum\Errors\ParentForumNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionUpdateReadmeError.cs" />
+    <Compile Include="Features\Forum\Errors\EmptyThreadCatalogNameError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidThreadCatalogNameLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidThreadCatalogLogoUrlLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\ThreadNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\ForumNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\CreateThreadIsShieldedUserError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionCreateThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\OverCreatePostIntervalsError.cs" />
+    <Compile Include="Features\Forum\Errors\CannotSellThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NotSellectThreadCatalogError.cs" />
+    <Compile Include="Features\Forum\Errors\EmptyPostSubjectError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidPostSubjectLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\EmptyPostContentError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidPostContentLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\UnapprovedError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionCreatePollError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidPollItemCountError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidPollMultipleError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidPollExpiresDateError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidPollItemContentLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionCreateQuestionError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidQuestionExpiresDateError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidQuestionRewardError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidQuestionRewardCountError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidQuestionRewardAndRewardCountError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionCreatePolemizeError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidPolemizeExpiresDateError.cs" />
+    <Compile Include="Features\Forum\Errors\EmptyAgreeViewPointError.cs" />
+    <Compile Include="Features\Forum\Errors\EmptyAgainstViewPointError.cs" />
+    <Compile Include="Features\Forum\Errors\UpdateThreadIsShieldedUserError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionUpdateThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\ThreadIsLockedCannotReplyError.cs" />
+    <Compile Include="Features\Forum\Errors\ThreadIsRecycledCannotReplyError.cs" />
+    <Compile Include="Features\Forum\Errors\ThreadIsUnapprovedCannotReplyError.cs" />
+    <Compile Include="Features\Forum\Errors\ReplyThreadIsShieldedUserError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionReplyThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionPolemizeError.cs" />
+    <Compile Include="Features\Forum\Errors\UpdatePostIsShieldedUserError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionUpdatePostError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidHistoryAttachmentCountError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidAttachmentFileTypeError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidAttachmentFileSizeError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionUploadAttachmentError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidAttachmentError.cs" />
+    <Compile Include="Features\Forum\Errors\OverTodayAlowAttachmentCountError.cs" />
+    <Compile Include="Features\Forum\Errors\OverTodayAlowAttachmentFileSizeError.cs" />
+    <Compile Include="Features\Forum\Errors\SetPostLoveHatePostNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\SetPostLoveHatePostCannotSetMoreError.cs" />
+    <Compile Include="Features\Forum\Errors\ForumThreadCatalogNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\SetPostLoveHatePostGuestCannotSetError.cs" />
+    <Compile Include="Features\Forum\Errors\SetThreadRankNotEnableError.cs" />
+    <Compile Include="Features\Forum\Errors\NopermissionSetThreadRankError.cs" />
+    <Compile Include="Features\Forum\Errors\ContnotSetOwnThreadRankError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionVoteError.cs" />
+    <Compile Include="Features\Forum\Errors\VotePollIsLockedError.cs" />
+    <Compile Include="Features\Forum\Errors\VotePollIsClosedError.cs" />
+    <Compile Include="Features\Forum\Errors\VotePollNotSellectItemError.cs" />
+    <Compile Include="Features\Forum\Errors\VotePollInvalidSellectedCountError.cs" />
+    <Compile Include="Features\Forum\Errors\VotePollHadVotedError.cs" />
+    <Compile Include="Features\Forum\Errors\GuestCannotPolemizeError.cs" />
+    <Compile Include="Features\Forum\Errors\BannedUserCannotPolemizeError.cs" />
+    <Compile Include="Features\Forum\Errors\IsNotPolemizeCannotPolemizeError.cs" />
+    <Compile Include="Features\Forum\Errors\HadPolemizedError.cs" />
+    <Compile Include="Features\Forum\Errors\PolemizeIsLockedError.cs" />
+    <Compile Include="Features\Forum\Errors\PolemizeIsClosedError.cs" />
+    <Compile Include="Features\Forum\Errors\NotSellectPolemizePointError.cs" />
+    <Compile Include="Features\Forum\Errors\BannedUserCannotFinalQuestionError.cs" />
+    <Compile Include="Features\Forum\Errors\IsNotQuestionCannotFinalError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionFinalQuestionError.cs" />
+    <Compile Include="Features\Forum\Errors\OverQuestionMaxRewardCountError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidQuestionRewardValueError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidQuestionBestRewardValueError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidQuestionBestPostIDError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidQuestionTotalRewardsError.cs" />
+    <Compile Include="Features\Forum\Errors\QuestionIsClosedError.cs" />
+    <Compile Include="Features\Forum\Errors\QuestionBestPostNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\BannedUserCannotVoteError.cs" />
+    <Compile Include="Features\Forum\Errors\IsNotPollCannotVoteError.cs" />
+    <Compile Include="Features\Forum\Errors\BannedUserCannotVoteBestPostError.cs" />
+    <Compile Include="Features\Forum\Errors\IsNotQuestionCannotVoteBestPostError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionVoteQuestionBestPostError.cs" />
+    <Compile Include="Features\Forum\Errors\QuestionIsNotClosedCannotVoteBestPostError.cs" />
+    <Compile Include="Features\Forum\Errors\HadVotedBestPostError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionRestoreOwnThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionRestoreAnyThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionApproveThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NoSellectedApproveThreadIDError.cs" />
+    <Compile Include="Features\Forum\Errors\NotSellectApprovePostIDsError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionApprovePostError.cs" />
+    <Compile Include="Features\Forum\Errors\MoveForumInvalidParentIDError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionJudgementThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\NotSellectDeleteThreadIDsError.cs" />
+    <Compile Include="Features\Forum\Errors\JoinThreadNewThreadNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\JoinThreadOldThreadNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\JoinThreadInvalidNewThreadIDError.cs" />
+    <Compile Include="Features\Forum\Errors\SplitThreadThreadNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\SplitThreadConnotSplitPollError.cs" />
+    <Compile Include="Features\Forum\Errors\SplitThreadInvalidPostCountError.cs" />
+    <Compile Include="Features\Forum\Errors\MoveThreadNoSelectNewForumError.cs" />
+    <Compile Include="Features\Forum\Errors\MoveThreadNoSelectThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\SetThreadNotUpdateSortOrderNotSellectThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\UpdateThreadCatalogNotSellectThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\UpdateThreadCatalogDisabledError.cs" />
+    <Compile Include="Features\Forum\Errors\UpdateThreadCatalogMustSellectThreadCatalogError.cs" />
+    <Compile Include="Features\Forum\Errors\SetThreadValuedNotSellectThreadError.cs" />
+    <Compile Include="Features\Forum\Errors\UpdatePostsShieldedNotSellectPostError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidThreadCateNameLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\EmptyThreadCateNameError.cs" />
+    <Compile Include="Features\Forum\Errors\EmptyThreadCateModelNameError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidThreadCateModelNameLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\ThreadCateNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionManageForumError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionManageThreadCateError.cs" />
+    <Compile Include="Features\Forum\Errors\EmptyThreadCateModelFieldNameError.cs" />
+    <Compile Include="Features\Forum\Errors\InvalidThreadCateModelFieldNameLengthError.cs" />
+    <Compile Include="Features\Forum\Errors\ThreadCateModelFieldNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\ThreadCateModelNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\NotSellectRestoreThreadIDsError.cs" />
+    <Compile Include="Features\Forum\Filters\AttachmentFilter.cs" />
+    <Compile Include="Features\Forum\Filters\PostFilter.cs" />
+    <Compile Include="Features\Forum\Filters\TopicFilter.cs" />
+    <Compile Include="Features\Forum\ForumBO.cs" />
+    <Compile Include="Features\Forum\PostBO.cs" />
+    <Compile Include="Features\Forum\ThreadCachePool.cs" />
+    <Compile Include="Features\Forum\ThreadCateBO.cs" />
+    <Compile Include="Features\Friend\Errors\NotSelectedFriendsError.cs" />
+    <Compile Include="Features\Impression\Entities\Impression.cs" />
+    <Compile Include="Features\Impression\Entities\ImpressionRecords.cs" />
+    <Compile Include="Features\Impression\Entities\ImpressionType.cs" />
+    <Compile Include="Features\Impression\ImpressionBO.cs" />
+    <Compile Include="Features\Impression\ImpressionDao.cs" />
+    <Compile Include="Features\Mission\Entities\MissionCategory.cs" />
+    <Compile Include="Features\Mission\Errors\NoPermissionCreateMissionError.cs" />
+    <Compile Include="Features\Mission\Errors\NoPermissionDeleteMissionError.cs" />
+    <Compile Include="Features\Mission\Errors\NoPermissionUpdateMissionError.cs" />
+    <Compile Include="Features\Mission\Errors\NotSelectedMissionsError.cs" />
+    <Compile Include="Features\Mission\Errors\MissionHadPrizedError.cs" />
+    <Compile Include="Features\NetDisk\Errors\DirectoryNameTooLongError.cs" />
+    <Compile Include="Features\NetDisk\Errors\DiskFileSizeOverflowError.cs" />
+    <Compile Include="Features\NetDisk\Errors\DuplicateNameError.cs" />
+    <Compile Include="Features\NetDisk\Errors\InsufficientDiskSpaceError.cs" />
+    <Compile Include="Features\NetDisk\Errors\InvalidFileNameError.cs" />
+    <Compile Include="Features\NetDisk\Errors\InvalidDirectoryNameError.cs" />
+    <Compile Include="Features\NetDisk\Errors\EmptyDirectoryNameError.cs" />
+    <Compile Include="Features\Notify\Errors\NoPermissionManageSystemNoyify.cs" />
+    <Compile Include="Features\Notify\Errors\NotExistsNotifyError.cs" />
+    <Compile Include="Features\Notify\Errors\SystemNotifyContentEmptyError.cs" />
+    <Compile Include="Features\Notify\Errors\SystemNotifyContentOverflow.cs" />
+    <Compile Include="Features\Notify\Errors\SystemNotifyEndDateError.cs" />
+    <Compile Include="Features\Notify\Errors\SystemNotifyNoReceive.cs" />
+    <Compile Include="Features\Notify\Errors\SystemNotifyTimespanError.cs" />
+    <Compile Include="Features\Notify\SystemNotifyProvider.cs" />
+    <Compile Include="Features\PointShow\Errors\InvalidPriceError.cs" />
+    <Compile Include="Features\PointShow\Errors\NoPremissionManagePointShowError.cs" />
+    <Compile Include="Features\PointShow\Errors\PointBalanceLowError.cs" />
+    <Compile Include="Features\PointShow\Errors\UserNotExistInPointShowError.cs" />
+    <Compile Include="Features\Prop\PropBO.cs" />
+    <Compile Include="Features\Serial\DataAccess\SerialDao.cs" />
+    <Compile Include="Features\Serial\Entities\Serial.cs" />
+    <Compile Include="Features\Serial\Enums\SerialType.cs" />
+    <Compile Include="Features\Serial\SerialBO.cs" />
+    <Compile Include="Features\Share\Errors\NoPermissionManageShareError.cs" />
+    <Compile Include="Features\Share\Errors\NoPermissionUseShareError.cs" />
+    <Compile Include="Features\Share\Errors\NoPermissionUseCollectionError.cs" />
+    <Compile Include="Features\Share\Errors\NoPermissionManageShareAndCollectionError.cs" />
+    <Compile Include="Features\Share\Errors\NoPermissionDeleteShareAndCollectionError.cs" />
+    <Compile Include="Features\Share\Errors\NotSelectedSharesError.cs" />
+    <Compile Include="Features\Share\FavoriteBO.cs" />
+    <Compile Include="Features\Space\Entities\SpaceData.cs" />
+    <Compile Include="Features\Space\Entities\SpaceTheme.cs" />
+    <Compile Include="Features\Tag\Errors\NotSelectedTagsError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionRatePointError.cs" />
+    <Compile Include="Features\Forum\Errors\NotSelectedPostMarksError.cs" />
+    <Compile Include="Features\Forum\Errors\PostRateOverMaxValueError.cs" />
+    <Compile Include="Features\Forum\Errors\PostRateOverMinValueError.cs" />
+    <Compile Include="Features\Forum\Errors\PostRateOverMaxValueInTimeError.cs" />
+    <Compile Include="Features\Forum\Errors\PostRateHadRatedError.cs" />
+    <Compile Include="Features\Forum\Errors\PostNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionCancelRateError.cs" />
+    <Compile Include="Features\Forum\Errors\PostRateNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\AttachmentError.cs" />
+    <Compile Include="Features\Forum\Errors\SearchOverSearchTimeError.cs" />
+    <Compile Include="Features\Forum\Errors\SearchInvalidKeywordError.cs" />
+    <Compile Include="Features\Forum\Errors\SearchUserNotExistsError.cs" />
+    <Compile Include="Features\Forum\Errors\SearchNoPermissionForumError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionSearchAllPostsError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionSearchTopicContentsError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionSearchUserTopicError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionSearchUserPostError.cs" />
+    <Compile Include="Features\Forum\Errors\NoPermissionSearchPostError.cs" />
+    <Compile Include="Features\Forum\Errors\OverUpdatePostIntervalsError.cs" />
+    <Compile Include="Features\User\BannedUserProvider.cs" />
+    <Compile Include="Features\User\DataAccess\ExtendedFieldDao.cs" />
+    <Compile Include="Features\User\DataAccess\InviteDao.cs" />
+    <Compile Include="Features\User\DataAccess\UserDao.cs" />
+    <Compile Include="Features\User\DataAccess\UserTempAvatarDao.cs" />
+    <Compile Include="Features\User\DataAccess\UserTempDataDao.cs" />
+    <Compile Include="Features\User\Entities\BannedUser.cs" />
+    <Compile Include="Features\User\Entities\ConsoleLoginLog.cs" />
+    <Compile Include="Features\User\Entities\ExtendedField.cs" />
+    <Compile Include="Features\User\Entities\ExtendedFieldType.cs" />
+    <Compile Include="Features\User\Entities\InviteSerial.cs" />
+    <Compile Include="Features\User\Entities\InviteSerialStat.cs" />
+    <Compile Include="Features\User\Entities\MenuPermissions.cs" />
+    <Compile Include="Features\User\Entities\OnlineUser.cs" />
+    <Compile Include="Features\User\Entities\PermissionSet.cs" />
+    <Compile Include="Features\User\Entities\PointExpressionColum.cs" />
+    <Compile Include="Features\User\Entities\PointInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\User\Entities\RealnameCheckUser.cs" />
+    <Compile Include="Features\User\Entities\SimpleUser.cs" />
+    <Compile Include="Features\User\Entities\TempDataBox.cs" />
+    <Compile Include="Features\User\Entities\User.cs" />
+    <Compile Include="Features\User\Entities\SimpleUser_AvatarExtension.cs" />
+    <Compile Include="Features\User\Entities\UserFeed.cs" />
+    <Compile Include="Features\User\Entities\UserMedal.cs" />
+    <Compile Include="Features\User\Entities\UserNotifySetting.cs" />
+    <Compile Include="Features\User\Entities\UserRole.cs" />
+    <Compile Include="Features\User\Entities\UserTempAvatar.cs" />
+    <Compile Include="Features\User\Entities\UserTempData.cs" />
+    <Compile Include="Features\User\Enums\EmailVerifyMode.cs" />
+    <Compile Include="Features\User\Enums\ExtentSettingsControlType.cs" />
+    <Compile Include="Features\User\Enums\Gender.cs" />
+    <Compile Include="Features\User\Enums\GetUserOption.cs" />
+    <Compile Include="Features\User\Enums\GetUserType.cs" />
+    <Compile Include="Features\User\Enums\InviteBuyInterval.cs" />
+    <Compile Include="Features\User\Enums\InviteMode.cs" />
+    <Compile Include="Features\User\Enums\InviteSerialStatus.cs" />
+    <Compile Include="Features\User\Enums\LimitMode.cs" />
+    <Compile Include="Features\User\Enums\ModeratorsType.cs" />
+    <Compile Include="Features\User\Enums\OnlineAction.cs" />
+    <Compile Include="Features\User\Enums\OnlineStatus.cs" />
+    <Compile Include="Features\User\Enums\SinatureFormat.cs" />
+    <Compile Include="Features\User\Enums\UserListOrderField.cs" />
+    <Compile Include="Features\User\Enums\UserPointType.cs" />
+    <Compile Include="Features\User\Enums\UserRegisterErrorCode.cs" />
+    <Compile Include="Features\User\Enums\UserRegisterState.cs" />
+    <Compile Include="Features\User\Enums\UserSpaceType.cs" />
+    <Compile Include="Features\User\Enums\UserTempDataType.cs" />
+    <Compile Include="Features\User\Errors\BanUserNoForumIDError.cs" />
+    <Compile Include="Features\User\Errors\BuyInviteSerialPointError.cs" />
+    <Compile Include="Features\User\Errors\BuyInviteSerialPointNotEnableError.cs" />
+    <Compile Include="Features\User\Errors\CannotChangeRealnameError.cs" />
+    <Compile Include="Features\User\Errors\CanNotDeleteSelfError.cs" />
+    <Compile Include="Features\User\Errors\DuplicateEmailError.cs" />
+    <Compile Include="Features\User\Errors\DuplicateUserIDError.cs" />
+    <Compile Include="Features\User\Errors\DuplicateUsernameError.cs" />
+    <Compile Include="Features\User\Errors\EmailNotMatchError.cs" />
+    <Compile Include="Features\User\Errors\EmailForbiddenError.cs" />
+    <Compile Include="Features\User\Errors\EmptyRealnameError.cs" />
+    <Compile Include="Features\User\Errors\EmptyInviterError.cs" />
+    <Compile Include="Features\User\Errors\EmptyInviteSerialError.cs" />
+    <Compile Include="Features\User\Errors\EmptyUsernameError.cs" />
+    <Compile Include="Features\User\Errors\EmptyUserPointNameError.cs" />
+    <Compile Include="Features\User\Errors\ExtendFieldEmptyError.cs" />
+    <Compile Include="Features\User\Errors\ExtendFieldnameEmptyError.cs" />
+    <Compile Include="Features\User\Errors\InvalidAvtivinCodeError.cs" />
+    <Compile Include="Features\User\Errors\InvalidUserPointMaxValueAndMinValueError.cs" />
+    <Compile Include="Features\User\Errors\InviteExpiredError.cs" />
+    <Compile Include="Features\User\Errors\InviterPointShort.cs" />
+    <Compile Include="Features\User\Errors\InviteSerialBuyOverflow.cs" />
+    <Compile Include="Features\User\Errors\InviteSerialCountFormatError.cs" />
+    <Compile Include="Features\User\Errors\InviteSerialDisableError.cs" />
+    <Compile Include="Features\User\Errors\InviteSerialError.cs" />
+    <Compile Include="Features\User\Errors\InviteUsedError.cs" />
+    <Compile Include="Features\User\Errors\MultiLevelMenuLackOfChildrenError.cs" />
+    <Compile Include="Features\User\Errors\NewPasswordError.cs" />
+    <Compile Include="Features\User\Errors\NoEnableUserPointError.cs" />
+    <Compile Include="Features\User\Errors\NoPermissionBanUserError.cs" />
+    <Compile Include="Features\User\Errors\NoPermissionEditThisRoleError.cs" />
+    <Compile Include="Features\User\Errors\NoPermissionEditUserPointError.cs" />
+    <Compile Include="Features\User\Errors\NoPermissionEditUserProfileError.cs" />
+    <Compile Include="Features\User\Errors\NoPermissionLoginError.cs" />
+    <Compile Include="Features\User\Errors\NoPermissionManageInviteSerialError.cs" />
+    <Compile Include="Features\User\Errors\NoPermissionManageModerator.cs" />
+    <Compile Include="Features\User\Errors\NoPermissionAvatarCheckError.cs" />
+    <Compile Include="Features\User\Errors\NotAgreeError.cs" />
+    <Compile Include="Features\User\Errors\NotSelectedUserError.cs" />
+    <Compile Include="Features\User\Errors\NoUsersAddToRolesError.cs" />
+    <Compile Include="Features\User\Errors\NoUsersRemoveFromRolesError.cs" />
+    <Compile Include="Features\User\Errors\PasswordError.cs" />
+    <Compile Include="Features\User\Errors\PasswordInconsistentError.cs" />
+    <Compile Include="Features\User\Errors\PointFormatError.cs" />
+    <Compile Include="Features\User\Errors\RealnameFormatError.cs" />
+    <Compile Include="Features\User\Errors\RecoverPasswordDisableError.cs" />
+    <Compile Include="Features\User\Errors\RegisterDisableError.cs" />
+    <Compile Include="Features\User\Errors\RegisterFrequentError.cs" />
+    <Compile Include="Features\User\Errors\RegisterIPLimitError.cs" />
+    <Compile Include="Features\User\Errors\SerialError.cs" />
+    <Compile Include="Features\User\Errors\SignatureLengthOverflowError.cs" />
+    <Compile Include="Features\User\Errors\UserIDInvalidError.cs" />
+    <Compile Include="Features\User\Errors\UserIsBanned.cs" />
+    <Compile Include="Features\User\Errors\UsernameCharError.cs" />
+    <Compile Include="Features\User\Errors\UsernameHasForbiddenWordsError.cs" />
+    <Compile Include="Features\User\Errors\UsernameIsExistsError.cs" />
+    <Compile Include="Features\User\Errors\UsernameLengthError.cs" />
+    <Compile Include="Features\User\Errors\UserNotActivedError.cs" />
+    <Compile Include="Features\User\Errors\UserNotExistsError.cs" />
+    <Compile Include="Features\User\Errors\UserPointCanNotDisablePointsError.cs" />
+    <Compile Include="Features\User\Errors\UserPointCannotExchangeError.cs" />
+    <Compile Include="Features\User\Errors\UserPointCannotTransferError.cs" />
+    <Compile Include="Features\User\Errors\UserPointCannotTransferToSelfError.cs" />
+    <Compile Include="Features\User\Errors\UserPointEmptyPointsExpressionError.cs" />
+    <Compile Include="Features\User\Errors\UserPointExchangeMinRemainingError.cs" />
+    <Compile Include="Features\User\Errors\UserPointExchangePointValueError.cs" />
+    <Compile Include="Features\User\Errors\UserPointExchangeRuleNotExistsError.cs" />
+    <Compile Include="Features\User\Errors\UserPointExchangeUnenabledPointError.cs" />
+    <Compile Include="Features\User\Errors\UserPointExpressionColumsError.cs" />
+    <Compile Include="Features\User\Errors\UserPointExpressionDivisorError.cs" />
+    <Compile Include="Features\User\Errors\UserPointIconEmptyError.cs" />
+    <Compile Include="Features\User\Errors\UserPointIconIsExistsError.cs" />
+    <Compile Include="Features\User\Errors\UserPointIconValueError.cs" />
+    <Compile Include="Features\User\Errors\UserPointInitialValueGreaterthanMaxValueError.cs" />
+    <Compile Include="Features\User\Errors\UserPointInitialValueLessthanMinValueError.cs" />
+    <Compile Include="Features\User\Errors\UserPointIsExistsExchangeRuleError.cs" />
+    <Compile Include="Features\User\Errors\UserPointOverMaxValueError.cs" />
+    <Compile Include="Features\User\Errors\UserPointOverMinValueError.cs" />
+    <Compile Include="Features\User\Errors\UserPointPointsExpressionFormatError.cs" />
+    <Compile Include="Features\User\Errors\UserPointTradeMaxValueError.cs" />
+    <Compile Include="Features\User\Errors\UserPointTradeMinValueError.cs" />
+    <Compile Include="Features\User\Errors\UserPointTradeRemainingError.cs" />
+    <Compile Include="Features\User\Errors\UserPointTransferMinRemainingError.cs" />
+    <Compile Include="Features\User\Errors\UserPointTransferPointValueError.cs" />
+    <Compile Include="Features\User\Errors\UserPointUpgradeIconCountError.cs" />
+    <Compile Include="Features\User\Errors\UserPointTradePointValueError.cs" />
+    <Compile Include="Features\User\Errors\NoPermissionManageUserMedalError.cs" />
+    <Compile Include="Features\User\Errors\EmptyDeleteMedalUserError.cs" />
+    <Compile Include="Features\User\Errors\EmptyAddMedalUserError.cs" />
+    <Compile Include="Features\User\Errors\MedalNotExistsError.cs" />
+    <Compile Include="Features\User\Errors\InvalidUserMedalEndDateError.cs" />
+    <Compile Include="Features\User\Errors\SignatureBannedKeywordsError.cs" />
+    <Compile Include="Features\User\Errors\EmptyDeleteUserMedalError.cs" />
+    <Compile Include="Features\User\Extensions\Actions\SaveUserGroups.cs" />
+    <Compile Include="Features\User\Filters\ExtendedFieldSearchInfo.cs" />
+    <Compile Include="Features\User\Filters\InviteSerialFilter.cs" />
+    <Compile Include="Features\User\Filters\UserSearchFilter.cs" />
+    <Compile Include="Features\User\InviteBO.cs" />
+    <Compile Include="Features\User\OnlineUserPool.cs" />
+    <Compile Include="Features\User\PointActions\PointActionBase.cs" />
+    <Compile Include="Features\User\PointActions\PointActionItemAttribute.cs" />
+    <Compile Include="Features\User\PointActions\PointActionManager.cs" />
+    <Compile Include="Features\User\PointActions\PointActionType.cs" />
+    <Compile Include="Features\User\PointActions\PointResult.cs" />
+    <Compile Include="Features\User\PointActions\Types\AlbumPointAction.cs" />
+    <Compile Include="Features\User\PointActions\Types\BlogPointAction.cs" />
+    <Compile Include="Features\User\PointActions\Types\CommentPointAction.cs" />
+    <Compile Include="Features\User\PointActions\Types\DoingPointAction.cs" />
+    <Compile Include="Features\User\PointActions\Types\ForumPointAction.cs" />
+    <Compile Include="Features\User\PointActions\Types\InvitePointAction.cs" />
+    <Compile Include="Features\User\PointActions\Types\PhotoPointAction.cs" />
+    <Compile Include="Features\User\PointActions\Types\PointShowPointAction.cs" />
+    <Compile Include="Features\User\PointActions\Types\SharePointAction.cs" />
+    <Compile Include="Features\User\PointActions\Types\UserPointAction.cs" />
+    <Compile Include="Features\User\Templates\ExtendedFieldTemplateMembers.cs" />
+    <Compile Include="Features\User\Templates\InviteTemplateMembers.cs" />
+    <Compile Include="Features\User\Templates\MedalTemplateMembers.cs" />
+    <Compile Include="Features\User\Templates\RoleTemplateMembers.cs" />
+    <Compile Include="Features\User\Templates\UserTemplateMembers.cs" />
+    <Compile Include="Features\User\UserBO.cs" />
+    <Compile Include="Features\User\UserTempDataBO.cs" />
+    <Compile Include="Features\NetDisk\ByteManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\DataAccess\DiskDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\DiskBO.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Entities\DiskDirectory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Entities\DiskEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Entities\DiskFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Entities\DiskInfo.cs" />
+    <Compile Include="Features\NetDisk\Entities\FileProperty\Exif.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Entities\FileProperty\FileProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Entities\FileProperty\Media.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Entities\FileProperty\Torrent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Entities\FileProperty\TorrentIncludeFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Entities\IFile.cs" />
+    <Compile Include="Features\NetDisk\Entities\ImageFile.cs" />
+    <Compile Include="Features\NetDisk\Entities\SimpleDiskFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Entities\TempFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Enumerations\CreateUpdateDiskDirectoryStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Enumerations\CreateUpdateDiskFileStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Filters\DiskFileFilter.cs" />
+    <Compile Include="Features\NetDisk\Enumerations\ExtractMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Enumerations\FileOrderBy.cs" />
+    <Compile Include="Features\NetDisk\Enumerations\FileViewMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Enumerations\MoveStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Extracts.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\FileProAnalyzer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\IconManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Unrar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\NetDisk\Errors\FileExistError.cs" />
+    <Compile Include="Features\NetDisk\Errors\NetDiskIsFullError.cs" />
+    <Compile Include="Features\NetDisk\Errors\NoDiskSpaceError.cs" />
+    <Compile Include="Features\NetDisk\Errors\NoPermissionUseNetDiskError.cs" />
+    <Compile Include="Common\Utils\CommonUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Globals\Entities\EntityBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Globals\Settings\SettingItemTypes\ExtensionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Globals\FileSystem\Entities\FileInfomation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Forum\Entities\ForumExtendedAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Globals\Enums\DateFormat.cs" />
+    <Compile Include="Globals\Enums\EnableStatus.cs" />
+    <Compile Include="Features\Forum\Enums\Forum.cs" />
+    <Compile Include="Features\Forum\Enums\ModeratorCenterAction.cs" />
+    <Compile Include="Features\Forum\Enums\OnlineCatalog.cs" />
+    <Compile Include="Globals\Enums\DeleteStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Features\Forum\Enums\Post.cs" />
+    <Compile Include="Features\Forum\Enums\SearchMode.cs" />
+    <Compile Include="Features\Forum\Enums\ThreadManageAction.cs" />
+    <Compile Include="Features\Forum\Enums\ThreadStatus.cs" />
+    <Compile Include="Features\Forum\Enums\ThreadType.cs" />
+    <Compile Include="Globals\Enums\TimeFormat.cs" />
+    <Compile Include="Features\Forum\Errors\NotIsAllowedFileTypeError.cs" />
+    <Compile Include="Features\Forum\Errors\PostSubjectBannedKeywords.cs" />
+    <Compile Include="Features\Forum\Errors\PostContentBannedKeywords.cs" />
+    <Compile Include="Features\Forum\Errors\OverMaxSellAttachPoint.cs" />
+    <Compile Include="Features\Forum\Errors\OverMinSellAttachPoint.cs" />
+    <Compile Include="Features\Forum\Errors\OverMaxSellThreadPoint.cs" />
+    <Compile Include="Features\Forum\Errors\OverMinSellThreadPoint.cs" />
+    <Compile Include="Features\Forum\Errors\CannotSellAttachError.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\ChangeSkinHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\ChatMessageHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\DeleteTempFileHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\DoingHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\DownloadHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\Js_EmoticonHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\NotifyHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\OnlineInfoHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\RegValidateHandler.cs" />
+    <Compile Include="Globals\Entities\HashedCollectionBase.cs" />
+    <Compile Include="Globals\Entities\HashedTimeLimitCollectionBase.cs" />
+    <Compile Include="Globals\Entities\TimeLimitCollectionBase.cs" />
+    <Compile Include="Globals\Entities\DataBaseInfo.cs" />
+    <Compile Include="Globals\Entities\CPUInfo.cs" />
+    <Compile Include="Globals\Entities\MemoryInfo.cs" />
+    <Compile Include="Globals\Enums\FileIconSizeEnum.cs" />
+    <Compile Include="Globals\Errors\BaseErrors\NoPermissionWithTargetError.cs" />
+    <Compile Include="Globals\FileSystem\Entities\DeletingFile.cs" />
+    <Compile Include="Globals\FileSystem\FileUploader.cs" />
+    <Compile Include="Globals\Jobs\JobDataClearMode.cs" />
+    <Compile Include="Globals\FileSystem\UploadActions\UploadDiskFileAction.cs" />
+    <Compile Include="Globals\Entities\NodeItem.cs" />
+    <Compile Include="Common\Runtime\BbsUrlHelper.cs" />
+    <Compile Include="Globals\Logs\LogHelper.cs" />
+    <Compile Include="Globals\FileSystem\ExeIconBuilder.cs" />
+    <Compile Include="Features\Forum\Entities\ThreadManageLog.cs" />
+    <Compile Include="Globals\Logs\Types\Topic_ApprovePost.cs" />
+    <Compile Include="Features\Passport\Entities\PassportClient.cs" />
+    <Compile Include="Globals\Settings\Types\PassportServerSettings.cs" />
+    <Compile Include="Globals\Settings\Types\PaySettings.cs" />
+    <Compile Include="Globals\Settings\Types\PointShowSettings.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeletePostTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\ApprovePostTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\ApproveTopicTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\RestoreTopicTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\ReCountUsersPointTask.cs" />
+    <Compile Include="Globals\XCmd\Types\ResetDenouncingCacheCmd.cs" />
+    <Compile Include="Globals\XCmd\Types\ResetFeedCommentInfoCmd.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="WebEngine\PagerInfo.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\ExecuteJobHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\StepByStepTaskHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\UploadTempFileHandler.cs">
+    </Compile>
+    <Compile Include="Globals\Entities\OperatorInfo.cs" />
+    <Compile Include="Globals\Entities\ExceptableEnumAttribute.cs" />
+    <Compile Include="Globals\Enums\LevelStatus.cs" />
+    <Compile Include="Globals\Enums\FileSizeUnit.cs" />
+    <Compile Include="Globals\Errors\DataNoSaveError.cs" />
+    <Compile Include="Globals\Errors\InvalidFileTypeError.cs" />
+    <Compile Include="Globals\Errors\NoPermissionVisitError.cs" />
+    <Compile Include="Globals\FileSystem\FileActionBase.cs" />
+    <Compile Include="Globals\FileSystem\UploadActions\UploadAlbumPhotoAction.cs" />
+    <Compile Include="Globals\FileSystem\UploadActions\UploadAttachmentAction.cs" />
+    <Compile Include="Globals\FileSystem\Uploader\ByteHelper.cs" />
+    <Compile Include="Globals\FileSystem\Uploader\Uploader.cs" />
+    <Compile Include="Globals\Jobs\Types\ClearChatMessageJob.cs" />
+    <Compile Include="Globals\Jobs\Types\AfterRequestInDay3AM.cs" />
+    <Compile Include="Globals\Jobs\Types\ClearNotifyJob.cs" />
+    <Compile Include="Globals\Jobs\Types\DeleteDenouncingJob.cs" />
+    <Compile Include="Globals\Jobs\Types\BeforeRequestIn3M.cs" />
+    <Compile Include="Globals\Jobs\Types\DeletePropLogJob.cs" />
+    <Compile Include="Globals\Logs\LogManager.cs" />
+    <Compile Include="Globals\Logs\Operation.cs" />
+    <Compile Include="Globals\Logs\OperationLog.cs" />
+    <Compile Include="Globals\Logs\OperationLogDao.cs" />
+    <Compile Include="Globals\Logs\OperationLogFilter.cs" />
+    <Compile Include="Globals\Logs\OperationTypeAttribute.cs" />
+    <Compile Include="Globals\Logs\OperationTypeInfo.cs" />
+    <Compile Include="Globals\Logs\Types\AdminLoginOperation.cs" />
+    <Compile Include="Globals\Logs\Types\Album_DeleteAlbum.cs" />
+    <Compile Include="Globals\Logs\Types\Album_DeleteAlbumByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Album_DeleteAlbumBySearch.cs" />
+    <Compile Include="Globals\Logs\Types\Album_DeletePhoto.cs" />
+    <Compile Include="Globals\Logs\Types\Album_DeletePhotoByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Album_DeletePhotoBySearch.cs" />
+    <Compile Include="Globals\Logs\Types\Blog_DeleteBlogArticle.cs" />
+    <Compile Include="Globals\Logs\Types\Blog_DeleteBlogArticleByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Blog_DeleteBlogArticleBySearch.cs" />
+    <Compile Include="Globals\Logs\Types\Doing_DeleteDoing.cs" />
+    <Compile Include="Globals\Logs\Types\Doing_DeleteDoingByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Doing_DeleteDoingBySearch.cs" />
+    <Compile Include="Globals\Logs\Types\Favorite_DeleteFavorite.cs" />
+    <Compile Include="Globals\Logs\Types\Favorite_DeleteFavoriteByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Favorite_DeleteFavoriteBySearch.cs" />
+    <Compile Include="Globals\Logs\Types\Share_DeleteShare.cs" />
+    <Compile Include="Globals\Logs\Types\Share_DeleteShareByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Share_DeleteShareBySearch.cs" />
+    <Compile Include="Globals\Logs\Types\user_BanUser.cs" />
+    <Compile Include="Globals\Logs\Types\user_changepassword.cs" />
+    <Compile Include="Globals\Logs\Types\user_delete.cs" />
+    <Compile Include="Globals\Logs\Types\User_IPChange.cs" />
+    <Compile Include="Globals\Logs\Types\user_ModeratorAppoint.cs" />
+    <Compile Include="Globals\Logs\Types\user_rolechange.cs" />
+    <Compile Include="Globals\Logs\Types\Topic_DeleteTopicBySearch.cs" />
+    <Compile Include="Globals\Logs\Types\Topic_DeleteTopicByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Topic_DeleteTopic.cs" />
+    <Compile Include="Globals\Logs\Types\Topic_DeletePost.cs" />
+    <Compile Include="Globals\Logs\Types\Topic_DeletePostByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Topic_DeleteAttachmentByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Topic_DeleteAttachmentBySearch.cs" />
+    <Compile Include="Globals\Logs\Types\Mission_DeleteMissionByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Feed_DeleteFeedBySearch.cs" />
+    <Compile Include="Globals\Logs\Types\Feed_DeleteFeedByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Feed_DeleteUserFeedByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Medal_DeleteMedalByIDs.cs" />
+    <Compile Include="Globals\Logs\Types\Medal_DeleteUsersMedal.cs" />
+    <Compile Include="Globals\Logs\Types\Medal_AddUsersMedal.cs" />
+    <Compile Include="Globals\Settings\Permission\BackendPageAttribute.cs" />
+    <Compile Include="Globals\Settings\Permission\IPermissionSetWithNode.cs" />
+    <Compile Include="Globals\Settings\Permission\PermissionSetWithNodeCollection.cs" />
+    <Compile Include="Globals\Settings\Permission\PermissionTargetAttribute.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\DefaultEmoticon.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\ForumPermissionSetNode.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\IBatchSave.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\ManageForumPermissionSetNode.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\NotifySettingItem.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\PostAliasNameItem.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\RateSetItem.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\RateSets.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\Medal.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\MedalLevel.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\TopLink.cs" />
+    <Compile Include="Globals\Settings\Types\AdvertSettings.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\ExceptionItem.cs" />
+    <Compile Include="Globals\Settings\Types\ChatSettings.cs" />
+    <Compile Include="Globals\Settings\Types\DeleteOperationLogJobSettings.cs" />
+    <Compile Include="Globals\Settings\Types\DiskSettings.cs" />
+    <Compile Include="Globals\Settings\Types\DoingSettings.cs" />
+    <Compile Include="Globals\Settings\Types\DownloadSettings.cs" />
+    <Compile Include="Globals\Settings\Types\EmoticonSettings.cs" />
+    <Compile Include="Globals\Settings\Types\FavoriteSettings.cs" />
+    <Compile Include="Globals\Settings\Types\ImpressionSettings.cs" />
+    <Compile Include="Globals\Settings\Types\NotifySettings.cs" />
+    <Compile Include="Globals\Settings\Types\PermissionTypes\BackendPermissions.cs" />
+    <Compile Include="Globals\Settings\Types\PostIndexAliasSettings.cs" />
+    <Compile Include="Globals\Settings\Types\RateSettings.cs" />
+    <Compile Include="Globals\Settings\Types\DefaultEmotSettings.cs" />
+    <Compile Include="Globals\Enums\DataAccessLevel.cs" />
+    <Compile Include="Globals\Enums\OnlineShowType.cs" />
+    <Compile Include="Globals\Errors\BaseErrors\EmptyError.cs" />
+    <Compile Include="Globals\Emails\TestEmail.cs" />
+    <Compile Include="Globals\Errors\BaseErrors\NoPermissionError.cs" />
+    <Compile Include="Globals\Errors\BaseErrors\NotExistsError.cs" />
+    <Compile Include="Globals\Filters\FilterItemFormType.cs" />
+    <Compile Include="Globals\Jobs\Types\BaiduPageOpJop.cs" />
+    <Compile Include="Globals\Jobs\Types\AfterRequestIn5M.cs" />
+    <Compile Include="Globals\Jobs\Types\BeforeRequestInDay0AM.cs" />
+    <Compile Include="Globals\Jobs\Types\SaveOnlineUserJob.cs" />
+    <Compile Include="Globals\Jobs\Types\AfterRequestIn3H.cs" />
+    <Compile Include="Globals\Jobs\Types\UpdateThreadViewsJob.cs" />
+    <Compile Include="Globals\Settings\Permission\NoPermissionType.cs" />
+    <Compile Include="Globals\Settings\Types\AjaxSettings.cs" />
+    <Compile Include="Globals\Settings\Types\SeoSettings.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\Judgement.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\Link.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\PostIcon.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\RoleInOnline.cs" />
+    <Compile Include="Globals\Settings\Types\JudgementSettings.cs" />
+    <Compile Include="Globals\Settings\Types\LinkSettings.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\ForumSettingItem.cs" />
+    <Compile Include="Globals\Settings\Types\ForumSettings.cs" />
+    <Compile Include="Globals\Settings\Types\PermissionTypes\ManageForumPermissionSet.cs" />
+    <Compile Include="Globals\Settings\Types\OnlineSettings.cs" />
+    <Compile Include="Globals\Settings\Types\BaiduPageOpJopSettings.cs" />
+    <Compile Include="Globals\Settings\Types\PostIconSettings.cs" />
+    <Compile Include="Globals\Settings\IExceptableSettingItem.cs" />
+    <Compile Include="Globals\Settings\Types\ShareSettings.cs" />
+    <Compile Include="Globals\Settings\Types\SkinSettings.cs" />
+    <Compile Include="Globals\Settings\Types\SpaceSettings.cs" />
+    <Compile Include="Globals\Settings\Types\UserSettings.cs" />
+    <Compile Include="Globals\Settings\Types\SearchSettings.cs" />
+    <Compile Include="Globals\Settings\Types\MedalSettings.cs" />
+    <Compile Include="Globals\Settings\Types\TopLinkSettings.cs" />
+    <Compile Include="Globals\Settings\Types\MissionSettings.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteAlbumTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteAttachmentTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteCommentTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteImpressionRecordTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteImpressionTypeTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeletePhotoTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteShareTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteFeedTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteUserTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\UpdateVarsDataTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\UpdateUsersDataTask.cs" />
+    <Compile Include="Globals\Vars\DataAccess\VarsDao.cs" />
+    <Compile Include="Globals\Vars\Entities\Vars.cs" />
+    <Compile Include="Globals\Vars\VarsManager.cs" />
+    <Compile Include="Globals\StepByStepTasks\DataAccess\StepByStepTaskDao.cs" />
+    <Compile Include="Globals\StepByStepTasks\RunningTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\TaskType.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteBlogArticleTask.cs" />
+    <Compile Include="Globals\Jobs\Types\DeleteFeedJob.cs" />
+    <Compile Include="Globals\FileSystem\DataAccess\FileDao.cs" />
+    <Compile Include="Globals\FileSystem\Entities\PhysicalFile.cs" />
+    <Compile Include="Globals\FileSystem\Entities\TempUploadFile.cs" />
+    <Compile Include="Globals\FileSystem\FileManager.cs" />
+    <Compile Include="Globals\Jobs\DataAccess\JobDao.cs" />
+    <Compile Include="Globals\Jobs\JobManager.cs" />
+    <Compile Include="Globals\Jobs\JobBase.cs" />
+    <Compile Include="Globals\AppHandlers\AppHandlerManager.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\OutputValidateCodeHandler.cs" />
+    <Compile Include="Globals\AppHandlers\Handlers\PhotoImageHandler.cs" />
+    <Compile Include="Globals\AppHandlers\IAppHandler.cs" />
+    <Compile Include="Globals\Settings\Permission\IPermissionSet.cs" />
+    <Compile Include="Globals\Settings\Permission\Permission.cs" />
+    <Compile Include="Globals\Settings\Permission\PermissionItem.cs" />
+    <Compile Include="Globals\Settings\Permission\PermissionItemAttribute.cs" />
+    <Compile Include="Globals\Settings\Permission\PermissionSetBase.cs" />
+    <Compile Include="Globals\Settings\Permission\PermissionSetType.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\FeedSendItem.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\PointActionItem.cs" />
+    <Compile Include="Globals\Settings\Types\AvatarSettings.cs" />
+    <Compile Include="Globals\Settings\Types\DateTimeSettings.cs" />
+    <Compile Include="Globals\Enums\UrlFormat.cs" />
+    <Compile Include="Globals\Settings\SettingItemTypes\PermissionLimit.cs" />
+    <Compile Include="Globals\Settings\Types\PermissionTypes\ManageUserPermissionSet.cs" />
+    <Compile Include="Globals\Settings\Types\PermissionSettings.cs" />
+    <Compile Include="Globals\Settings\Types\PermissionTypes\UserPermissionSet.cs" />
+    <Compile Include="Globals\Settings\Types\PermissionTypes\SpacePermissionSet.cs" />
+    <Compile Include="Globals\Settings\Types\FeedJobSettings.cs" />
+    <Compile Include="Globals\Settings\Types\PermissionTypes\ForumPermissionSet.cs" />
+    <Compile Include="Globals\StepByStepTasks\StepByStepTaskBase.cs" />
+    <Compile Include="Globals\StepByStepTasks\TaskManager.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteBlogCategoryTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteDoingTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteForumTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\JoinForumTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\DeleteTopicTask.cs" />
+    <Compile Include="Globals\StepByStepTasks\Types\UpdateForumDataTask.cs" />
+    <Compile Include="WebEngine\Template\Skin.cs" />
+    <Compile Include="Globals\ValidateCodes\DataAccess\ValidateCodeDao.cs" />
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCode_Style4.cs" />
+    <Compile Include="Globals\ValidateCodes\Types\ValidateCodeActionRecord.cs" />
+    <Compile Include="Globals\XCmd\IXCmd.cs" />
+    <Compile Include="Globals\XCmd\Types\ResetAlbumCacheCmd.cs" />
+    <Compile Include="Globals\XCmd\Types\ResetVarsCacheCmd.cs" />
+    <Compile Include="Globals\XCmd\Types\ResetUserCacheCmd.cs" />
+    <Compile Include="Globals\XCmd\Types\DeleteFileCmd.cs" />
+    <Compile Include="Globals\XCmd\XCmdManager.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Globals\SpaceAppBO.cs" />
+    <Compile Include="WebEngine\AjaxPanel.cs" />
+    <Compile Include="WebEngine\AjaxPanelContext.cs" />
+    <Compile Include="WebEngine\AjaxPanelDummyWriter.cs" />
+    <Compile Include="WebEngine\AjaxPanelWriter.cs" />
+    <Compile Include="WebEngine\Attributes\TemplateDefaultValueAttribute.cs" />
+    <Compile Include="WebEngine\Attributes\TemplateExtensionFunctionAttribute.cs" />
+    <Compile Include="WebEngine\Attributes\TemplateExtensionPropertyAttribute.cs" />
+    <Compile Include="WebEngine\Attributes\TemplateFunctionAttribute.cs" />
+    <Compile Include="WebEngine\Attributes\TemplateMagicPropertyAttribute.cs" />
+    <Compile Include="WebEngine\Attributes\TemplateMemberAttribute.cs" />
+    <Compile Include="WebEngine\Attributes\TemplatePackageAttribute.cs" />
+    <Compile Include="WebEngine\Attributes\TemplateTagAttribute.cs" />
+    <Compile Include="WebEngine\Attributes\TemplateVariableAttribute.cs" />
+    <Compile Include="Common\Types\NameObjectCollection.cs" />
+    <Compile Include="WebEngine\Config.cs" />
+    <Compile Include="WebEngine\Consts.cs" />
+    <Compile Include="WebEngine\Context.cs" />
+    <Compile Include="WebEngine\ErrorInfo.cs" />
+    <Compile Include="WebEngine\ErrorScope.cs" />
+    <Compile Include="WebEngine\Errors\TryParse_ParseFailed.cs" />
+    <Compile Include="WebEngine\FormVariable.cs" />
+    <Compile Include="WebEngine\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebEngine\PagePartBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebEngine\PagePartExecutor.cs" />
+    <Compile Include="WebEngine\Plugin\ActionHandlerInfo.cs" />
+    <Compile Include="WebEngine\Plugin\ActionHandlerInfoCollection.cs" />
+    <Compile Include="WebEngine\Plugin\ActionHandlerType.cs" />
+    <Compile Include="WebEngine\Plugin\ActionResult.cs" />
+    <Compile Include="WebEngine\Plugin\ActionTypes\BeforeUploadAvatar.cs" />
+    <Compile Include="WebEngine\Plugin\PluginBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebEngine\Plugin\PluginManager.cs" />
+    <Compile Include="WebEngine\RequestVariable.cs" />
+    <Compile Include="WebEngine\Routing\RouteResult.cs" />
+    <Compile Include="WebEngine\Routing\RouteTable.cs" />
+    <Compile Include="WebEngine\Template\TemplateExtensionMember.cs" />
+    <Compile Include="WebEngine\Template\TemplateElement.cs" />
+    <Compile Include="WebEngine\Template\TemplateElementCollection.cs" />
+    <Compile Include="WebEngine\Template\TemplateFile.cs" />
+    <Compile Include="WebEngine\Template\TemplateManager.cs" />
+    <Compile Include="WebEngine\Template\TemplateMembers.cs" />
+    <Compile Include="WebEngine\Template\TemplateParser.cs" />
+    <Compile Include="WebEngine\Template\TemplateSystemMembers.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\PassportServerInterface\api.disco" />
+    <Content Include="WebEngine\TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PassportServerInterface\api.wsdl" />
+    <None Include="Web References\PassportServerInterface\APIResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\ChatMessageProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\ChatSessionProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\CookieInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\DataForLogin.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\DataForNewUser.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\FriendGroupProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\FriendProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\KeyValueProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\NotifyProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\NotifyTypeProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\PassportInfoProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PassportServerInterface\SystemNotifyProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\UnreadNotifiesProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\UserProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\UserWebsiteProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PassportServerInterface\WebsiteProxy.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://siteimg.chinaz.com/SnapWebImg.asmx%3fop=WebSnapCreate">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ThumbnailServerInterface\</RelPath>
+      <UpdateFromURL>http://siteimg.chinaz.com/SnapWebImg.asmx%3fop=WebSnapCreate</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MaxLabs_bbsMax_ThumbnailServerInterface_SnapWebImg</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://p.chinaz.com/api.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PassportServerInterface\</RelPath>
+      <UpdateFromURL>http://p.chinaz.com/api.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>MaxLabs_bbsMax_PassportServerInterface_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\UBB\Types\" />
+    <Folder Include="Features\Chat\Enums\" />
+    <Folder Include="Features\Impression\Errors\" />
+    <Folder Include="Features\Mission\Extensions\Missions\" />
+    <Folder Include="Features\Notify\Interface\" />
+    <Folder Include="Features\PointShow\Templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

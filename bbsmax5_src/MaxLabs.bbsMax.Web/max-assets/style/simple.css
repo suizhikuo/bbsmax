@@ -1,0 +1,64 @@
+/*
+ * Official style sheet for BBSMax 3.0 final
+ * Archiver_Default.html
+ * Copyright (c) www.bbsmax.com
+ * 2008-11-06 Compressed Version
+ */
+body,div,ul,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,pre,table,caption,th,td,form,input,button,select,textarea{margin:0;padding:0;font-weight:normal;font-style:normal;font-size:100%;font-family:Tahoma,Helvetica,Arial,serif;}
+ol,ul{list-style:none;}
+fieldset,img,iframe{border:0;}
+:focus{outline:0;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;}
+body{margin:10px;color:#000;background:#fff;font-size:75%;line-height:1.5;}
+a:link,a:visited{color:#06c;text-decoration:none;}
+a:hover,a:active{text-decoration:underline;}
+/*= Simple Archives version core style ===================*/
+.header h1{font-size:2.5em;color:#06c;}
+.printtools{padding:0 1em;line-height:2.5em;height:2.5em;background:#f7f7f7;}
+.footer{clear:both;padding:10px 0;font-size:90%;color:#666;}
+.box{border:1px solid #ddd;margin-bottom:10px;clear:both;}
+.box-head{background:#f7f7f7;line-height:2;padding:0 1em;border-bottom:1px solid #ddd;}
+.box-head h3{font-size:120%;font-weight:bold;}
+.box-head h3,.box-head p{display:inline;}
+.box-main{padding:.5em 1em;font-size:120%;}
+.box-main p,.box-main ol,.box-main ul,.entry-list dl{margin-bottom:.5em;}
+.entry-list dd{margin-left:2em;}
+.box-main ol{list-style:decimal inside;}
+.date,.status{color:#666;}
+.author,.author a:link,.author a:visited{color:#393;}
+.paginationlite a.current{font-weight:bold;color:#000;}
+/*= Topic ================================================*/
+.entry-content{overflow:hidden;word-wrap:break-word;}
+* html .entry-content{width:95%;}
+.entry-content p,.entry-content ul,.entry-content ol,.entry-content dl,.entry-content table{margin-bottom:.5em;}
+.entry-content ul,.entry-content ol{margin-left:1.5em;list-style:disc;}
+.entry-content ol{list-style:decimal;}
+.entry-content td,.entry-content th{border:1px solid #ccc;}
+blockquote{padding-left:2em;margin-left:0;}
+.maxcode-code{border:1px solid #cadcea;border-left-width:3px;margin:10px 0;background:#fff;font-size:0.85em;}
+.maxcode-code dt{margin:0;padding:0 10px;line-height:2;border-bottom:1px dashed #ccc;}
+.maxcode-code dd{margin:0;}
+.maxcode-code pre{margin:0;width:100%;min-height:1em;overflow:auto;line-height:normal;white-space:pre;padding:0 0 1.5em 0;/*for IE*/overflow-y:hidden;/*for IE*/}
+.maxcode-code dd>/**/pre{padding:0;overflow-y:auto;}
+.maxcode-code pre code{display:block;padding:5px 10px;}
+.maxcode-code .maxcode-code-copy,.maxcode-code .maxcode-code-run{display:none;}
+.maxcode-quote{border:1px solid #cadcea;border-left-width:3px;padding:5px;background:#fff;margin-bottom:.5em;font-size:90%;}
+.maxcode-quote .maxcode-quote{font-size:100%;}
+* html .maxcode-quote{height:1%;}
+.maxcode-quote dl{margin-bottom:0;}
+.maxcode-quote dt{color:#06c;font-size:90%;}
+.maxcode-userenters .maxcode-quote dd{margin:0;}
+.maxcode-hidetips{margin:10px 0;width:250px;padding:2px 10px;border:1px solid #d2ebb4;color:#087d25;}
+.maxcode-hidecontent{border:1px solid #97cdec;background:#fff;padding:.5em .5em .5em 2em;margin-bottom:.5em;zoom:1;/*IE*/}
+.maxcode-hidecontent .maxcode-hidetips{color:#48a2e7;border:0;margin:0 0 10px -2em;}
+.maxcode-quote{border:1px solid #cadcea;border-left-width:3px;padding:5px;margin-bottom:.5em;}
+/*= Extra ================================================*/
+.multicolumns2 .column1,.multicolumns2 .column2,
+ul.multicolumns2 li,ol.multicolumns2 li,dl.multicolumns2 dd{width:50%;*width:49.9%;float:left;}
+.clearfix{zoom:1;}
+.clearfix:after{content:".";clear:both;display:block;height:0;visibility:hidden;}
+.red,a.red:link,a.red:visited{color:#f00;}
+.left{text-align:left;}
+.right{text-align:right;}
+.center{text-align:center;}

@@ -1,0 +1,217 @@
+﻿/*==========================================================
+    BBSMAX Yellow Theme
+    (c) www.bbsmax.com
+    Default User Space Theme Style
+==========================================================*/
+/*= Main part style ======================================*/
+.section-space .main-inner{border:solid #dfd0a3;border-width:0 1px;background:#fff url(../images/theme/edge.gif) repeat-y 139px 0;}
+.section-space .content{float:right;width:100%;}
+.section-space .content-main .round-top,
+.section-space .content-main .round-bottom{display:none;}
+.section-space .content-inner{margin-left:140px;}
+.section-space .spacesidebar{float:left;width:140px;margin-right:-140px;}
+.section-space .spacesidebar-inner{margin:0 10px;}
+.section-space .content-main-inner{padding:0 10px;border:none;}
+.section-space .content-sub .panel{margin:0 10px 10px;}
+
+.section-space-home .content-main{float:left;width:100%;}
+.section-space-home .content-main-inner{margin-right:240px;}
+.section-space-home .content-sub{float:right;width:240px;margin-left:-240px;}
+
+/*= Widgets =============================================*/
+.spacetip{margin:0 20px 10px;padding:10px 10px 10px 50px;color:#333;background:#fffbcc url(../images/icons/tip_alert.gif) no-repeat 10px 50%;}
+
+.section-space .panel-head{margin-bottom:10px;}
+.section-space .panel-title{float:left;}
+.section-space .panel-more{float:right;}
+
+.section-space .pagination-inner{float:right;}
+.section-space .pagination a,.section-space .pagination span{margin:0 0 0 3px;}
+
+.section-space .nodata{padding:10px;color:#999;text-align:center;}
+
+/*= Space sidebar =*/
+.spaceavatar{margin-bottom:10px;}
+
+.spaceaddfriend{font-size:117%;width:120px;height:40px;line-height:40px;margin-bottom:10px;background:url(../images/space_addfriend.png) no-repeat;}
+.spaceaddfriend a{display:block;padding-left:35px;}
+.spaceaddfriend a img{float:left;display:inline;margin-left:-20px;}
+.spaceaddfriend a:link,.spaceaddfriend a:visited{color:#fff;}
+
+.spaceapplist li,
+.spaceoperatelist li{clear:both;height:24px;line-height:24px;overflow:hidden;}
+.spaceapplist a,
+.spaceoperatelist a{float:left;padding-left:20px;white-space:nowrap;}
+.spaceapplist a img,
+.spaceoperatelist a img{float:left;display:inline;margin:4px 0 4px -20px;}
+.spaceapplist a:link,.spaceapplist a:visited{color:#333;}
+.spaceoperatelist a:link,.spaceoperatelist a:visited{color:#999;}
+
+.spaceapplist{margin-bottom:10px;}
+.spaceoperatelist{margin-bottom:10px;padding:10px 0;border:1px dotted #ddd;border-width:1px 0;}
+
+/*= Space caption =*/
+.spacecaption{margin-bottom:10px;}
+.spacecaption .caption-head{margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #ddd;}
+.spacecaption .ownername{font-size:133%;float:left;}
+.spacecaption .ownername .online{font-size:75%;color:#999;}
+.spacecaption .ownerfeed{float:right;}
+.spacecaption .ownerfeed a.rss{padding-left:20px;background:url(../images/icons/rss.gif) no-repeat 0 50%;}
+
+.ownerstatus-wrap{overflow:hidden;margin-bottom:10px;padding-left:10px;color:#666;background:url(../images/space_status.png) no-repeat 0 -25px;}
+.ownerstatus{float:left;padding-right:10px;background:url(../images/space_status.png) no-repeat 100% -50px;}
+.ownerstatus-inner{float:left;height:25px;line-height:25px;max-width:500px;overflow:hidden;background:url(../images/space_status.png) repeat-x 0 0;white-space:nowrap;overflow:hidden;}
+* html .ownerstatus-inner{width:90%;}
+.ownerstatus-form{background-position:0 -100px;}
+.ownerstatus-form .ownerstatus{background-position:100% -125px;}
+.ownerstatus-form .ownerstatus-inner{background-position:0 -75px;}
+* html .ownerstatus-form .ownerstatus-inner{width:320px;}
+.ownerstatus-form input.text{width:260px;border:0;background-color:transparent;}
+
+.ownerstat .numeric{color:#f60;}
+
+/*= Space owner info =*/
+.spaceownerinfo{margin-bottom:10px;line-height:1.6;}
+.spaceownerinfo li{float:left;width:49%;}
+.spaceownerinfo .label{color:#999;margin-right:5px;}
+.spaceownerinfo-viewall{text-align:right;}
+
+/*= Space warning =*/
+.spacewarning{font-size:117%;margin-bottom:10px;padding:10px;border:1px solid #f6db61;background:#fffbcc url(../images/highlight_1.gif) repeat-x;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.spacewarning .spacewarning-content{margin-bottom:10px;}
+.spacewarning .spaceaddfriend{font-size:100%;margin-bottom:0;}
+
+/*= Blog =*/
+.spacebloglist .spaceblog-item{margin-bottom:5px;padding-bottom:5px;border-bottom:1px solid #ddd;}
+.spacebloglist .title{margin-bottom:5px;}
+.spacebloglist .title .date{margin-left:10px;}
+.spacebloglist .summary{margin-bottom:5px;color:#333;}
+.spacebloglist .privacy{padding-left:18px;color:#d90;background:url(../images/icons/lock.gif) no-repeat 0 50%;}
+.spacebloglist .stat{color:#999;}
+
+/*= Album =*/
+.spacealbumlist .albumitem{float:left;width:265px;height:110px;margin:0 10px 10px 0;overflow:hidden;}
+.spacealbumlist .albumitem-inner{padding:0 0 0 114px;}
+.spacealbumlist .cover{float:left;display:inline;width:104px;margin-left:-114px;}
+.spacealbumlist .cover a{display:block;width:104px;height:104px;line-height:104px;text-align:center;font-size:0;}
+.spacealbumlist .cover img{padding:1px;border:1px solid #ddd;background:#fff;vertical-align:middle;}
+.spacealbumlist .cover a:hover,.spacealbumlist .cover a:active{text-decoration:none;}
+.spacealbumlist .cover a:hover img{border-color:#fffbcc;}
+.spacealbumlist .title{margin-bottom:5px;}
+.spacealbumlist .name{font-weight:bold;}
+.spacealbumlist .privacy{padding-left:18px;color:#d90;background:url(../images/icons/lock.gif) no-repeat 0 50%;}
+.spacealbumlist .counts{color:#666;}
+.spacealbumlist .update{color:#999;}
+
+/*= Space commoent =*/
+.spacecommentform{padding-left:65px;}
+.spacecommentform-avatar{float:left;display:inline;margin-left:-65px;}
+.spacecommentform-field{padding:10px;background:#fffcd8;border:1px solid #fffbcc;border-width:1px 0;}
+.spacecommentform .formrow{margin-bottom:10px;}
+.spacecommentform .formrow-action{margin-bottom:0;}
+.spacecommentform .form-enter{float:left;margin-right:10px;}
+.spacecommentform .form-tip{float:left;}
+.spacecommentform-enter .form-enter{float:none;height:50px;overflow:hidden;margin-right:0;background:#fff;border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;}
+.spacecommentform-enter textarea{width:99%;height:50px;border:0;}
+.spacecommentform-captcha input.validcode{width:6em;}
+
+.spacecomment-list{margin-bottom:10px;border-top:1px solid #eee;}
+.spacecomment-list .spacecomment-entry{padding:5px 26px 5px 65px;border-bottom:1px solid #eee;}
+.spacecomment-list .avatar{float:left;display:inline;width:65px;margin-left:-65px;}
+.spacecomment-list .content{float:left;width:100%;}
+.spacecomment-list .actions{float:right;display:inline;width:16px;margin-right:-26px;}
+.spacecomment-list .actions a{display:block;width:16px;height:16px;overflow:hidden;text-indent:-999px;background-image:url(../images/actions.png);background-position:no-repeat;}
+.spacecomment-list .actions .action-delete{background-position:0 0;}
+.spacecomment-list .actions .action-delete:hover{background-position:-16px 0;}
+.spacecomment-list .actions .action-reply{background-position:0 -96px;}
+.spacecomment-list .actions .action-reply:hover{background-position:-16px -96px}
+.spacecomment-list .actions .action-edit{background-position:0 -144px;}
+.spacecomment-list .actions .action-edit:hover{background-position:-16px -144px;}
+.spacecomment-list .title{margin-bottom:5px;}
+.spacecomment-list .title .date{margin-left:10px;}
+.spacecomment-list .maxcode-quote{margin-bottom:5px;padding:5px 10px;border:1px solid #ddd;background:#f8f8f8 url(../images/quote.gif) no-repeat 100% 0;}
+
+.spacecomment-list .spacecomment-entry *[class~="actions"]{visibility:hidden;}
+.spacecomment-list .spacecomment-entry:hover *[class~="actions"]{visibility:visible;}
+
+/*= Impressions =*/
+.impressionform{margin-bottom:0;}
+.impressionform .formrow{margin-bottom:5px;}
+.impressionform .formrow .label{margin-bottom:5px;}
+.impressionform .impressionform-input input.text{width:95%;padding:2px 0;}
+.impressionform .impressionform-submit{float:right;line-height:25px;}
+.impressionform .impression-textlimit{float:left;line-height:25px;margin-right:10px;color:#999;}
+.impressionform .impressionform-suggest a{white-space:nowrap;}
+.impressionform .impressionform-suggest a:link,.impressionform .impressionform-suggest a:visited{color:#666;}
+
+.impressionwords{margin-bottom:10px;text-align:center;}
+.impressionwords a{display:inline-block;line-height:2;padding:0 5px;white-space:nowrap;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}
+.impressionwords a:hover,.impressionwords a:active{color:#fff !important;text-decoration:none;}
+.impressionwords .imp-1{color:#136197 !important;}
+.impressionwords .imp-2{color:#db3f02 !important;}
+.impressionwords .imp-3{color:#5e8f08 !important;}
+.impressionwords .imp-4{color:#c91f17 !important;}
+.impressionwords .imp-5{color:#ff9600 !important;}
+.impressionwords .imp-6{color:#5d6165 !important;}
+.impressionwords .imp-7{color:#1cbdcf !important;}
+.impressionwords .imp-8{color:#5b288e !important;}
+.impressionwords .imp-9{color:#082994 !important;}
+.impressionwords .imp-10{color:#ffc600 !important;}
+.impressionwords .imp-1:hover{background:#136197;}
+.impressionwords .imp-2:hover{background:#db3f02;}
+.impressionwords .imp-3:hover{background:#5e8f08;}
+.impressionwords .imp-4:hover{background:#c91f17;}
+.impressionwords .imp-5:hover{background:#ff9600;}
+.impressionwords .imp-6:hover{background:#5d6165;}
+.impressionwords .imp-7:hover{background:#1cbdcf;}
+.impressionwords .imp-8:hover{background:#5b288e;}
+.impressionwords .imp-9:hover{background:#082994;}
+.impressionwords .imp-10:hover{background:#ffc600;}
+
+.impression-log{margin-bottom:10px;}
+.impression-log ul{border-top:1px solid #eee;}
+.impression-log li{padding:5px;border-bottom:1px solid #eee;}
+
+.impression-note{color:#666;}
+
+/*= Visitor =*/
+.spacevisitorlist .visitoritem{margin-bottom:10px;padding-left:60px;padding-right:21px;}
+.spacevisitorlist .avatar{float:left;display:inline;margin-left:-60px;}
+.spacevisitorlist .name,
+.spacevisitorlist .date,
+.spacevisitorlist .operate{white-space:nowrap;}
+.spacevisitorlist .addfriend{padding-left:16px;background:url(../images/icons/friend_add.gif) no-repeat 0 50%;}
+.spacevisitorlist .action{float:right;display:inline;margin-right:-21px;width:11px;}
+.spacevisitorlist .action a{float:left;width:11px;height:11px;margin-bottom:5px;overflow:hidden;text-indent:-999px;background-repeat:no-repeat;}
+.spacevisitorlist .action a.action-delete{background-image:url(../images/item_delete.gif);}
+.spacevisitorlist .action a:hover{background-position:-11px 0;}
+
+.spacevisitorlist .chat a,
+.spacevfriendlist .chat a{padding-left:16px;background:url(../images/icons/chat_online.gif) no-repeat 0 50%;}
+.spacevisitorlist .chat a.chat-offline,
+.spacevfriendlist .chat a.chat-offline{background-image:url(../images/icons/chat_offline.gif);}
+.spacevisitorlist .chat a.chat-online:link,.spacevisitorlist .chat a.chat-online:visited,
+.spacevfriendlist .chat a.chat-online:link,.spacevfriendlist .chat a.chat-online:visited{color:#178eb9;}
+.spacevisitorlist .chat a.chat-offline:link,.spacevisitorlist .chat a.chat-offline:visited,
+.spacevfriendlist .chat a.chat-offline:link,.spacevfriendlist .chat a.chat-offline:visited{color:#666;}
+
+.spacevisitorlist .visitoritem *[class~="action"]{visibility:hidden;}
+.spacevisitorlist .visitoritem:hover *[class~="action"]{visibility:visible;}
+
+.section-space-visitor .spacevisitorlist .visitoritem{float:left;width:160px;margin-right:10px;}
+
+/*= Friend =*/
+.spacevfriendlist{margin-right:-5px;}
+.spacevfriendlist li{float:left;width:68px;height:80px;margin:0 5px 5px 0;text-align:center;overflow:hidden;}
+.spacevfriendlist .avatar{display:block;width:54px;height:54px;overflow:hidden;margin:0 auto;background:url(../images/avatar_bg.gif) no-repeat;}
+.spacevfriendlist .avatar img{margin:3px;}
+.spacevfriendlist .name{display:block;white-space:nowrap;}
+.spacevfriendlist a:link,.spacevfriendlist a:visited{color:#000;}
+
+.section-space-friend .spacevfriendlist li{height:100px;}
+
+/*= Space owner profile =*/
+.spaceownerprofile .profile-title{font-size:117%;margin-bottom:10px;padding-top:10px;border-top:1px dashed #ddd;}
+.spaceownerprofile .profile-list{margin-bottom:10px; line-height:1.8;}
+.spaceownerprofile .profile-list li{float:left;width:49.9%;white-space:nowrap;}
+.spaceownerprofile .profile-list .label{margin-right:5px;color:#666;}

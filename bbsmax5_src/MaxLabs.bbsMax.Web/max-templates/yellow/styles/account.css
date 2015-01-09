@@ -1,0 +1,101 @@
+﻿/*==========================================================
+    BBSMAX Yellow Theme
+    (c) www.bbsmax.com
+==========================================================*/
+.section-account .content-main-inner{padding:60px 10px 50px;border:solid #dfd0a3;border-width:0 1px;background:#fff;}
+
+.section-account .btn-wrap .button{font-size:12px;}
+.section-account .btn-wrap{background:url(../images/button_2.png) no-repeat;}
+.section-account .btn-wrap .btn{height:25px;line-height:25px;background:url(../images/button_2.png) no-repeat 100% -25px;}
+.section-account .btn-wrap .button{height:25px;line-height:25px;padding:0 10px;}
+.section-account .btn-disable{background-position:0 -50px;}
+.section-account .btn-disable .btn{background-position:100% -75px;}
+
+.formcaption{margin-bottom:30px;}
+.formcaption h3{font-size:117%;margin-bottom:0;}
+
+/*= Form (inherit: common.css - .fromgroup ) =*/
+.formcaption h3{color:#000;}
+.formrow{margin-bottom:10px;padding-left:70px;}
+.formrow .label{float:left;display:inline;width:60px;margin-left:-70px;font-weight:normal;line-height:2;}
+.formrow .form-note{margin-top:5px;}
+.formrow .ajaxloading{padding:0 10px 0 25px;background:url(../images/ajaxloading.gif) no-repeat 5px 50%;}
+.formrow input.text{width:150px;padding:3px;}
+.formrow input.validcode{width:60px;}
+.formrow .captcha img{border:1px solid #ccc;vertical-align:top;}
+.account-message{font-size:117%;margin:10px 0;padding:10px 10px 10px 35px;color:#333;background:url(../images/icons/tip_alert.gif) no-repeat 0 50%;}
+
+.loginform-wrap{float:left;width:50%;background:url(../images/theme/login_edge.gif) no-repeat 100% 0;}
+.loginform-wrap .formcaption{display:none;}
+.loginform{float:right;display:inline;width:400px;margin:0 10px 0 0;}
+.loginform .formrow .label{text-align:right;}
+.loginform .remember,
+.loginform .invisible{margin-bottom:5px;}
+.loginform .remember input,
+.loginform .invisible input{margin:0;vertical-align:middle;}
+.loginform .formrow-action{line-height:25px;}
+
+.reglink-wrap{float:left;width:49.9%;}
+.reglink{width:400px;}
+.reglink-inner{padding-left:150px;background:url(../images/theme/reg_icon.png) no-repeat 40px 0;min-height:80px;height:auto !important;height:80px;}
+.reglink .reglink-text h3{font-size:117%;margin-bottom:10px;}
+.reglink .reglink-text p{color:#999;margin-bottom:10px;}
+.reglink .register-link{font-size:117%;}
+
+.section-account-register .content-main-inner{padding:30px 10px;}
+
+.registerdock-wrap{float:left;width:70%;background:url(../images/theme/login_edge.gif) no-repeat 100% 0;}
+.registerdock{margin:0 10px 0 70px;}
+.registerform .formrow-agree input{margin:0;vertical-align:middle;}
+
+.loginlink-wrap{float:left;width:29.9%;}
+.loginlink-inner{padding-left:150px;background:url(../images/theme/reg_icon.png) no-repeat 40px 0;min-height:80px;height:auto !important;height:80px;}
+.loginlink .loginlink-text h3{font-size:117%;margin-bottom:10px;}
+.loginlink .loginlink-text p{color:#999;margin-bottom:10px;}
+.loginlink .login-link{font-size:117%;}
+
+.register-inviter{margin-bottom:10px;padding-left:70px;}
+.register-inviter .inviter-avatar{float:left;display:inline;margin-left:-70px;}
+.register-inviter .inviter-avatar img{padding:1px;border:1px solid #ccc;background:#fff;}
+.register-inviter .inviter-message{padding:10px;background:#fff9ec;border:1px solid #dfcb97;}
+.register-inviter .inviter-message h3{font-size:114%;margin-bottom:1em;margin-left:-16px;padding-left:16px;background:url(../images/theme/arrow.gif) no-repeat;}
+.register-inviter .inviter-message p{margin-bottom:5px;}
+
+.registerverify-step{font-size:117%;margin-bottom:20px;}
+.registerverify-step li{padding:20px 0;border-bottom:1px solid #ddd;}
+.registerverify-step li strong{color:#333;margin-right:40px;}
+
+.registerverify-buttontext{color:#666;margin-bottom:20px;}
+
+.agreement-content{margin-bottom:10px;border:1px solid #dfcb97;background:#fff9ec;}
+.agreement-content-inner{height:300px;line-height:1.6;margin:10px;padding:10px;overflow:auto;}
+
+.section-account-findpassword .content-main-inner{padding:30px 10px;}
+.findpassworddock{margin:0 10px 0 70px;}
+
+/*= Info =================================================*/
+.section-info .content-main-inner{padding:30px 10px 10px;border:solid #dfd0a3;border-width:0 1px;background:#fff;}
+
+.infopanel .panel-body{padding:50px 10px;background:#fff;}
+
+.operatemessage{width:50%;min-width:350px;line-height:1.8;margin:0 auto 20px;}
+.operatemessage .operatemessage-inner{padding-left:70px;background-repeat:no-repeat;background-position:5px 10px;}
+.operatemessage .message-title{font-size:133%;margin:0 0 .5em;}
+.operatemessage .message-intro,
+.operatemessage .message-action{margin-bottom:5px;color:#666;}
+
+.operatemessage .message-error{background-image:url(../images/icons/error_48.png);}
+.operatemessage .message-success{background-image:url(../images/icons/success_48.png);}
+.operatemessage .message-alert{background-image:url(../images/icons/alert_48.png);}
+
+.extramessage-wrap{padding:20px 0;background:url(../images/theme/info_bg.png) no-repeat 50% 0;}
+.extramessage{width:50%;min-width:350px;line-height:1.8;margin:0 auto;}
+.extramessage .extramessage-inner{padding-left:70px;background:url(../images/icons/online.gif) no-repeat 50px 2px;}
+
+.fastloginform-wrap{width:50%;margin:10px auto;}
+.fastloginform{margin-left:50px;}
+.fastloginform .remember,
+.fastloginform .invisible{margin-bottom:5px;}
+.fastloginform .remember input,
+.fastloginform .invisible input{margin:0;vertical-align:middle;}
+.fastloginform .formrow-action{line-height:25px;}

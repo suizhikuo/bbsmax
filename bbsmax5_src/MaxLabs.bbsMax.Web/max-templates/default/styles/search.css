@@ -1,0 +1,38 @@
+﻿.section-search .content-main-inner{padding:10px 10px 0;}
+
+.searchform{padding:20px;background:#f2f7fb;zoom:1;}
+.searchform .panel-head{display:none;}
+
+.searchform-normal{margin-bottom:10px;padding-left:180px;}
+.searchform-normal .searchform-enter{float:left;}
+.searchform-normal .searchform-enter input.searchform-input{float:left;margin-right:5px;width:260px;height:18px;}
+.searchform-normal .searchform-enter .searchform-select{float:left;margin-right:5px;width:80px;height:24px;}
+.searchform-normal .searchform-submit{float:left;}
+.searchform-normal .searchform-toggle{float:left;line-height:25px;}
+.searchform-normal .searchform-tip{float:left;clear:both;margin-top:10px;color:#999;width:100%;}
+
+.searchform-advance{margin-bottom:0;padding-top:2px;padding-left:100px;background:url(../images/line_1.gif) repeat-x;}
+.searchform-advance .formrow{padding-top:10px;padding-left:80px;}
+.searchform-advance .formrow .label{float:left;display:inline;margin-left:-80px;width:70px;}
+.searchform-advance .formrow .forumselect{width:260px;height:150px;}
+
+.searchresult .panel-head{line-height:2.8;padding:0 5px 0 10px;border-top:3px solid #eee;border-bottom:1px solid #eee;}
+.searchresult .panel-title{float:left;margin-right:20px;}
+.searchresult .panel-title .count{color:#f60;}
+
+.searchresult .searchresult-table{width:100%;table-layout:fixed;}
+.searchresult-table td{padding:5px;border-bottom:1px solid #eee;}
+.searchresult-table thead td{color:#999;background:#f8f8f8;white-space:nowrap;}
+.searchresult-table thead a:link,.searchresult-table thead a:visited{color:#999;}
+.searchresult-table td.icon{width:25px;}
+.searchresult-table td.title{width:50%;}
+.searchresult-table td.title .title-wrap{word-wrap:break-word;overflow:hidden;}
+.searchresult-table td.author,
+.searchresult-table td.cate,
+.searchresult-table td.last{width:120px;white-space:nowrap;}
+.searchresult-table td.author a,
+.searchresult-table td.last a{display:block;}
+.searchresult-table td.stats{width:80px;text-align:right;white-space:nowrap;}
+
+.search-loader{padding:20px;color:#999;text-align:center;}
+.search-loader span{padding:5px 0 5px 20px;background:url(../images/ajaxloading.gif) no-repeat 0 50%;}

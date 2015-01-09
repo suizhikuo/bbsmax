@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MaxLabs.bbsMax.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MaxLabs_bbsMax_PassportServerInterface_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://p.chinaz.com/api.asmx</Value>
+    </Setting>
+    <Setting Name="MaxLabs_bbsMax_ThumbnailServerInterface_SnapWebImg" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://siteimg.chinaz.com/SnapWebImg.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

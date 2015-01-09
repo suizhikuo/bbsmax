@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MaxLabs.MaxEngine</name>
+    </assembly>
+    <members>
+        <member name="T:MaxLabs.MaxEngine.Action.ActionManager">
+            <summary>
+            用于管理表单动作
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Action.ActionManager.Current">
+            <summary>
+            获取当前实例
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Action.ActionInfo.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Action.ActionInfo.ActionName">
+            <summary>
+            动作名称
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Action.ActionInfo.ActionClass">
+            <summary>
+            任务对应的类
+            </summary>
+        </member>
+        <member name="T:MaxLabs.MaxEngine.Action.ActionContext">
+            <summary>
+            Action处理上下文
+            </summary>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ActionContext.Get(System.String)">
+            <summary>
+            获取当前请求中的表单数据，如果没有该表单项，将返回null(千万不要将返回结果不判断 null 就直接 Trim() 或者其他任何字符串操作)
+            </summary>
+            <param name="formName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ActionContext.Get(System.String,MaxLabs.MaxEngine.Action.Method)">
+            <summary>
+            获取当前请求中的表单数据，如果没有该表单项，将返回null(千万不要将返回结果不判断 null 就直接 Trim() 或者其他任何字符串操作)
+            </summary>
+            <param name="formName"></param>
+            <param name="method"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ActionContext.Get(System.String,MaxLabs.MaxEngine.Action.Method,System.String)">
+            <summary>
+            获取当前请求中的表单数据，如果没有该表单项，将返回传入的默认值
+            </summary>
+            <param name="formName"></param>
+            <param name="method"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ActionContext.Get``1(System.String,``0)">
+            <summary>
+            获取当前请求中的表单数据，如果没有该表单项，将返回传入的默认值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="formName"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ActionContext.Get``1(System.String,MaxLabs.MaxEngine.Action.Method,``0)">
+            <summary>
+            获取当前请求中的表单数据，如果没有该表单项，将返回传入的默认值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="formName"></param>
+            <param name="method"></param>
+            <param name="defaultValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ActionContext.Get``1(System.String)">
+            <summary>
+            获取当前请求中的表单数据，如果没有该表单项，将返回null
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="formName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ActionContext.Get``1(System.String,MaxLabs.MaxEngine.Action.Method)">
+            <summary>
+            获取当前请求中的表单数据，如果没有该表单项，将返回null
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="formName"></param>
+            <param name="method"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ActionContext.IsClick(System.String)">
+            <summary>
+            判断是否点击了指定名称的按钮
+            </summary>
+            <param name="buttonName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ActionContext.TryParse(System.Type,System.String,System.Object@)">
+            <summary>
+            尝试解析字符串
+            </summary>
+            <param name="type">所要解析成的类型</param>
+            <param name="value">字符串</param>
+            <param name="result">解析结果，解析失败将返回null</param>
+            <returns>解析失败将返回具体错误消息，否则将返回null，解析结果通过result获得</returns>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Action.ActionContext.Current">
+            <summary>
+            获取当前请求中的Action处理上下文，只有在请求被页面代码识别为Action处理请求时此属性才有对应的值
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Action.ActionContext.CurrentPage">
+            <summary>
+            当前请求页面
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Action.ActionContext.ClientScriptManager">
+            <summary>
+            客户端脚本管理器
+            </summary>
+        </member>
+        <member name="T:MaxLabs.MaxEngine.Action.Method">
+            <summary>
+            Http请求方法
+            </summary>
+        </member>
+        <member name="F:MaxLabs.MaxEngine.Action.Method.All">
+            <summary>
+            所有方法
+            </summary>
+        </member>
+        <member name="F:MaxLabs.MaxEngine.Action.Method.Post">
+            <summary>
+            Post提交
+            </summary>
+        </member>
+        <member name="F:MaxLabs.MaxEngine.Action.Method.Get">
+            <summary>
+            Get提交
+            </summary>
+        </member>
+        <member name="T:MaxLabs.MaxEngine.Action.ClientScriptManager">
+            <summary>
+            客户端脚本管理器
+            </summary>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ClientScriptManager.SetVariable(System.String,System.String)">
+            <summary>
+            设置JS变量
+            </summary>
+            <param name="variableName">变量名</param>
+            <param name="value">变量值</param>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ClientScriptManager.GenerateCode">
+            <summary>
+            生成JS代码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Action.ActionAttribute.GetFromType(System.Type)">
+            <summary>
+            从类型信息中获取自定义标签
+            </summary>
+            <param name="type">类型的反射信息</param>
+            <returns>自定义标签实例，或者null</returns>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Action.ActionAttribute.Name">
+            <summary>
+            动作名称
+            </summary>
+        </member>
+    </members>
+</doc>

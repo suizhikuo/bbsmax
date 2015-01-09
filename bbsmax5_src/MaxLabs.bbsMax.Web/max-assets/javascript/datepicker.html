@@ -1,0 +1,321 @@
+﻿<!--
+by js菜鸟 wenquan
+email:wenquan@bbsmax.com
+copyright:bbs.bbsmax.com
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>选择日期</title>
+<script type="text/javascript">
+    // copyright ©2009 bbsmax
+    // design : wen quan 
+    // 2009-5-16 added by http://www.bbsmax.com/ 
+        var param = {};
+        
+        function setDefaultDate() {
+            
+            param.date = new Date();
+            param.year = param.date.getFullYear();
+            param.month = param.date.getMonth() + 1;
+            param.day = param.date.getDate();
+            param.showtime = "";
+        }
+        
+        var result = null;   
+        var showTime;
+        var currentTime;
+
+        var w = location.search;
+        if (w) {
+            w = w.substring(1);
+            var arr = w.split("&");
+            w = arr.join('",');
+            w = w.replace(/=/g, ':"');
+            w = w + '"';
+            param = eval("param={" + w + '}');
+            if (param.date && param.date.match(/\d{4}\D\d{1,2}\D\d{1,2}/)) {
+
+                var match = /(\d{4})\D(\d{1,2})\D(\d{1,2})/.exec(param.date);
+                param.year = parseInt(match[1], 10);
+                param.month = parseInt(match[2], 10);
+                param.day = parseInt(match[3], 10);
+            }
+            else {
+                setDefaultDate();
+            }
+        }
+        else {
+            setDefaultDate();
+        }
+
+        
+        
+        var months = new Array("一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二");
+        var daysInMonth = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+        var days = new Array("日", "一", "二", "三", "四", "五", "六");
+        var classTemp;
+        var today = new getToday();
+        var year = today.year;
+        var month = today.month;
+        var newCal;
+
+        function getDays(month, year) {
+            if (1 == month) return ((0 == year % 4) && (0 != (year % 100))) || (0 == year % 400) ? 29 : 28;
+            else return daysInMonth[month];
+        }
+
+        function getToday() {
+            this.now = new Date();
+            this.year = this.now.getFullYear();
+            this.month = this.now.getMonth();
+            this.day = this.now.getDate();
+        }
+
+        function Calendar() {
+            newCal = new Date(year, month, 1);
+            today = new getToday();
+            var day = -1;
+            var startDay = newCal.getDay();
+            var endDay = getDays(newCal.getMonth(), newCal.getFullYear());
+            var daily = 0;
+            day = param.day;
+            //if ((today.year == newCal.getFullYear()) && (today.month == newCal.getMonth())) {
+            //    day = today.day;
+            //}
+            
+            var caltable = document.getElementById("caltable").tBodies[0];
+            var intDaysInMonth = getDays(newCal.getMonth(), newCal.getFullYear());
+            for (var intWeek = 0; intWeek < caltable.rows.length; intWeek++)
+                for (var intDay = 0; intDay < caltable.rows[intWeek].cells.length; intDay++) {
+                var cell = caltable.rows[intWeek].cells[intDay];
+                var montemp = (newCal.getMonth() + 1) < 10 ? ("0" + (newCal.getMonth() + 1)) : (newCal.getMonth() + 1);
+                if ((intDay == startDay) && (0 == daily)) { daily = 1; }
+                var daytemp = daily < 10 ? ("0" + daily) : (daily);
+                var d = "<" + newCal.getFullYear() + "-" + montemp + "-" + daytemp + ">";
+                if (day == daily) cell.className = "DayNow";
+                else if (intDay == 6) cell.className = "DaySat";
+                else if (intDay == 0) cell.className = "DaySun";
+                else cell.className = "Day";
+                if ((daily > 0) && (daily <= intDaysInMonth)) {
+                    cell.innerHTML = daily;
+                    daily++;
+                } else {
+                    cell.className = "CalendarTD";
+                    cell.innerText = "";
+                }
+            }
+            document.getElementById("year").value = year;
+            document.getElementById("month").value = month + 1;
+        }
+
+        function subMonth() {
+            if ((month - 1) < 0) {
+                month = 11;
+                year = year - 1;
+            } else {
+                month = month - 1;
+            }
+            Calendar();
+        }
+
+        function addMonth() {
+            if ((month + 1) > 11) {
+                month = 0;
+                year = year + 1;
+            } else {
+                month = month + 1;
+            }
+            Calendar();
+        }
+
+
+        function subYear() {
+            year = year - 1;
+            Calendar();
+        }
+
+        function addYear() {
+            year = year + 1;
+            Calendar();
+        }
+
+        function setDate() {
+            var m = document.getElementById("month")
+            if (m.value < 1 || m.value > 12) {
+                alert("月的有效范围在1-12之间!");
+                return;
+            }
+            year = Math.ceil(document.getElementById("year").value);
+            month = Math.ceil(m.value - 1);
+            Calendar();
+        }
+
+        function closeData() {
+            parent.datePanel.result = result;
+            parent.datePanel.close();
+            parent.datePanel = null;
+        }
+        
+        function selectDay(e)
+        {
+            if (e && e.firstChild)
+            {
+                var day = e.firstChild.nodeValue;
+                if (day) {
+                 
+                        result = year + "-" + (month + 1) + "-" + day;
+                        closeData();
+                }
+            }
+        }
+
+    </script>
+<script type="text/javascript">
+        function buttonOver() {
+            var e = window.event || arguments[0];
+            if (!e)
+                return;
+            var obj = e.srcElement || e.currentTarget;
+            obj.style.backgroundColor = "#ccddff";
+        }
+
+        function buttonOut() {
+            var e = window.event || arguments[0];
+            if (!e)
+                return;
+            var obj = e.srcElement || e.currentTarget;
+            window.setTimeout(function() { obj.style.backgroundColor = ""; }, 300);
+        }
+    </script>
+<style type="text/css">
+*{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;}
+body{font-size:12px;line-height:1.5;color:#000;background:#fff;}
+body,textarea{font-family:Tahoma,Helvetica,Arial,sans-serif;}
+input,select{font-family:inherit;font-size:100%;}
+input.text{padding:2px;border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;}
+
+.calendar{width:100%;}
+.calendar td{font-size:12px;text-align:center;}
+td.title{padding:3px 2px;background:#cdf;}
+td.title a:link,td.title a:visited{padding:0 2px;font-weight:bold;color:#06c;text-decoration:none;}
+.weekdayheader td{padding:1px 2px;border-bottom:1px solid #cdf;background:#fff;}
+.DaySunTitle,.DaySatTitle{color:#c00;}
+
+#calendar td{padding:1px 2px;font-weight:bold;cursor:pointer;}
+#calendar td:hover{background:#eaf0f6;}
+#calendar .DaySat,#calendar .DaySun{color:#c00;}
+#calendar .DayNow{background:#eaf0f6;border:1px solid #cdf;}
+
+</style>
+</head>
+<body>
+<table class="calendar" id="caltable">
+    <thead>
+        <tr>
+            <td colspan="7" class="title">
+                <a href="javascript:subYear();" title="上一年" class="DayButton">&laquo;</a>
+                <a href="javascript:subMonth();" title="上一月" class="DayButton">&lsaquo;</a>
+                <input id="year" name="year" type="text" class="text" size="4" maxlength="4" onkeydown="if (event.keyCode==13){setDate()}" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" readonly="readonly" onpaste="this.value=this.value.replace(/[^0-9]/g,'')" />
+                年
+                <input id="month" name="month" type="text" class="text" size="1" maxlength="2" onkeydown="if (event.keyCode==13){setDate()}" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" readonly="readonly" onpaste="this.value=this.value.replace(/[^0-9]/g,'')" />
+                月
+                <a href="Javascript:addMonth();" title="下一月" class="DayButton">&rsaquo;</a>
+                <a href="Javascript:addYear();" title="下一年" class="DayButton">&raquo;</a>
+                <select id="dropHour" style="display:none">
+                <option>00</option>
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                </select>
+                <select id="dropMinute" style="display:none">
+                <option>00</option>
+                <option>05</option>
+                <option>10</option>
+                <option>15</option>
+                <option>20</option>
+                <option>25</option>
+                <option>30</option>
+                <option>35</option>
+                <option>40</option>
+                <option>45</option>
+                <option>50</option>
+                <option>55</option>
+                </select>
+            </td>
+        </tr>
+        <tr class="weekdayheader">
+            <script type="text/javascript">
+                document.write('<td class=DaySunTitle id=diary >' + days[0] + "</td>");
+                for (var intLoop = 1; intLoop < days.length - 1; intLoop++)
+                document.write('<td class="DayTitle" id="diary">' + days[intLoop] + "</td>");
+                document.write('<td class="DaySatTitle" id="diary">' + days[intLoop] + "</td>"); 
+            </script>
+        </tr>
+    </thead>
+    <tbody id="calendar">
+        <script type="text/javascript">
+            for (var intWeeks = 0; intWeeks < 6; intWeeks++) {
+                document.write('<tr>');
+                for (var intDays = 0; intDays < days.length; intDays++)
+                    document.write('<td class="CalendarTD" onMouseover="buttonOver();" onMouseOut="buttonOut();" onclick="selectDay(this)"></td>');
+                document.write("</tr>");
+            }
+        </script>
+    </tbody>
+</table>
+
+    <script type="text/javascript">
+        addEvent = function(el, evname, func) {
+            if (el.attachEvent) { // IE
+                el.attachEvent("on" + evname, func);
+            } else if (el.addEventListener) { // Gecko / W3C
+                el.addEventListener(evname, func, true);
+            } else { // Opera (or old browsers)
+                el["on" + evname] = func;
+            }
+        };
+        removeEvent = function(el, evname, func) {
+            if (el.detachEvent) { // IE
+                el.detachEvent("on" + evname, func);
+            } else if (el.removeEventListener) { // Gecko / W3C
+                el.removeEventListener(evname, func, true);
+            } else { // Opera (or old browsers)
+                el["on" + evname] = null;
+            }
+        }
+    
+        if (param.showtime) {
+            document.getElementById("dropMinute").style.display = '';
+            document.getElementById("dropHour").style.display = '';
+        }
+        year = param.year;
+        month = param.month-1;
+
+        Calendar();
+    </script>
+</body>
+</html>

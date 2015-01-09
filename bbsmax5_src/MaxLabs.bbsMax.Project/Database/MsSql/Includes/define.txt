@@ -1,0 +1,2 @@
+﻿exp_GetSortOrder=({0} + ({1} - FLOOR({0} / 1000000000000000)) * 1000000000000000)
+--{# GetSortOrder SortOrder, 5 #}

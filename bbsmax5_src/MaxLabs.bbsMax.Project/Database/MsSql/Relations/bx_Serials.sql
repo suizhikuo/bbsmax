@@ -1,0 +1,6 @@
+﻿EXEC bx_Drop 'FK_bx_Serials_UserID';
+
+ALTER TABLE [bx_Serials]  WITH CHECK ADD  CONSTRAINT [FK_bx_Serials_UserID] FOREIGN KEY([UserID])
+REFERENCES [bx_Users] ([UserID])
+ON UPDATE CASCADE
+ON DELETE CASCADE

@@ -1,0 +1,6 @@
+﻿EXEC bx_Drop 'FK_bx_PostMarks_PostID';
+
+ALTER TABLE [bx_PostMarks]  WITH CHECK ADD  CONSTRAINT [FK_bx_PostMarks_PostID] FOREIGN KEY([PostID])
+REFERENCES [bx_Posts] ([PostID])
+ON UPDATE CASCADE
+ON DELETE CASCADE

@@ -1,0 +1,277 @@
+﻿<!--
+by js菜鸟 wenquan
+email:wenquan@bbsmax.com
+copyright:bbs.bbsmax.com
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>选择色彩</title>
+<style type="text/css">
+*{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;}
+body{font-size:12px;line-height:1.5;color:#000;background:#fff;}
+body,textarea,button{font-family:Tahoma,Helvetica,Arial,sans-serif;}
+input,select,button{font-family:inherit;font-size:100%;}
+input.text{padding:2px;border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;}
+
+table{width:100%;*width:95%;}
+td{vertical-align:top;}
+#ColorTable td,#GrayTable td{cursor:pointer;font:0/0 sans-serif;}
+table p{margin-bottom:5px;}
+
+</style>
+<script type="text/javascript"> 
+
+function $(id){ return document.getElementById(id);}
+var result = null;
+var SelRGB = ''; 
+var DrRGB = ''; 
+var SelGRAY = '120'; 
+var hexch = new Array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'); 
+var searchtext=location.search.replace("?","");
+searchtext = searchtext.replace(/&/ig,"\",");
+searchtext = searchtext.replace(/=/ig,":\"");
+searchtext +="\"";
+eval( "var searchObj={"+searchtext + "}");
+
+var RGB, GrayTable, ColorTable,GRAY,SelColor,ShowColor;
+
+var inited =false;
+
+function initColor(){ 
+
+if(inited==false)
+{
+    RGB=$("RGB");
+    GrayTable=$("GrayTable");
+    ColorTable=$("ColorTable");
+    GRAY=$("GRAY");
+    SelColor=$("SelColor");
+    ShowColor=$("ShowColor");
+ GrayTable.onmouseout=function (){ showGray(SelGRAY); }
+ GrayTable.ondblclick=ok;
+ColorTable.ondblclick=ok;
+ColorTable.onmouseout =function(){  RGB.innerHTML = SelRGB;  EndColor(); }
+    inited=true;
+}
+if ( searchObj.color){ 
+        var old_color = searchObj.color.replace("#",""); 
+        if ( /^[0-9A-Fa-f]{1,6}$/.test(old_color) ) { 
+            if(old_color.length<6) old_color = "000000".substring(0,6-old_color.length) + old_color ;
+            SelRGB = '#'+old_color; 
+            RGB.innerHTML = SelRGB; 
+            EndColor(); 
+        } else { 
+            SelColor.value = old_color; 
+            ShowColor.bgColor = SelColor.value; 
+        } 
+    } 
+} 
+
+
+function ToHex(n) {    var h, l;  n = Math.round(n);  l = n % 16;  h = Math.floor((n / 16)) % 16;  return (hexch[h] + hexch[l]); } 
+
+function DoColor(c, l) 
+{ var r, g, b; 
+  r = '0x' + c.substring(1, 3); 
+  g = '0x' + c.substring(3, 5); 
+  b = '0x' + c.substring(5, 7); 
+   
+  if(l > 120) 
+  { 
+    l = l - 120; 
+
+    r = (r * (120 - l) + 255 * l) / 120; 
+    g = (g * (120 - l) + 255 * l) / 120; 
+    b = (b * (120 - l) + 255 * l) / 120; 
+  }else 
+  { 
+    r = (r * l) / 120; 
+    g = (g * l) / 120; 
+    b = (b * l) / 120; 
+  } 
+
+  return '#' + ToHex(r) + ToHex(g) + ToHex(b); 
+} 
+
+function EndColor() 
+{ 
+  var i; 
+  if(DrRGB != SelRGB) 
+  { 
+    DrRGB = SelRGB; 
+    for(i = 0; i <= 30; i ++) 
+      GrayTable.rows[i].bgColor = DoColor(SelRGB, 240 - i * 8); 
+  } 
+
+    if ( RGB.innerHTML == ''){ 
+        initColor(); 
+    } else { 
+      SelColor.value = DoColor(RGB.innerHTML, GRAY.innerHTML); 
+      ShowColor.bgColor = SelColor.value; 
+    } 
+} 
+</script>
+</head>
+<body style="overflow:hidden;">
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding:5px;">
+    <table id="ColorTable" cellpadding="0" cellspacing="0">
+    <tbody>
+    <script type="text/javascript">
+    function wc(r, g, b, n) 
+    { 
+        r = ((r * 16 + r) * 3 * (15 - n) + 0x80 * n) / 15; 
+        g = ((g * 16 + g) * 3 * (15 - n) + 0x80 * n) / 15; 
+        b = ((b * 16 + b) * 3 * (15 - n) + 0x80 * n) / 15; 
+        var cr= ToHex(r) + ToHex(g) + ToHex(b);
+        document.write('<td onmouseover="showColor(\'#'+cr+'\')" onclick="clickColor(\'#'+cr+'\')" style="background:#' + cr + ';width:8px;height:8px;"></td>'); 
+    }
+    var cnum = new Array(1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0); 
+      for(i = 0; i < 16; i ++) 
+      { 
+         document.write('<tr>'); 
+         for(j = 0; j < 30; j ++) 
+         { 
+             n1 = j % 5; 
+             n2 = Math.floor(j / 5) * 3; 
+             n3 = n2 + 3; 
+
+             wc((cnum[n3] * n1 + cnum[n2] * (5 - n1)), 
+                 (cnum[n3 + 1] * n1 + cnum[n2 + 1] * (5 - n1)), 
+                 (cnum[n3 + 2] * n1 + cnum[n2 + 2] * (5 - n1)), i); 
+         } 
+
+         document.writeln('</tr>'); 
+      } 
+    </script>
+    </tbody>
+    </table>
+</td>
+<td style="padding:5px 5px 5px 0;">
+    <table id="GrayTable" cellpadding="0" cellspacing="0">
+    <script type="text/javascript"> 
+      for(i = 255; i >= 0; i -= 8.5) {
+      var gray=Math.floor(i * 16 / 17);
+         document.write('<tr style="background:#' + ToHex(i) + ToHex(i) + ToHex(i) + ';"><td onmouseover="showGray('+gray+')" onclick="selGray('+gray+')" style="width:20px;height:4px;"></td></tr>'); }
+    </script>
+    </table>
+</td>
+</tr>
+</table>
+
+<table cellpadding="0" cellspacing="0" >
+    <tr>
+        <td style="padding:5px;">
+            <p>选中色彩</p>
+            <table id="ShowColor" style="margin-bottom:5px;width:auto;">
+                <tbody>
+                    <tr>
+                        <td style="width:50px;height:50px;border:1px solid #000;">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td style="padding:5px 5px 5px 0;">
+            <p>基色: <span id="RGB"></span></p>
+            <p>亮度: <span id="GRAY">120</span></p>
+            <p>代码: <input id="SelColor" style="border:0;" size="7" /></p>
+        </td>
+        <td style="padding:5px 5px 5px 0;text-align:right;">
+            <p><button id="Ok" onclick="ok()" type="submit">确定</button></p>
+            <p><button onfocus="blur()" onclick="initColor()">重设</button></p>
+            <p><button onclick="closecolor()">取消</button></p>
+        </td>
+    </tr>
+</table>
+
+<script type="text/javascript"> 
+// copyright ©2009 bbsmax
+// design : wen quan 
+// initColor初始化传递过来的颜色 
+// 2009-5-16 added by http://www.bbsmax.com/
+
+    function closecolor() {
+        parent.colorPanel.result = result;
+        parent.colorPanel.close();
+        parent.colorPanel = null;
+    }
+
+function showColor( color ){  RGB.innerHTML = color;   EndColor(); }
+
+
+function selGray(gray){ SelGRAY = gray;  EndColor(); }
+
+function clickColor(color){ SelRGB =color;  EndColor(); }
+
+function showGray(gray){ GRAY.innerHTML = gray; EndColor();}
+
+function ok()
+{
+  if(parent==null) return ;
+  result=SelColor.value;
+  closecolor();
+}
+
+function to16(num){   //十进制  转十六进制
+  num=num;
+  if(!isNaN(num)){
+   var result="";
+    while(num>=16){  //循环求余后反向连接字符串
+   result=_to16(num%16)+result;
+   num=parseInt(num/16);
+    }
+   result=_to16(num%16)+result;
+   return result;
+  }
+  else
+  return 0x0;
+}
+function _to16(num){ //十六进制单位转换
+  switch(num){
+  case 0 : return "0";
+  case 1 : return "1";
+  case 2 : return "2";
+  case 3 : return "3";
+  case 4 : return "4";
+  case 5 : return "5";
+  case 6 : return "6";
+  case 7 : return "7";
+  case 8 : return "8";
+  case 9 : return "9";
+  case 10 : return "A";
+  case 11 : return "B";
+  case 12 : return "C";
+  case 13 : return "D";
+  case 14 : return "E";
+  case 15 : return "F";
+  }
+}
+
+
+addEvent = function(el, evname, func) {
+	if (el.attachEvent) { // IE
+		el.attachEvent("on" + evname, func);
+	} else if (el.addEventListener) { // Gecko / W3C
+		el.addEventListener(evname, func, true);
+	} else { // Opera (or old browsers)
+		el["on" + evname] = func;
+	}
+};
+removeEvent = function(el, evname, func) {
+	if (el.detachEvent) { // IE
+		el.detachEvent("on" + evname, func);
+	} else if (el.removeEventListener) { // Gecko / W3C
+		el.removeEventListener(evname, func, true);
+	} else { // Opera (or old browsers)
+		el["on" + evname] = null;
+	}
+}
+initColor(); 
+</script>
+</body>
+</html>

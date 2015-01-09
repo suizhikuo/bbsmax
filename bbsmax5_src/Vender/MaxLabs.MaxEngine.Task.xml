@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MaxLabs.MaxEngine.Task</name>
+    </assembly>
+    <members>
+        <member name="T:MaxLabs.MaxEngine.TaskAttribute">
+            <summary>
+            标识一个类为任务
+            </summary>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.TaskAttribute.GetFromType(System.Type)">
+            <summary>
+            从类型信息中获取自定义标签
+            </summary>
+            <param name="type">类型的反射信息</param>
+            <returns>自定义标签实例，或者null</returns>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.TaskAttribute.Name">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.TaskAttribute.PublishAction">
+            <summary>
+            标识当前任务类型是否发布为一个表单动作
+            </summary>
+        </member>
+        <member name="T:MaxLabs.MaxEngine.Task.TaskInfo">
+            <summary>
+            标识任务的信息
+            </summary>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskInfo.CreateTaskItem(System.Object[])">
+            <summary>
+            创建对应的任务项实例（使用当前Http请求中的数据作为任务项构造函数参数）
+            </summary>
+            <returns>任务项实例</returns>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskInfo.ModuleName">
+            <summary>
+            模块名称
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskInfo.TaskName">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskInfo.TaskClass">
+            <summary>
+            任务对应的类
+            </summary>
+        </member>
+        <member name="T:MaxLabs.MaxEngine.Task.TaskStatus">
+            <summary>
+            表示任务执行的结果
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskStatus.TaskID">
+            <summary>
+            所属的任务的ID
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskStatus.Progress">
+            <summary>
+            获取或设置任务进度
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskStatus.IsCancel">
+            <summary>
+            获取或设置任务是否取消
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskStatus.Running">
+            <summary>
+            获取任务是否正在执行
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskStatus.Message">
+            <summary>
+            任务返回的消息
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskStatus.HasError">
+            <summary>
+            是否存在错误
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskStatus.Exception">
+            <summary>
+            任务的异常信息
+            </summary>
+        </member>
+        <member name="T:MaxLabs.MaxEngine.TaskMainAttribute">
+            <summary>
+            用于将构造函数标识为任务入口函数，任务管理器将通过这个入口传递参数给任务实例
+            </summary>
+        </member>
+        <member name="T:MaxLabs.MaxEngine.Task.ITaskItemWorkFolderProvider">
+            <summary>
+            任务工作路径提供器
+            </summary>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.ITaskItemWorkFolderProvider.GetWorkFolder(MaxLabs.MaxEngine.Task.TaskInfo)">
+            <summary>
+            任务工作路径提供器，用于提供任务的工作路径，
+            任务管理器可以伪造任务线程工作目录，失得ConfigurationManager可以读取到该目录下的配置文件
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskStatusCollection.Item(System.Guid)">
+            <summary>
+            通过任务ID获取相应的任务项
+            </summary>
+            <param name="taskID">任务的唯一ID</param>
+            <returns>对应的任务项</returns>
+        </member>
+        <member name="T:MaxLabs.MaxEngine.Task.ITaskPlan">
+            <summary>
+            任务执行计划必须实现的接口
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.ITaskPlan.CanRemove">
+            <summary>
+            任务管理器每隔1秒会轮询已添加的任务执行计划一遍，
+            当任务执行计划的CanRemove返回true时，任务管理器将会把该任务执行计划从列表中移除
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.ITaskPlan.CanExecute">
+            <summary>
+            任务管理器每隔1秒会轮询已添加的任务执行计划一遍，
+            当任务执行计划的CanExecute返回true时，任务管理器将会执行该计划
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.ITaskPlan.TaskName">
+            <summary>
+            计划要执行的任务名称，格式如：
+            [ModuleName:]TaskName
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.ITaskPlan.Parameters">
+            <summary>
+            任务执行所需的参数
+            </summary>
+        </member>
+        <member name="T:MaxLabs.MaxEngine.Task.TaskItemCollection">
+            <summary>
+            任务项容器
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskItemCollection.Item(System.Guid)">
+            <summary>
+            通过任务ID获取相应的任务项
+            </summary>
+            <param name="taskID">任务的唯一ID</param>
+            <returns>对应的任务项</returns>
+        </member>
+        <member name="T:MaxLabs.MaxEngine.Task.TaskManager">
+            <summary>
+            任务管理器，管理和运行MaxEngine的所有后台任务
+            </summary>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskManager.ImportModule(System.String,System.Type)">
+            <summary>
+            加载应用模块的任务处理器
+            </summary>
+            <param name="moduleName">模块名称</param>
+            <param name="type">表示应用模块的类型</param>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskManager.ExecuteTask(System.String,System.Object[])">
+            <summary>
+            在当前线程执行任务
+            </summary>
+            <param name="taskName">任务名称，可以包含模块名，格式为 ModuleName:TaskName</param>
+            <param name="parameters">任务参数</param>
+            <returns>任务执行结果</returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskManager.QueueTask(System.String,System.Object[])">
+            <summary>
+            将任务推入队列待线程池有空闲线程时执行
+            </summary>
+            <param name="taskName">任务名称，可以包含模块名，格式为 ModuleName:TaskName</param>
+            <param name="parameters">任务参数</param>
+            <returns>任务的唯一ID，如果任务加入队列失败，将返回Guid.Empty</returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskManager.FindTaskItem(System.Predicate{MaxLabs.MaxEngine.Task.TaskItem})">
+            <summary>
+            查找符合条件的任务项
+            </summary>
+            <param name="match">查找条件</param>
+            <returns>符合条件的任务项</returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskManager.GetTaskStatus(System.Guid)">
+            <summary>
+            获取任务执行状态
+            </summary>
+            <param name="taskID">任务的唯一ID</param>
+            <returns>任务执行结果</returns>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskManager.CancelTask(System.Guid)">
+            <summary>
+            取消队列中的任务
+            </summary>
+            <param name="taskID">任务的唯一ID</param>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskManager.AddTaskPlan(MaxLabs.MaxEngine.Task.ITaskPlan)">
+            <summary>
+            添加任务执行计划
+            </summary>
+            <param name="plan">任务执行计划对象</param>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskManager.StartAllTaskPlans">
+            <summary>
+            开始所有任务执行计划
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskManager.Current">
+            <summary>
+            任务管理器当前实例
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskManager.TaskItemWorkFolderProvider">
+            <summary>
+            任务工作路径提供器，用于提供任务的工作路径，
+            任务管理器可以伪造任务线程工作目录，失得ConfigurationManager可以读取到该目录下的配置文件
+            </summary>
+        </member>
+        <member name="T:MaxLabs.MaxEngine.Task.TaskItem">
+            <summary>
+            表示任务项
+            </summary>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskItem.Prepare">
+            <summary>
+            重写此方法，用于预备任务执行，如果预备任务过程中没有出现异常情况，请返回null
+            如果出现以外情况，比如参数格式不正确，请构造一个TaskResult对象，并将错误信息填入TaskResult对象返回
+            </summary>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskItem.Execute">
+            <summary>
+            重写此方法，实现具体的任务执行过程
+            </summary>
+        </member>
+        <member name="M:MaxLabs.MaxEngine.Task.TaskItem.Cancel">
+            <summary>
+            重写此方法，实现任务的取消
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskItem.ID">
+            <summary>
+            获取任务的唯一ID
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskItem.WorkFolder">
+            <summary>
+            当前工作目录
+            </summary>
+        </member>
+        <member name="P:MaxLabs.MaxEngine.Task.TaskItem.Status">
+            <summary>
+            获取任务执行结果
+            </summary>
+        </member>
+    </members>
+</doc>

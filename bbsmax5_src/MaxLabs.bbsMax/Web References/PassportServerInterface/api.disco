@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://p.chinaz.com/api.asmx?wsdl" docRef="http://p.chinaz.com/api.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://p.chinaz.com/api.asmx" xmlns:q1="http://bbsmax.com/" binding="q1:ServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://p.chinaz.com/api.asmx" xmlns:q2="http://bbsmax.com/" binding="q2:ServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

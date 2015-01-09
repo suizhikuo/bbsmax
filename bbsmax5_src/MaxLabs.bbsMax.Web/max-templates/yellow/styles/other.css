@@ -1,0 +1,108 @@
+﻿/*==========================================================
+    BBSMAX Yellow Theme
+    (c) www.bbsmax.com
+==========================================================*/
+/*= Section-members  =====================================*/
+.section-members .content-inner{border:solid #dfd0a3;border-width:0 1px;background:#fff url(../images/theme/edge.gif) repeat-y 120px 0;}
+.section-members .content-main{float:right;width:100%;}
+.section-members .content-main-inner{margin-left:120px;padding:0 10px;}
+.section-members .content-sub{float:left;width:120px;margin-right:-120px;}
+.section-members .content-sub .sidebar{margin:0 20px;}
+.section-members .content-sub .sidebar .panel-head{margin:0 0 10px 10px;}
+
+.category-list{line-height:2;padding:0 0 10px;border-bottom:1px solid #f4e5c4;}
+.category-list a,.category-list a:link,.category-list a:visited{color:#333;padding-left:10px;}
+.category-list a.current,.category-list a.current:link,.category-list a.current:visited{color:#ab0000;background:url(../images/current_arrow.gif) no-repeat 0 50%;}
+
+/*= Rankinglayout =*/
+.rankinglayout .rankinglayout-content{float:left;width:100%;}
+.rankinglayout .rankinglayout-content-inner{margin-right:160px;}
+.rankinglayout .rankinglayout-sidebar{float:right;width:150px;margin-left:-150px;}
+
+.rankinglayout-priceranking .rankinglayout-content-inner{margin-right:190px;}
+.rankinglayout-priceranking .rankinglayout-sidebar{float:right;width:180px;margin-left:-180px;}
+
+.rankinglayout-nosidebar .rankinglayout-content-inner{margin-right:0;}
+.rankinglayout-nosidebar .rankinglayout-sidebar{display:none;}
+
+.userstablepanel .panel-head{display:none;}
+
+.userstable{width:100%;margin-bottom:10px;}
+.userstable td{padding:10px 5px;border-bottom:1px solid #eee;}
+.userstable .nodata{padding:50px 10px;color:#999;text-align:center;}
+
+.userstable thead td{padding:5px;border-top:1px solid #eee;color:#999;background:#f8f8f8;white-space:nowrap;}
+.userstable thead td strong{color:#666;}
+
+.userstable td.order{width:30px;}
+.userstable td.roleicon{width:16px;}
+.userstable td.userid{width:30px;}
+.userstable td.bday{width:90px;}
+.userstable td.date{width:90px;}
+.userstable tbody td.userid{color:#666;}
+.userstable tbody td.order{color:#666;}
+.userstable td.avatar{width:54px;}
+.userstable td.mediumavatar{width:28px;}
+.userstable td.avatar a{float:left;width:48px;height:48px;}
+.userstable td.mediumavatar a{float:left;width:24px;height:24px;}
+.userstable td.user{line-height:1.6;vertical-align:top;}
+.userstable tbody td.price{color:#f60;}
+.userstable .remainprice .price{display:block;color:#f60;}
+.userstable .rankinguser-name .realname{color:#666;}
+.userstable .rankinguser-name img{vertical-align:middle;}
+.userstable .rankinguser-action{ white-space:nowrap;}
+.userstable .rankinguser-action a{padding-left:16px;}
+.userstable .rankinguser-action a.addnewfriend{background:url(../images/icons/friend_add.gif) no-repeat 0 50%;}
+.userstable .rankinguser-action a.chat-online{background:url(../images/icons/chat_online.gif) no-repeat 0 50%;}
+.userstable .rankinguser-action a.chat-offline{background:url(../images/icons/chat_offline.gif) no-repeat 0 50%;}
+.userstable .rankingtablerow-my td{background:#fffcd8;}
+.userstable .order .number{font:117% Georgia,Serif;}
+.userstable .rankinguser-speak{color:#666;}
+.userstable .rankinguser-action a:link,.userstable .rankinguser-action a:visited{color:#000;}
+
+/*= Joinrankingform =*/
+.joinrankingform .formgroup-title{margin-bottom:10px;}
+.joinrankingform .formrow{margin-bottom:10px;}
+.joinrankingform .label,
+.joinrankingform .form-enter{margin-bottom:5px;}
+.joinrankingform .form-enter textarea,
+.joinrankingform .form-enter .text{width:100%;}
+.joinrankingform .form-enter textarea{-width:95%;}
+.joinrankingform .form-enter .number{width:6em;}
+
+.myfriends-dropdown .dropdownmenu-list{height:100px;overflow:auto;}
+
+/*= Rankingheader =*/
+.rankingheader{margin-bottom:10px;}
+.rankingsearch{float:right;}
+.rankingsearch a{padding-left:20px;background:url(../images/icons/search.gif) no-repeat 0 50%;}
+.rankingheader .value{color:#f60;}
+
+.myrankingorder .rankingorder{margin-bottom:10px;}
+.myrankingorder .rankingorder .value{font-size:2em;display:block;color:#f60;text-align:center;}
+.myrankingorder .rankingvalue{margin-bottom:10px;}
+.myrankingorder .rankingvalue .label{color:#666;margin-right:5px;}
+.myrankingorder .rankingvalue .value{color:#000;}
+
+/*= Ranking search form (inherit: common.css - .formgroup)=*/
+.rankingsearchform .formrow{margin-bottom:10px;padding-left:120px;line-height:1.8;}
+.rankingsearchform .formrow .label{float:left;display:inline;width:100px;margin-left:-120px;text-align:right;}
+.rankingsearchform .formrow .form-enter{float:left;margin-right:10px;}
+.rankingsearchform .formrow .form-enter label{margin-right:5px;}
+.rankingsearchform .formrow .form-enter .number{width:4em;}
+.rankingsearchform .formrow-action{line-height:25px;}
+
+/*= Section-announcement ================================*/
+.section-announcement .content-inner{padding:0 10px;border:solid #dfd0a3;border-width:0 1px;background:#fff;}
+
+.announcemententry{margin-bottom:10px;}
+.announcemententry .panel-head{height:37px;line-height:37px;padding:0 10px;background:url(../images/theme/panel_head.gif) repeat-x;}
+.announcemententry .panel-title{float:left;}
+.announcemententry .panel-title .tip{font-style:normal;font-weight:normal;color:#999;}
+.announcemententry .panel-body{padding:10px 10px 0;}
+
+.announcement-info{margin-bottom:10px;}
+.announcement-info .label{margin-right:5px;}
+.announcement-info .value{color:#999;}
+
+.announcement-content{font-size:117%;}

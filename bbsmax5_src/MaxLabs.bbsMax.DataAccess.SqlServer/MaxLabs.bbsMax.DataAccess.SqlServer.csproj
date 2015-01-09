@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4960A98D-032B-4C68-91C4-381D295B084C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaxLabs.bbsMax.DataAccess.SqlServer</RootNamespace>
+    <AssemblyName>MaxLabs.bbsMax.DataAccess.SqlServer</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Publish|AnyCPU' ">
+    <OutputPath>bin\Publish\</OutputPath>
+    <DefineConstants>TRACE;Publish</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DebugPublish|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvertDao.cs" />
+    <Compile Include="AlbumDao.cs" />
+    <Compile Include="AnnouncementDao.cs" />
+    <Compile Include="BannedUserDao.cs" />
+    <Compile Include="BlogDao.cs" />
+    <Compile Include="ChatDao.cs" />
+    <Compile Include="ClickLogDao.cs" />
+    <Compile Include="ClubDao.cs" />
+    <Compile Include="CommentDao.cs" />
+    <Compile Include="ImpressionDao.cs" />
+    <Compile Include="ForumDao.cs" />
+    <Compile Include="InternalCode\DeclareVariable.cs" />
+    <Compile Include="InternalCode\InternalConsts.cs" />
+    <Compile Include="InternalCode\DataProvider.cs" />
+    <Compile Include="DatabaseInfoDao.cs" />
+    <Compile Include="DoingDao.cs" />
+    <Compile Include="FeedDao.cs" />
+    <Compile Include="FriendDao.cs" />
+    <Compile Include="InternalCode\SqlConditionBuilder.cs" />
+    <Compile Include="InternalCode\SqlQuery.cs" />
+    <Compile Include="InternalCode\SqlSession.cs" />
+    <Compile Include="InternalCode\StoredProcedureAttribute.cs" />
+    <Compile Include="InternalCode\DaoUtil.cs" />
+    <Compile Include="InternalCode\XSqlDataReader.cs" />
+    <Compile Include="OperationLogDao.cs" />
+    <Compile Include="PayDao.cs" />
+    <Compile Include="PassportDao.cs" />
+    <Compile Include="PointLogDao.cs" />
+    <Compile Include="PropDao.cs" />
+    <Compile Include="RoleDao.cs" />
+    <Compile Include="SerialDao.cs" />
+    <Compile Include="StepByStepTaskDao.cs" />
+    <Compile Include="UserTempAvatarDao.cs" />
+    <Compile Include="InviteDao.cs" />
+    <Compile Include="NotifyDao.cs" />
+    <Compile Include="FileDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportDao.cs" />
+    <Compile Include="SettingDao.cs" />
+    <Compile Include="ShareDao.cs" />
+    <Compile Include="PointShowDao.cs" />
+    <Compile Include="SpaceDao.cs" />
+    <Compile Include="TagDao.cs" />
+    <Compile Include="UserTempDataDao.cs" />
+    <Compile Include="UserDao.cs" />
+    <Compile Include="MissionDao.cs" />
+    <Compile Include="DiskDao.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EmoticonDao.cs" />
+    <Compile Include="ValidateCodeDao.cs" />
+    <Compile Include="JobDao.cs" />
+    <Compile Include="VarsDao.cs" />
+    <Compile Include="PostDao.cs" />
+    <Compile Include="ThreadCateDao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MaxLabs.bbsMax.Rescourses\MaxLabs.bbsMax.Rescourses.csproj">
+      <Project>{035716FE-D39E-4CD8-8322-36DCAD488049}</Project>
+      <Name>MaxLabs.bbsMax.Rescourses</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MaxLabs.bbsMax\MaxLabs.bbsMax.csproj">
+      <Project>{7BB4B70C-E194-47F9-989A-72A222FE6D2E}</Project>
+      <Name>MaxLabs.bbsMax</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>"$(SolutionDir)Vender\ProjectHelper.exe" /startrunview $(ConfigurationName) "$(SolutionDir)"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

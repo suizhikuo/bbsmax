@@ -1,0 +1,82 @@
+﻿/*==========================================================
+    BBSMAX Classic Theme for BBSMAX 5
+==========================================================*/
+.section-account .main-inner{padding:30px 50px 10px;background:#fff url(../images/theme/content_bg.png) repeat-x;border-top:1px solid #d7ecf7;}
+.section-account .btn-wrap,.section-account .minbtn-wrap{float:left;display:block;margin-right:10px;border:1px solid #1382bf;background:#40b6f6 url(../images/theme/btn_blue.gif) repeat-x;}
+
+/*= Form (inherit: common.css - .fromgroup ) =*/
+.formcaption h3{color:#000;}
+.formrow{line-height:2;margin-bottom:15px;padding-left:70px;}
+.formrow .label{float:left;display:inline;width:60px;margin-left:-70px;font-weight:normal;}
+.formrow .form-note{margin:5px 0 0 0;}
+.formrow .ajaxloading{padding:0 10px 0 25px;background:url(../images/ajaxloading.gif) no-repeat 5px 50%;}
+.formrow input.text{width:150px;padding:3px;}
+.formrow input.validcode{width:60px;}
+.formrow .captcha img{border:1px solid #ccc;vertical-align:top;}
+.account-message{font-size:117%;margin:10px 0;padding:10px 10px 10px 35px;color:#333;background:url(../images/icons/tip_alert.gif) no-repeat 0 50%;}
+.formrow-action{line-height:30px;}
+
+.register-inviter{margin:10px 0;padding:10px;background:#afd5e2;}
+.register-inviter .inviter-avatar{float:left;margin-right:20px;}
+.register-inviter .inviter-avatar img{padding:1px;border:1px solid #ccc;background:#fff;}
+.register-inviter .inviter-message{font-size:117%;float:left;width:500px;}
+.register-inviter .inviter-message h3{font-size:114%;margin-bottom:1em;}
+.register-inviter .inviter-message p{margin-bottom:5px;}
+
+.registerverify-step{font-size:117%;margin-bottom:20px;}
+.registerverify-step li{padding:20px 0 22px 0;border-bottom:1px solid #ddd;}
+.registerverify-step li strong{color:#333;margin-right:40px;}
+.registerverify-step .mail-login:link,.registerverify-step .mail-login:visited{color:#f60;}
+
+.registerverify-button{text-align:center;}
+.registerverify-buttontext{color:#666;margin-bottom:20px;}
+.registerverify-button .btn-wrap{float:none;display:inline-block;margin-right:10px;}
+.registerverify-button .btn-wrap .btn{float:none;display:inline-block;}
+
+.agreement-content{margin-bottom:10px;border:1px solid #999;background:#fff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+.agreement-content-inner{height:300px;line-height:1.6;margin:10px;padding:10px;overflow:auto; }
+.agreement-buttons{text-align:center;}
+.agreement-buttons .btn-wrap{float:none;display:inline-block;}
+.agreement-buttons .btn-wrap .btn{float:none;display:inline-block;}
+
+.section-account-login .content-main-inner{width:650px;margin:0 auto;}
+.section-account-login .loginform-wrap{float:right;width:350px;height:auto !important;height:280px;min-height:280px;background:url(../images/theme/reg_edge.png) no-repeat;overflow:hidden;}
+.section-account-login .reglink-wrap{float:left;width:300px;height:auto !important;height:280px;min-height:280px;background:url(../images/theme/reg_icon.png) no-repeat 0 15px;}
+.loginform-wrap .formcaption{margin-left:50px;}
+.loginform{margin-left:50px;padding:15px 15px 5px;border:1px solid #cce4f0;background:#f6fbff url(../images/highlight_1.gif) repeat-x;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
+.loginform .formrow .label{width:50px;}
+.loginform .formrow input.text{width:170px;}
+.loginform .formrow input.validcode{width:80px;}
+
+.reglink-wrap .reglink-text,
+.reglink-wrap .register-link{margin-left:110px;}
+
+.reglink-wrap .register-link a{float:left;display:block;height:30px;line-height:30px;padding:0 10px;border:1px solid #1382bf;background:#40b6f6 url(../images/theme/btn_blue.gif) repeat-x;}
+.reglink-wrap .register-link a:link,.reglink-wrap .register-link a:visited{color:#fff;text-decoration:none;}
+
+.reglink-wrap .reglink-text h3{font-size:117%;margin-bottom:10px;}
+.reglink-wrap .reglink-text p{margin-bottom:10px;}
+
+/*= Info =================================================*/
+.section-info .main-inner{padding:30px 50px 50px;background:#fff url(../images/theme/content_bg.png) repeat-x;border-top:1px solid #d7ecf7;}
+
+.operatemessage{width:50%;min-width:350px;line-height:1.8;margin:20px auto;}
+.operatemessage .operatemessage-inner{padding-left:70px;background-repeat:no-repeat;background-position:5px 10px;}
+.operatemessage .message-title{font-size:133%;margin:0 0 .5em;}
+.operatemessage .message-intro,
+.operatemessage .message-action{color:#666;}
+
+.operatemessage .message-error{background-image:url(../images/icons/error_48.png);}
+.operatemessage .message-success{background-image:url(../images/icons/success_48.png);}
+.operatemessage .message-alert{background-image:url(../images/icons/alert_48.png);}
+
+.extramessage{width:50%;min-width:350px;line-height:1.8;margin:0 auto;padding:20px 0;}
+.extramessage .extramessage-inner{padding:0 10px 0 30px;background:url(../images/icons/online.gif) no-repeat 10px 2px;}
+
+.fastloginform-wrap{width:50%;margin:10px auto;}
+.fastloginform{margin-left:50px;}
+.fastloginform .remember,
+.fastloginform .invisible{margin-bottom:5px;}
+.fastloginform .remember input,
+.fastloginform .invisible input{margin:0;vertical-align:middle;}
+.fastloginform .formrow-action{line-height:25px;}

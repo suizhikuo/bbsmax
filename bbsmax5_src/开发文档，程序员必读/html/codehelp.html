@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style1
+        {
+            width: 304px;
+        }
+        .style2
+        {
+            width: 320px;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <p><h3> 一、 版权声明</h3>
+    </p>
+    <p>
+       
+bbsmax 不是一个免费产品，源代码仅限用于学习，禁止用于商业站点或者其他商业用途 <br />
+        如果您要将bbsmax用于商业用途，需要从官方购买商业授权，得到授权后可以基于源代码二次开发 <br />
+        版权所有 厦门麦斯网络科技有限公司 <br />
+        公司网站 :  <a target="_blank" href="http://www.bbsmax.com">www.bbsmax.com</a><br />
+ <p><h3>二、所需环境</h3></p>
+&nbsp; 开发环境：Microsoft Visual Studio 2010<br />
+        数据库版本: Microsoft SQL Server 2000 ～2008<br />
+&nbsp; .NET版本: .Net Framework 2.0 及以上版本<br />
+&nbsp; 运行环境: 安装IIS 5.0 或更高版本的Windows操作系统<br />
+    </p>
+    <p><h3>三、项目结构</h3></p>
+    <table style="width: 100%;" border="1">
+        <tr>
+            <th class="style1">
+                项目名称</th>
+            <th class="style2">
+                项目说明&nbsp;
+            </th>
+            <th>
+                项目依赖&nbsp;
+            </th>
+        </tr>
+        <tr>
+            <td class="style1">
+                MaxLabs.bbsMax.Rescourses</td>
+            <td class="style2">
+                资源项目，目前只放一些语言包，方便以后支持多语言。无功能行的代码</td>
+            <td>
+                无</td>
+        </tr>
+        <tr>
+            <td class="style1">
+                MaxLabs.bbsMax.RegExp</td>
+            <td class="style2">
+                正则表达式项目。 系统中所有的正则表达式全部定义于这里，无功能性的代码</td>
+            <td>
+                无</td>
+        </tr>
+        <tr>
+            <td class="style1">
+                MaxLabs.bbsMax.Project</td>
+            <td class="style2">
+                数据库项目， 存放BBSMAX数据库结构，包括所有的bbsmax数据库表、视图、触发器、函数、关系、和部分存储过程的脚本资源文件，无功能性的代码</td>
+            <td>
+                无</td>
+        </tr>
+        <tr>
+            <td class="style1">
+                MaxLabs.Passport.Proxy</td>
+            <td class="style2">
+                bbsmax的Passport服务器和客户端公用的传递数据的代理类</td>
+            <td>
+                无</td>
+        </tr>
+        <tr>
+            <td class="style1">
+                MaxLabs.Passport.Client</td>
+            <td class="style2">
+                Passport客户端接口， 当挂接到Passport服务器后通过此项目接收由Passport服务器发送过来的指令</td>
+            <td>
+                MaxLabs.Passport.Proxy</td>
+        </tr>
+       
+        <tr>
+            <td class="style1">
+                MaxLabs.Passport.ClientKit</td>
+            <td class="style2">
+                Passport的客户端开发工具箱（待完善）</td>
+            <td>
+                无</td>
+        </tr>
+       
+        <tr>
+            <td class="style1">
+                MaxLabs.bbsMax</td>
+            <td class="style2">
+                bbsmax业务逻辑层BBSMAX内核部分.</td>
+            <td>
+                MaxLabs.bbsMax.Rescourses<br />
+                MaxLabs.bbsMax.RegExp<br />
+                MaxLabs.Passport.Proxy<br />
+                <br />
+                当开启Passport服务器的时候需要通过MaxLabs.bbsMax.IInstructEngine接口间接引用MaxLabs.Passport.InstructEngine</td>
+        </tr> 
+        <tr>
+            <td class="style1">
+                MaxLabs.Passport.InstructEngine</td>
+            <td class="style2">
+                Passport服务器数据同步指令发送引擎部分，<br />
+                负责发送同步数据同步指令到每个Passport客户端</td>
+            <td>
+                MaxLabs.Passport.Proxy<br />
+                MaxLabs.bbsMax</td>
+        </tr>
+        <tr>
+            <td class="style1">
+                MaxLabs.bbsMax.DataAccess.SqlServer</td>
+            <td class="style2">
+                bbsmax数据访问层,这个项目内的DAO类均继承自MaxLabs.bbsMax.DataAccess.DaoBase&lt;T&gt;抽象类，定义于MaxLabs.bbsMax项目</td>
+            <td>
+                MaxLabs.bbsMax.Rescourses<br />
+MaxLabs.bbsMax</td>
+        </tr>
+        <tr>
+            <td class="style1">
+                MaxLabs.Passport.Server</td>
+            <td class="style2">
+                系统整合WebService ,Passport服务器 API接口</td>
+            <td>
+                MaxLabs.Passport.Proxy<br />
+                MaxLabs.bbsMax</td>
+        </tr>
+        <tr>
+            <td class="style1">
+                MaxLabs.bbsMax.Web</td>
+            <td class="style2">
+                Web层。</td>
+            <td>
+                除MaxLabs.bbsMax.Project以外的所有项目</td>
+        </tr>
+    </table>
+
+
+    <p><h3> 四、基本系统结构图：</h3></p>
+    <p style="text-align: center">
+        <img alt="" src="images/jiegou.png" /></p>
+    </body>
+</html>

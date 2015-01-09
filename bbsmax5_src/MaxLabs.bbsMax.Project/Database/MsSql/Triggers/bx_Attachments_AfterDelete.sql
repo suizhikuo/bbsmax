@@ -1,0 +1,12 @@
+﻿CREATE TRIGGER bx_Attachments_AfterDelete  ON [bx_Attachments] 
+AFTER DELETE
+AS
+BEGIN
+
+	SET NOCOUNT ON;
+
+	DELETE bx_Files
+		WHERE FileID IN (SELECT FileID FROM [DELETED])
+			AND FileID NOT IN (SELECT FileID FROM [bx_UsedFileIds] WHERE FileID IN (SELECT FileID FROM [DELETED]))
+
+END

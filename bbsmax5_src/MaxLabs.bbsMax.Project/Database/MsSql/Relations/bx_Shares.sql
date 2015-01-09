@@ -1,0 +1,11 @@
+﻿--用户用户分享关系表外键关系
+
+ALTER TABLE bx_UserShares ADD 
+	CONSTRAINT [FK_bx_UserShares_UserID] FOREIGN KEY (UserID) REFERENCES bx_Users (UserID) ON UPDATE CASCADE ON DELETE CASCADE;
+
+go
+
+ALTER TABLE bx_UserShares ADD 
+	CONSTRAINT [FK_bx_UserShares_ShareID] FOREIGN KEY (ShareID) REFERENCES bx_Shares (ShareID) ON UPDATE CASCADE ON DELETE CASCADE;
+
+go

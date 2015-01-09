@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        .style1
+        {
+            color: #FF0066;
+        }
+        .style2
+        {
+            width: 596px;
+            height: 493px;
+        }
+        .style3
+        {
+            width: 1191px;
+            height: 337px;
+        }
+        .style4
+        {
+            width: 811px;
+            height: 737px;
+        }
+        .style5
+        {
+            color: #0000FF;
+        }
+    </style>
+</head>
+<body>
+
+    <p>
+        BBSMAX在5.0版本中预留了大量的Web Service接口，可以进行非常完美的整合, 
+        如果希望其他程序整合到BBSMAX论坛，则需要您有一定的.NET开发能力。<br />
+        <br />
+        Web Service：<br />
+        安装或升级完成BBSMAX 5.0 后在论坛的根路径下有一个 api.asmx 所有的API接口均定义于这个文件。<br />
+        可以通过浏览器直接访问这个比如：<a href="http://bbs.bbsmax.com/api.asmx" target="_blank">http://bbs.bbsmax.com/api.asmx</a><br />
+        每个函数均做了注释，如果不明白具体的参数可以参考源代码的注释。<br />
+        此接口需要后台开放，并且需要调用者在系统中注册后才能调用<br />
+        Web Service接口的设置页面在5.0版本中并没有在后台菜单中显示出来,可以在地址栏中直接输入页面URL访问<br />
+        <a href="http://yourdomain/max-admin/passport/setting-passportserver.aspx">
+        http://<span class="style1">your domain</span>/max-admin/passport/setting-passportserver.aspx</a><br />
+        <br />
+        1、开启passport服务。<br />
+        2、保存设置<br />
+        3、注册客户端<br />
+&nbsp;&nbsp;
+        <img alt="" class="style2" src="images/regpassport.png" /><br />
+        4、注册成功客户端后得到客户端ID，调用API时需要附带此客户端ID和通讯密钥<br />
+&nbsp;
+        <img alt="" class="style3" src="images/passportcall.png" /></p>
+    <p>
+        &nbsp;</p>
+    <p>
+        5、客户端ID和通讯密钥需要通过<span class="style5">SoapHeader</span>对象传输。附带这两个参数的方法：<br />
+&nbsp;&nbsp; 请参见 MaxLabs.Passport.ClientKit项目下的<br />
+&nbsp;&nbsp; Common\AsmxAccess.cs 文件。 下图：<br />
+        <img alt="" class="style4" src="images/asmxapi.png" /><br />
+&nbsp;&nbsp;
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,279 @@
+﻿/*==========================================================
+    BBSMAX Yellow Theme
+    (c) www.bbsmax.com
+==========================================================*/
+.section-center .content-main-inner{padding:0 10px;background:#fff;border:solid #dfd0a3;border-width:0 1px;}
+.section-center .sidebar{background:#fff;border:solid #dfd0a3;border-width:0 1px;}
+.section-center .sidebar .panel{margin:0;padding:10px 0;border-bottom:1px solid #ebddb2;}
+.section-center .sidebar .panel-head,
+.section-center .sidebar .panel-body{padding:0 10px;}
+
+/*= Layout =*/
+.quickpublishform{margin-bottom:10px;padding-left:70px;}
+.quickpublishform .useravatar{float:left;display:inline;width:60px;margin-left:-70px;}
+.quickpublishform .useravatar a{float:left;position:relative;padding:3px;background:url(../images/avatar_bg.gif) no-repeat;}
+.quickpublishform .useravatar a img{display:block;background:#fff;}
+.quickpublishform .useravatar .avatar-change{position:absolute;top:2px;right:2px;width:11px;height:11px;text-indent:-999px;background:url(../images/avatar_edit.gif) no-repeat;visibility:hidden;}
+.quickpublishform .useravatar a:hover .avatar-change{visibility:visible;}
+.quickpublishform .quickpublishform-enter{zoom:1;}
+.quickpublishform .errormsg{margin-bottom:5px;padding:0 0 0 20px;background-color:transparent;background-position:0 50%;}
+.quickpublishform .quickpublishform-change{float:left;}
+.quickpublishform .quickpublishform-change a{padding-left:18px;background-repeat:no-repeat;background-position:0 50%;}
+.quickpublishform .quickpublishform-change a:link,.quickpublishform .quickpublishform-change a:visited{color:#666;}
+
+.quickstatusform .statusform-textarea{margin-bottom:5px;overflow:hidden;border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;background:#fff;}
+.quickstatusform .statusform-textarea textarea{display:block;width:99%;height:2.8em;padding:2px 0;border:0;}
+.quickstatusform .statusform-action{line-height:25px;}
+.quickstatusform .statusform-submit{float:right;}
+.quickstatusform .statusform-submit .minbtn-wrap{margin-right:5px;}
+.quickstatusform .statusform-tip{float:left;margin-right:10px;color:#999;}
+.quickstatusform .statusform-tip .numeric{font-family:Georgia,Times,serif;}
+
+.quickshareform .formrow{margin-bottom:5px;}
+.quickshareform .formrow .label{margin-bottom:5px;}
+.quickshareform .formrow .form-enter{border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;background:#fff;}
+.quickshareform .formrow input.url{width:99%;padding:2px 0;border:0;}
+.quickshareform .quickshareform-action{line-height:25px;}
+.quickshareform .quickshareform-submit{float:right;}
+.quickshareform .quickshareform-submit .minbtn-wrap{margin-right:5px;}
+.quickshareform .formrow .text[type="text"]{color:#999;}
+.quickshareform .formrow .text[type="text"]:focus{color:#000;}
+
+/*= Sidebar =*/
+.missiondock .panel-head{margin-bottom:10px;}
+.missiondock .missionitem{padding-left:75px;}
+.missiondock .missionitem .mission-icon{float:left;display:inline;margin-left:-75px;}
+.missiondock .mission-title{font-size:117%;}
+.missiondock .mission-award .label{color:#999;}
+.missiondock .mission-award .value{color:#f60;font-weight:bold;}
+
+.myuserinfo .panel-head{margin-bottom:10px;}
+.myuserinfo li{clear:both;color:#666;line-height:1.8;}
+.myuserinfo .label{float:left;margin-right:10px;}
+.myuserinfo .value{float:left;margin-right:20px;color:#000;font-style:normal;}
+.myuserinfo .order{float:left;color:#c00;font-style:normal;}
+
+.noticelist .panel-head{margin-bottom:10px;}
+.notice-list li{clear:both;padding-left:20px;margin-bottom:5px;}
+.notice-list li img{float:left;display:inline;margin-left:-20px;}
+
+.visitors .panel-head{margin-bottom:10px;}
+.visitors .panel-title{float:left;}
+.visitors .panel-more{float:right;}
+.visitorlist .visitoritem{margin-bottom:10px;padding-left:60px;padding-right:21px;}
+.visitorlist .avatar{float:left;display:inline;margin-left:-60px;}
+.visitorlist .name,
+.visitorlist .date,
+.visitorlist .operate{white-space:nowrap;}
+.visitorlist .addfriend{padding-left:16px;background:url(../images/icons/friend_add.gif) no-repeat 0 50%;}
+.visitorlist .action{float:right;display:inline;margin-right:-21px;width:11px;}
+.visitorlist .action a{float:left;width:11px;height:11px;margin-bottom:5px;overflow:hidden;text-indent:-999px;background-repeat:no-repeat;}
+.visitorlist .action a.action-delete{background-image:url(../images/item_delete.gif);}
+.visitorlist .action a:hover{background-position:-11px 0;}
+.visitorlist .chat a,
+.visitorlist .chat a{padding-left:16px;background:url(../images/icons/chat_online.gif) no-repeat 0 50%;}
+.visitorlist .chat a.chat-offline,
+.visitorlist .chat a.chat-offline{background-image:url(../images/icons/chat_offline.gif);}
+.visitorlist .chat a.chat-online:link,.visitorlist .chat a.chat-online:visited{color:#ab0000;}
+.visitorlist .chat a.chat-offline:link,.visitorlist .chat a.chat-offline:visited{color:#666;}
+
+.visitorlist .visitoritem *[class~="action"]{visibility:hidden;}
+.visitorlist .visitoritem:hover *[class~="action"]{visibility:visible;}
+
+/*= My Threads ===========================================*/
+.section-mythreads .content-main-inner{padding:0 10px;background:#fff;border:solid #dfd0a3;border-width:0 1px;}
+.section-mythreads .workspace-content-inner{margin-right:0;}
+
+.mythreadstable{margin-bottom:10px;}
+.mythreadstable table{width:100%;}
+.mythreadstable td{padding:5px;border-bottom:1px solid #eee;}
+.mythreadstable thead td{color:#999;background:#f8f8f8;border-top:1px solid #eee;}
+.mythreadstable td.category,
+.mythreadstable td.published,
+.mythreadstable td.last,
+.mythreadstable td.stats{width:100px;}
+.mythreadstable td.stats{text-align:right;}
+.mythreadstable tbody td.stats{font-size:83%;}
+.mythreadstable .date{font-size:83%;display:block;}
+.mythreadstable .value{color:#f60;font-weight:bold;}
+.mythreadstable .negative{color:#c00;}
+.mythreadstable .reason .date{display:inline;}
+
+/*= Notify ===============================================*/
+.section-notify .content-main-inner{padding:0 10px;background:#fff;border:solid #dfd0a3;border-width:0 1px;}
+
+.section-notify .workspace-content{float:right;}
+.section-notify .workspace-content-inner{margin-left:130px;margin-right:0;}
+.section-notify .workspace-sidebar{float:left;width:120px;margin-left:0;margin-right:-120px;}
+
+.notifylist{margin-bottom:10px;}
+.notifylist .notify-list{border-top:1px solid #eee;}
+.notifylist .notifyitem{padding:5px 60px 5px 5px;border-bottom:1px solid #eee;overflow:hidden;}
+.notifylist .notify-entry{float:left;width:100%;}
+.notifylist .entry-action{float:right;display:inline;margin:1px -60px 0 0;width:50px;}
+.notifylist .entry-action a{float:right;display:inline;margin:0 0 0 5px;}
+.notifylist .notify-date{color:#999;margin-left:10px;}
+.notifylist .notify-content .unread{color:#c00;margin-right:1em;}
+.notifylist .notify-action{margin-top:5px; background:#eee;}
+
+.notifylist .notify-action a,
+.notifycontrol .notify-ignoreall a{float:left;margin-right:5px;padding-right:5px;background:url(../images/button_3.png) no-repeat 100% -75px;}
+.notifylist .notify-action a span,
+.notifycontrol .notify-ignoreall a span{float:left;height:25px;line-height:25px;padding:0 5px 0 10px;background:url(../images/button_3.png) no-repeat 0 -50px;}
+.notifylist .notify-action a:hover,
+.notifycontrol .notify-ignoreall a:hover{background-position:100% -125px;}
+.notifylist .notify-action a:hover span,
+.notifycontrol .notify-ignoreall a:hover span{background-position:0 -100px;}
+.notifylist .notify-action a:link,.notifylist .notify-action a:visited,
+.notifycontrol .notify-ignoreall a:link,.notifycontrol .notify-ignoreall a:visited{color:#333;text-decoration:none;cursor:pointer;}
+
+.notifycontrol .notify-ignoreall{float:left;}
+.notifycontrol .pagination{float:right;}
+
+.notifycategory{padding-bottom:29px;background:url(../images/cate_edge.png) no-repeat 100% 100%;}
+.notifycategory-list{padding-top:5px;padding-bottom:1px;border-right:1px solid #dfd0a3;}
+.notifycategory li{margin-bottom:1px;zoom:1;}
+.notifycategory li a{position:relative;display:block;height:30px;line-height:30px;padding:0 10px;}
+.notifycategory li .counts{color:#ab0000;}
+.notifycategory li a:link,.notifycategory li a:visited{color:#000;text-decoration:none;}
+.notifycategory li a:hover,.notifycategory li a:active,
+.notifycategory li a.current:link,.notifycategory li a.current:visited{margin-right:-1px;background:url(../images/cate_tab.png) no-repeat;}
+
+.section-notify .formrow{line-height:1.8;padding:10px 0 10px 90px;border-top:1px solid #eee;}
+.section-notify .formrow .label{float:left;display:inline;width:80px;margin-left:-90px;}
+.section-notify .formrow .form-enter{float:left;margin-right:10px;}
+.section-notify .formrow .form-tip{float:left;}
+.section-notify .formrow .form-enter .form-tip{float:none;margin-left:10px;}
+.section-notify .formrow .form-note{clear:both;float:left;margin-top:5px;}
+.section-notify .formrow .text{width:15em;}
+.section-notify .formrow .number{width:8em;}
+.section-notify .formrow select{width:10em;}
+.section-notify .formrow .form-optionlist{float:left;width:100%;}
+.section-notify .formrow .form-optionlist li{float:left;width:150px;margin:0 10px 0 0;}
+
+/*= Chat Message =========================================*/
+.section-chat .content-main-inner{padding:0 10px;background:#fff;border:solid #dfd0a3;border-width:0 1px;}
+.section-chat .workspace-content{float:right;}
+.section-chat .workspace-content-inner{margin-left:320px;margin-right:0;}
+.section-chat .workspace-sidebar{float:left;width:320px;margin-left:0;margin-right:-320px;}
+.section-chat .workspace-sidebar .pagination{padding-right:10px;}
+
+.msglist{margin-bottom:10px;}
+.msglist .msgitem{position:relative;margin:0 0 -1px;padding:10px 52px 10px 50px;border:1px solid #ddd;}
+.msglist .current{z-index:1;border:1px solid #ffe5a0;background:#fffae3;padding-right:53px;margin-right:-1px;}
+.msglist .msgitem .current-arrow{position:absolute;top:50%;right:-7px;width:7px;height:14px;overflow:hidden;margin-top:-7px;background:url(../images/msg_current.gif) no-repeat;}
+.msglist .msg-avatar{float:left;display:inline;width:30px;margin:2px 0 0 -40px;}
+.msglist .entry-action{float:right;display:inline;margin-right:-47px;width:42px;}
+.msglist .entry-action a{float:left;margin:10px 5px 0 0;}
+.msglist .msg-entry{float:left;width:100%;}
+.msglist .msg-entry a{display:block;}
+.msglist .msg-entry .author{float:left;font-weight:bold;}
+.msglist .msg-entry .msg-status{color:#c00;margin-left:.5em;}
+.msglist .msg-entry .updated{float:right;}
+.msglist .msg-entry .msg-lastmsg{display:block;clear:both;}
+.msglist .msg-entry a:link,.msglist .msg-entry a:visited{color:#000;text-decoration:none;}
+
+.msgloglist-head{margin-bottom:10px;padding:5px 10px;border:solid #ebddb2;border-width:1px 0;background:#fffae3 url(../images/highlight_1.gif) repeat-x;}
+.msgloglist-head .title{float:left;}
+.msgloglist-head .counts{float:right;color:#666;}
+.msglog-list{margin-bottom:10px;}
+.msglog-list .msglog-date{padding:5px 10px;border-bottom:1px solid #ddd;}
+.msglog-list .msglogitem{padding:5px 10px;border-bottom:1px solid #ddd;}
+.msglog-list .msglogitem .msglog-title{margin-bottom:5px;}
+.msglog-list .msglogitem .published{margin-left:1em;}
+
+.startchat{width:280px;margin:0 auto;}
+.startchat .startchatform{margin-bottom:10px;}
+.startchat .startchatform-enter{float:left;width:150px;margin-right:5px;padding:1px 0;background:#fff;border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;}
+.startchat .startchatform-enter input.text{border:0;width:98%;}
+.startchat .startchatform-enter .text[type="text"]{color:#999;}
+.startchat .startchatform-enter .text[type="text"]:focus{color:#000;}
+
+/*= Friend ===============================================*/
+.section-friend .content-main-inner{padding:0 10px;background:#fff;border:solid #dfd0a3;border-width:0 1px;}
+
+.section-friend .workspace-content{float:right;}
+.section-friend .workspace-content-inner{margin-left:190px;margin-right:0;}
+.section-friend .workspace-sidebar{float:left;width:180px;margin-left:0;margin-right:-180px;}
+
+.section-friend-blacklist .workspace-content{float:left;}
+.section-friend-blacklist .workspace-content-inner{margin-right:190px;margin-left:0;}
+.section-friend-blacklist .workspace-sidebar{float:right;width:180px;margin-left:-180px;margin-right:0;}
+
+.section-friend-impression .workspace-content-inner{margin-left:0;margin-right:0;}
+.section-friend-impression .workspace-sidebar{width:0;}
+
+.section-friend-invite .workspace-content-inner{margin-left:0;margin-right:0;}
+.section-friend-invite .workspace-sidebar{width:0;}
+
+.friendlist .frienditem{float:left;margin:0 10px 10px 0;width:280px;height:85px;overflow:hidden;line-height:1.8;border:1px solid #eee;}
+.friendlist .friend-entry{padding:10px 30px 10px 70px;}
+.friendlist .friend-entry .avatar{float:left;display:inline;width:60px;margin-left:-60px;}
+.friendlist .friend-content{float:left;width:100%;overflow:hidden;}
+.friendlist .entry-action{float:right;display:inline;margin-right:-25px;width:20px;}
+.friendlist .friend-content .name .fn{margin-right:5px;}
+.friendlist .friend-content .operate,
+.friendlist .friend-content .friend-status{color:#999;white-space:nowrap;}
+.friendlist .friend-content .operate a:link,.friendlist .friend-content .operate a:visited{color:#666;}
+
+.friendlist .friend-content .operate a.changegroup{float:left;padding:0 19px 0 0;background:url(../images/button_3.png) no-repeat 100% 0;cursor:pointer;}
+.friendlist .friend-content .operate a.changegroup span{float:left;padding:0 0 0 5px;height:25px;line-height:25px;background:url(../images/button_3.png) no-repeat 0 999px;}
+.friendlist .friend-content .operate a.changegroup:hover{text-decoration:none;background-position:100% -25px;}
+.friendlist .friend-content .operate a.changegroup:hover span{background-position:0 -50px;}
+
+.friendgroup{padding-bottom:30px;background:url(../images/cate_edge.png) no-repeat 100% 100%;}
+.friendgroup .panel-head{display:none;}
+.friendgroup .panel-body{padding-top:5px;padding-bottom:1px;border-right:1px solid #dfd0a3;}
+.friendgroup .category-list li{margin-bottom:1px;zoom:1;}
+.friendgroup .category-list li .name a{position:relative;height:30px;line-height:30px;padding:0 10px;}
+.friendgroup .category-list li:hover .name a,
+.friendgroup .category-list li .name a:hover,
+.friendgroup .category-list li .name a:active,
+.friendgroup .category-list li.current .name a:link,
+.friendgroup .category-list li.current .name a:visited{margin-right:-1px;background:url(../images/cate_tab.png) no-repeat;}
+.friendgroup .addcategory .formgroup{background:transparent;}
+
+.impression-list{margin-bottom:10px;border-top:1px solid #eee;}
+.impressionlist .impressionitem{padding:10px 0 10px 70px;border-bottom:1px solid #eee;}
+.impressionlist .avatar{float:left;display:inline;width:60px;margin-left:-70px;}
+.impressionlist .name{margin-bottom:8px;overflow:hidden;}
+.impressionlist .name .fn{float:left;margin-right:10px;}
+.impressionlist .name .chat{float:left;}
+.impressionlist .name .writeimpression{float:right;}
+.impressionlist .name .writeimpression:link,.impressionlist .name .writeimpression:visited{color:#999;}
+
+.impression-word{margin-bottom:0;text-align:left;}
+
+.inviteform .formrow{margin-bottom:10px;line-height:1.8;padding-left:90px;}
+.inviteform .formrow .label{float:left;display:inline;width:80px;margin-left:-90px;}
+.inviteform .formrow .form-enter{float:left;margin-right:10px;}
+.inviteform .formrow .form-tip{float:left;}
+.inviteform .formrow .text{width:15em;}
+.inviteform .formrow .number{width:8em;}
+.inviteform .formrow textarea{width:400px;height:5em;}
+.inviteform .formrow .form-note{clear:both;float:left;margin-top:5px;}
+.inviteform .formrow .invitepreview{width:100%; }
+.inviteform .formrow .invitepreview-inner{padding:10px;background:#ffc;border:1px solid #ccc;border-width:1px 0;}
+
+.invitecodetable{margin-bottom:10px;}
+.invitecodetable table{width:100%;}
+.invitecodetable td{padding:5px;border-bottom:1px solid #eee;white-space:nowrap;}
+.invitecodetable thead td{color:#999;border-top:1px solid #ccc;border-bottom:1px solid #ddd;background:#f5f5f5 url(../images/highlight_1.gif) repeat-x;}
+.invitecodetable td.code{width:330px;}
+.invitecodetable td.user{width:80px;}
+.invitecodetable td.date{width:80px;}
+.invitecodetable td.send{width:80px;}
+.invitecodetable .nodata{padding:50px 0;color:#999;text-align:center;}
+
+.inviteuser .panel-head{margin-bottom:10px;}
+.inviteuser .pagination{margin-bottom:0;}
+.inviteuserlist{margin-bottom:5px;}
+.inviteuser-list li{float:left;width:190px;margin-bottom:5px;line-height:28px;}
+.inviteuser-list .avatar{float:left;margin-right:5px;width:28px;height:28px;overflow:hidden;background:url(../images/avatar_medium_bg.gif) no-repeat;}
+.inviteuser-list .avatar img{padding:2px;}
+
+.addblacklist .formrow{margin-bottom:10px;}
+.addblacklist .label{margin-bottom:5px;}
+.addblacklist .form-enter{border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;background:#fff;}
+.addblacklist .form-enter input.text{width:98%;border:0;}
+.addblacklist .form-note{margin-top:5px;}

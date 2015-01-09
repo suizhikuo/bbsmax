@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BA6295DC-1218-41AE-815D-4B31EA1EDD9D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaxLabs.bbsMax.Project</RootNamespace>
+    <AssemblyName>MaxLabs.bbsMax.Project</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Publish|AnyCPU' ">
+    <OutputPath>bin\Publish\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Database\MsSql\Views\bx_UserTempAvatar.sql" />
+    <None Include="Database\MsSql\Tables\bx_Announcements.sql">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database\MsSql\Views\bx_SimpleUser.sql" />
+    <None Include="Database\MsSql\Tables\bx_Emoticons.sql" />
+    <None Include="Database\MsSql\Tables\bx_FriendGroups.sql" />
+    <None Include="Database\MsSql\Tables\bx_DenouncingContents.sql" />
+    <None Include="Database\MsSql\Tables\bx_ClubCategories.sql" />
+    <None Include="Database\MsSql\Tables\bx_Notify.sql" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database\MsSql\Tables\bx_FeedTemplates.sql" />
+    <None Include="Database\MsSql\Tables\bx_Friends.sql" />
+    <None Include="Database\MsSql\Tables\bx_Visitors.sql" />
+    <None Include="Database\MsSql\Tables\bx_Settings.sql" />
+    <None Include="Database\MsSql\Tables\bx_Users.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserRoles.sql" />
+    <None Include="Database\MsSql\Tables\bx_Feeds.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserNoAddFeedApps.sql" />
+    <None Include="Database\MsSql\Tables\bx_FeedFilters.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database\MsSql\DefaultData.sql" />
+    <None Include="Database\MsSql\Functions\bx_GetStringTable_nvarchar.sql" />
+    <None Include="Database\MsSql\Functions\bx_GetBigIntTable.sql" />
+    <None Include="Database\MsSql\Includes\CheckDirectoryID.sql" />
+    <None Include="Database\MsSql\Includes\Procedure_UpdateKeyword.sql" />
+    <None Include="Database\MsSql\Includes\Procedure_UpdateKeyword2.sql" />
+    <None Include="Database\MsSql\Procedures\bx_Register.sql" />
+    <None Include="Database\MsSql\Procedures\bx_SendMessage.sql" />
+    <None Include="Database\MsSql\Procedures\bx_VisitBlogArticle.sql" />
+    <None Include="Database\MsSql\Procedures\bx_Blog_PostBlogArticle.sql" />
+    <None Include="Database\MsSql\Procedures\bx_ApplyMission.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreateEmoticonsAndGroups.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_MoveEmoticons.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_RenameEmoticonShortcut.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadByID.sql" />
+    <None Include="Database\MsSql\Relations\bx_AlbumReverters.sql" />
+    <None Include="Database\MsSql\Relations\bx_BannedUsers.sql" />
+    <None Include="Database\MsSql\Relations\bx_BanUserForumInfoLogs.Sql" />
+    <None Include="Database\MsSql\Relations\bx_BlogArticleReverters.sql" />
+    <None Include="Database\MsSql\Relations\bx_BlogArticleVisitors.sql" />
+    <None Include="Database\MsSql\Relations\bx_BlogCategories.sql" />
+    <None Include="Database\MsSql\Relations\bx_BlogCategoryReverters.sql" />
+    <None Include="Database\MsSql\Relations\bx_ClubMembers.sql" />
+    <None Include="Database\MsSql\Relations\bx_DoingReverters.sql" />
+    <None Include="Database\MsSql\Relations\bx_EmoticonGroups.sql" />
+    <None Include="Database\MsSql\Relations\bx_Emoticons.sql" />
+    <None Include="Database\MsSql\Relations\bx_Moderators.sql" />
+    <None Include="Database\MsSql\Relations\bx_Notify.sql" />
+    <None Include="Database\MsSql\Relations\bx_PhotoReverters.sql" />
+    <None Include="Database\MsSql\Relations\bx_ShareReverters.sql" />
+    <None Include="Database\MsSql\Relations\bx_TagRelation.sql" />
+    <None Include="Database\MsSql\Relations\bx_Photos.sql" />
+    <None Include="Database\MsSql\Relations\bx_Spaces.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserExtendedFields.sql" />
+    <None Include="Database\MsSql\Relations\bx_DiskDirectories.sql" />
+    <None Include="Database\MsSql\Relations\bx_DiskFiles.sql" />
+    <None Include="Database\MsSql\Relations\bx_Albums.sql" />
+    <None Include="Database\MsSql\Relations\bx_BlogArticles.sql" />
+    <None Include="Database\MsSql\Relations\bx_ImpressionRecords.sql" />
+    <None Include="Database\MsSql\Relations\bx_Impressions.sql" />
+    <None Include="Database\MsSql\Relations\bx_Comments.sql" />
+    <None Include="Database\MsSql\Relations\bx_Doings.sql" />
+    <None Include="Database\MsSql\Relations\bx_Friends.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserMedals.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserMobileCode.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserRoles.sql" />
+    <None Include="Database\MsSql\Relations\bx_Visitors.sql" />
+    <None Include="Database\MsSql\Relations\bx_FriendGroups.sql" />
+    <None Include="Database\MsSql\Relations\bx_InviteSerials.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserAvatarLocks.sql" />
+    <None Include="Database\MsSql\Relations\bx_PropLogs.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserProps.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserReverters.sql" />
+    <None Include="Database\MsSql\Relations\bx_TempUploadFiles.sql" />
+    <None Include="Database\MsSql\Relations\bx_PointShows.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserInfos.sql" />
+    <None Include="Database\MsSql\Relations\bx_ChatSessions.sql" />
+    <None Include="Database\MsSql\Relations\bx_ChatMessages.sql" />
+    <None Include="Database\MsSql\Relations\bx_ChatMessageReverters.sql" />
+    <None Include="Database\MsSql\Relations\bx_PostMarks.sql" />
+    <None Include="Database\MsSql\Relations\bx_DenouncingContents.sql" />
+    <None Include="Database\MsSql\Relations\bx_CommentReverters.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserVars.sql" />
+    <None Include="Database\MsSql\Relations\bx_AuthenticUsers.sql" />
+    <None Include="Database\MsSql\Relations\bx_ThreadImages.sql" />
+    <None Include="Database\MsSql\Start.sql" />
+    <None Include="Database\MsSql\Tables\bx_ADCategory.sql" />
+    <None Include="Database\MsSql\Tables\bx_AdminSessions.sql" />
+    <None Include="Database\MsSql\Tables\bx_Adverts.sql" />
+    <None Include="Database\MsSql\Tables\bx_Albums.sql" />
+    <None Include="Database\MsSql\Tables\bx_AlbumReverters.sql" />
+    <None Include="Database\MsSql\Tables\bx_BannedUsers.sql" />
+    <None Include="Database\MsSql\Tables\bx_BanUserForumInfoLogs.Sql" />
+    <None Include="Database\MsSql\Tables\bx_BlogArchives.sql" />
+    <None Include="Database\MsSql\Tables\bx_BlogArticlesReverter.sql" />
+    <None Include="Database\MsSql\Tables\bx_BlogArticleVisitors.sql" />
+    <None Include="Database\MsSql\Tables\bx_BlogCategories.sql" />
+    <None Include="Database\MsSql\Tables\bx_BlogArticles.sql" />
+    <None Include="Database\MsSql\Tables\bx_BlogCategoryReverters.sql" />
+    <None Include="Database\MsSql\Tables\bx_ClubMembers.sql" />
+    <None Include="Database\MsSql\Tables\bx_Clubs.sql" />
+    <None Include="Database\MsSql\Tables\bx_Comments.sql" />
+    <None Include="Database\MsSql\Tables\bx_CommentReverters.sql" />
+    <None Include="Database\MsSql\Tables\bx_DiskDirectories.sql" />
+    <None Include="Database\MsSql\Tables\bx_DiskFiles.sql" />
+    <None Include="Database\MsSql\Tables\bx_DoingReverters.sql" />
+    <None Include="Database\MsSql\Tables\bx_EmoticonGroups.sql" />
+    <None Include="Database\MsSql\Tables\bx_ExtendedFields.sql" />
+    <None Include="Database\MsSql\Tables\bx_Files.sql" />
+    <None Include="Database\MsSql\Tables\bx_Identities_8000.sql" />
+    <None Include="Database\MsSql\Tables\bx_Instructs.sql" />
+    <None Include="Database\MsSql\Tables\bx_InviteSerials.sql" />
+    <None Include="Database\MsSql\Tables\bx_IPLogs.sql" />
+    <None Include="Database\MsSql\Tables\bx_Medals.sql" />
+    <None Include="Database\MsSql\Tables\bx_Doings.sql" />
+    <None Include="Database\MsSql\Tables\bx_OperationLogs.sql" />
+    <None Include="Database\MsSql\Tables\bx_PassportClients.sql" />
+    <None Include="Database\MsSql\Tables\bx_Pay.sql" />
+    <None Include="Database\MsSql\Tables\bx_PropLogs.sql" />
+    <None Include="Database\MsSql\Tables\bx_Roles.sql" />
+    <None Include="Database\MsSql\Tables\bx_UsersInRoles.sql" />
+    <None Include="Database\MsSql\Tables\bx_ShareReverters.sql" />
+    <None Include="Database\MsSql\Tables\bx_StepByStepTasks.sql" />
+    <None Include="Database\MsSql\Tables\bx_ImpressionRecords.sql" />
+    <None Include="Database\MsSql\Tables\bx_Impressions.sql" />
+    <None Include="Database\MsSql\Tables\bx_UnreadNotifies.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserAvatarLocks.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserExtendedValues.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserInfos.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserMissions.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserFeeds.sql" />
+    <None Include="Database\MsSql\Relations\bx_Shares.sql" />
+    <None Include="Database\MsSql\Tables\bx_Photos.sql" />
+    <None Include="Database\MsSql\Procedures\bx_CreateFeed.sql" />
+    <None Include="Database\MsSql\Procedures\bx_CreateFeedFilter.sql" />
+    <None Include="Database\MsSql\Tables\bx_Denouncings.sql" />
+    <None Include="Database\MsSql\Functions\bx_GetIntTable.sql" />
+    <None Include="Database\MsSql\Functions\bx_GetStringTable_varchar.sql" />
+    <Content Include="Database\MsSql\Functions\bx_GetStringTable_ntext.sql" />
+    <Content Include="Database\MsSql\Functions\bx_GetStringTable_text.sql" />
+    <None Include="Database\MsSql\Functions\bx_Common_GetSortOrder.sql" />
+    <None Include="Database\MsSql\Functions\bx_UpdateSortOrder.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreateForum.sql" />
+    <None Include="Database\MsSql\Relations\bx_Threads.sql" />
+    <None Include="Database\MsSql\Relations\bx_Posts.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetDisabledTriggerForumIDs.sql" />
+    <None Include="Database\MsSql\Relations\bx_AttachmentExchanges.sql" />
+    <None Include="Database\MsSql\Relations\bx_Attachments.sql" />
+    <None Include="Database\MsSql\Relations\bx_Polemizes.sql" />
+    <None Include="Database\MsSql\Relations\bx_PolemizeUsers.sql" />
+    <None Include="Database\MsSql\Relations\bx_Polls.sql" />
+    <None Include="Database\MsSql\Relations\bx_PollItems.sql" />
+    <None Include="Database\MsSql\Relations\bx_PollItemDetails.sql" />
+    <None Include="Database\MsSql\Relations\bx_QuestionRewards.sql" />
+    <None Include="Database\MsSql\Relations\bx_Questions.sql" />
+    <None Include="Database\MsSql\Relations\bx_QuestionUsers.sql" />
+    <None Include="Database\MsSql\Relations\bx_ThreadCatalogsInForums.sql" />
+    <None Include="Database\MsSql\Relations\bx_ThreadExchanges.sql" />
+    <None Include="Database\MsSql\Relations\bx_ThreadRanks.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetAllForums.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdateForumData.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_ResetTodayPosts.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdateForum.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DeleteForum.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdateForumStatus.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DeleteForumThreads.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_MoveForumThreads.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_MoveForum.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_Common_UpdateSortOrder.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetAllModerators.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetModeratorForums.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreateModerator.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DeleteModerator.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DeleteModerators.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdateModerator.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CheckModeratorRole.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DeleteExpiresModerators.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetAllThreadCatalogs.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreateThreadCatalog.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdateThreadCatalog.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DeleteThreadCatalog.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_AddThreadCatalogToForum.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_RemoveThreadCatalogFromForum.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdateForumsInThreadCatalog.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadCatalogForumIDs.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadCatalogsInForums.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdateForumThreadCatalogsData.sql" />
+    <None Include="Database\MsSql\Tables\bx_PhotoReverters.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetPostUserIDsFormThreads.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadsByCreateDate.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadsHot.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadsValued.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_IsRepliedThread.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadsByPostCreateDate.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadsByForumID.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetGlobalStickyThreadIdentities.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadsByThreadType.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadsByThreadCatalogID.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetValuedThreads.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadsByForumIdentities.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetMyParticipantThreads.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetMyThreads.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadsByIdentities.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadsByStatus.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThread.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreateThread.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreatePost.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetPost.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetPosts.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetPostsByIdentities.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DeleteThreads.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DeletePosts.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdateThread.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdatePost.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_MoveThreads.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_JoinThreads.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_SplitThread.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_SetThreadsSubjectStyle.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_SetThreadsLock.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_SetThreadsUp.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_SetThreadsValued.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_SetThreadsStatus.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetAttachment.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetAttachments.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetAttachmentIsBuy.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreateAttachmentExchange.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreatePoll.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_Vote.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetPoll.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetVotedUsers.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetPollDetails.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreateQuestion.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetQuestion.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_FinalQuestion.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_AddQuestionUser.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetUserQuestions.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreatePolemize.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_AddPolemizeUser.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetPolemizePosts.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetAllPolemizeTypePosts.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CheckExpiresQuestions.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreateThreadManageLog.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadManageLogsBySearch.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DeleteThreadManageLogs.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadManageLogs.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreatePostMark.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetPostMarks.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetPostMarksBySeach.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DeletePostMark.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_ApprovePosts.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetUnapprovedPostThread.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetUnapprovedPostThreads.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetUnapprovedPosts.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadRanksByThreadID.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetThreadRanksByUserID.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_CreateOrUpdateThreadRank.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DeleteThreadRank.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdatePostsShielded.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_GetSortOrder.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdateSortOrder.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_SearchStatement.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_RecordStat------------------------.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_Common_GetRecordsByPage.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_Common_GetRecordsByPageSQLString.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_DoCreateStat.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_Common_GetRecordsByPage_LongCondition.sql" />
+    <None Include="Database\MsSql\Includes\Trigger_BuildExtendedData.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_AutoFinalQuestion.sql" />
+    <None Include="Database\MsSql\Relations\bx_AdminSessions.sql" />
+    <None Include="Database\MsSql\Relations\bx_Clubs.sql" />
+    <None Include="Database\MsSql\Relations\bx_PostReverters.sql" />
+    <None Include="Database\MsSql\Relations\bx_ThreadReverters.sql" />
+    <None Include="Database\MsSql\Procedures\bx_UpdateUserGeneralPoint.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserNoAddFeedApps.sql" />
+    <None Include="Database\MsSql\Relations\bx_FeedFilters.sql" />
+    <None Include="Database\MsSql\Relations\bx_TopicStatus.sql" />
+    <Content Include="Database\MsSql\Includes\define.txt" />
+    <None Include="Database\MsSql\Relations\bx_PostLoveHates.sql" />
+    <None Include="Database\MsSql\Relations\bx_StickThreads.sql" />
+    <None Include="Database\MsSql\Relations\bx_ThreadCates.sql" />
+    <None Include="Database\MsSql\Relations\bx_Serials.sql" />
+    <None Include="Database\MsSql\Relations\bx_UnreadNotifies.sql" />
+    <None Include="Database\MsSql\Tables\bx_SmsCodes.sql" />
+    <None Include="Database\MsSql\Relations\bx_UserTempData.sql" />
+    <Content Include="Database\MsSql\Relations\bx_Pay.sql" />
+    <Content Include="Database\MsSql\Relations\bx_PointLogs.sql" />
+    <None Include="Database\MsSql\Relations\bx_ThreadWords.sql" />
+    <Content Include="Database\MsSql\Relations\bx_RecoverPasswordLogs.sql" />
+    <Content Include="Database\MsSql\Relations\bx_UsersInRoles.sql" />
+    <Content Include="Database\MsSql\Tables\bx_RecoverPasswordLogs.sql" />
+    <Content Include="Database\MsSql\Tables\bx_UserFeeds.sql" />
+    <Content Include="Database\MsSql\Tables\bx_Shares.sql" />
+    <Content Include="Database\MsSql\Tables\bx_Missions.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserMedals.sql" />
+    <None Include="Database\MsSql\Tables\bx_PointShows.sql" />
+    <None Include="Database\MsSql\Tables\bx_Tags.sql" />
+    <None Include="Database\MsSql\Tables\bx_TagRelation.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserTempData.sql" />
+    <None Include="Database\MsSql\Tables\bx_ChatMessages.sql" />
+    <None Include="Database\MsSql\Tables\bx_ImpressionTypeReverters.sql" />
+    <None Include="Database\MsSql\Tables\bx_Props.sql" />
+    <None Include="Database\MsSql\Tables\bx_TempUploadFiles.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserProps.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserVars.sql" />
+    <None Include="Database\MsSql\Tables\bx_PostReverters.sql" />
+    <None Include="Database\MsSql\Tables\bx_ThreadReverters.sql" />
+    <None Include="Database\MsSql\Tables\bx_ChatSessions.sql" />
+    <None Include="Database\MsSql\Tables\bx_ImpressionTypes.sql" />
+    <None Include="Database\MsSql\Tables\bx_Serials.sql" />
+    <None Include="Database\MsSql\Tables\bx_ClickLogs.sql" />
+    <Content Include="Database\MsSql\Tables\bx_PollItems.sql" />
+    <None Include="Database\MsSql\Tables\bx_ChatMessageReverters.sql" />
+    <None Include="Database\MsSql\Tables\bx_DeletingFiles.sql" />
+    <None Include="Database\MsSql\Tables\bx_BanUserLogs.sql" />
+    <None Include="Database\MsSql\Tables\bx_DayLastThreads.sql" />
+    <None Include="Database\MsSql\Tables\bx_AuthenticUsers.sql" />
+    <None Include="Database\MsSql\Tables\bx_ThreadImages.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserMobileOperationLogs.sql" />
+    <None Include="Database\MsSql\TestDatas\TestDatas.sql" />
+    <None Include="Database\MsSql\Triggers\bx_BlogArticles_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_BlogArticles_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Comments_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Denouncings_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_DiskFiles_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_DiskFiles_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Doings_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Emoticons_After_Update.sql" />
+    <None Include="Database\MsSql\Triggers\bx_ChatMessages_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_BlogArticles_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Comments_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Comments_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Photos_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Photos_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_RoleUsers_After_Delete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_RoleUsers_After_Insert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_RoleUsers_After_Update.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Shares_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_TagRelation_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_UserInfos_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_UserRoles_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Users_InsteadOfDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Photos_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Friends_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Friends_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Shares_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Albums_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Albums_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Doings_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Visitors_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_TagRelation_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_UserRoles_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_UserExtendedValues_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_UserExtendedValues_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Albums_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_DiskFiles_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Friends_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_ChatMessages_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Emoticons_After_Insert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Emoticons_After_Delete.sql" />
+    <None Include="Database\MsSql\Tables\bx_SystemNotifies.sql" />
+    <None Include="Database\MsSql\Triggers\bx_ImpressionRecords_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_ImpressionRecords_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Files_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Attachments_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_DeletingFiles_AfterInsert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Forum_AfterDelete.sql" />
+    <None Include="Database\MsSql\Views\bx_BanUserViewLogs.sql" />
+    <None Include="Database\MsSql\Views\bx_UserTempRealname.sql" />
+    <None Include="Database\MsSql\Views\bx_Members.sql" />
+    <None Include="Database\MsSql\Views\bx_PointShowUsers.sql" />
+    <None Include="Database\MsSql\Views\bx_SerialCounter.sql" />
+    <None Include="Database\MsSql\Views\bx_UserVisitors.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserGetPropLogs.sql" />
+    <Content Include="Database\MsSql\Tables\bx_UserMissions.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Users_Exp_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Tables\bx_ValidateCodeActionRecords.sql" />
+    <None Include="Database\MsSql\Tables\bx_JobStatus.sql" />
+    <None Include="Database\MsSql\Tables\bx_Forums.sql" />
+    <None Include="Database\MsSql\Tables\bx_Threads.sql" />
+    <None Include="Database\MsSql\Tables\bx_Posts.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Posts_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Posts_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Threads_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Threads_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Tables\bx_AttachmentExchanges.sql" />
+    <None Include="Database\MsSql\Tables\bx_Attachments.sql" />
+    <None Include="Database\MsSql\Tables\bx_Moderators.sql" />
+    <None Include="Database\MsSql\Tables\bx_Polls.sql" />
+    <None Include="Database\MsSql\Tables\bx_PolemizeUsers.sql" />
+    <None Include="Database\MsSql\Tables\bx_Polemizes.sql" />
+    <Content Include="Database\MsSql\Tables\bx_PollItemDetails.sql" />
+    <None Include="Database\MsSql\Tables\bx_QuestionRewards.sql" />
+    <None Include="Database\MsSql\Tables\bx_Questions.sql" />
+    <None Include="Database\MsSql\Tables\bx_QuestionUsers.sql" />
+    <None Include="Database\MsSql\Tables\bx_ThreadCatalogs.sql" />
+    <None Include="Database\MsSql\Tables\bx_ThreadCatalogsInForums.sql" />
+    <None Include="Database\MsSql\Tables\bx_ThreadExchanges.sql" />
+    <None Include="Database\MsSql\Tables\bx_ThreadRanks.sql" />
+    <None Include="Database\MsSql\Tables\bx_ThreadManageLogs.sql" />
+    <None Include="Database\MsSql\Procedures\v30\bx_UpdateOnlineTime.sql" />
+    <None Include="Database\MsSql\Tables\bx_Vars.sql" />
+    <None Include="Database\MsSql\Tables\bx_Stats.sql" />
+    <None Include="Database\MsSql\Tables\bx_PostMarks.sql" />
+    <None Include="Database\MsSql\Tables\bx_Identities_4000.sql" />
+    <None Include="Database\MsSql\Views\bx_FriendsHasImpressions.sql" />
+    <None Include="Database\MsSql\Views\bx_ImpressionRecordsWithTypeInfo.sql" />
+    <None Include="Database\MsSql\Views\bx_SellingProps.sql" />
+    <None Include="Database\MsSql\Views\bx_TopicsWithContents.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Users_AfterInsert.sql" />
+    <None Include="Database\MsSql\Views\bx_UserEmoticonInfo.sql" />
+    <None Include="Database\MsSql\Views\bx_AttacmentsWithForumID.sql" />
+    <None Include="Database\MsSql\Triggers\bx_UserMedals_AfterDelete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_UserMedals_AfterUpdate.sql" />
+    <None Include="Database\MsSql\Triggers\bx_ChatSession_After_Delete.sql" />
+    <None Include="Database\MsSql\Tables\bx_UserReverters.sql" />
+    <None Include="Database\MsSql\Tables\bx_SearchPostResults.sql" />
+    <None Include="Database\MsSql\Views\bx_UserMissionsView.sql" />
+    <None Include="Database\MsSql\Tables\bx_TopicStatus.sql" />
+    <None Include="Database\MsSql\Views\bx_UsedFileIds.sql">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database\MsSql\Views\bx_UserPropsView.sql" />
+    <None Include="Database\MsSql\Tables\bx_PostLoveHates.sql" />
+    <None Include="Database\MsSql\Tables\bx_StickThreads.sql" />
+    <None Include="Database\MsSql\Tables\bx_ThreadCates.sql" />
+    <None Include="Database\MsSql\Tables\bx_ThreadCateModels.sql" />
+    <None Include="Database\MsSql\Tables\bx_ThreadCateModelFields.sql" />
+    <None Include="Database\MsSql\Triggers\bx_PointShows_After_Update.sql" />
+    <None Include="Database\MsSql\Views\bx_AuthUsers.sql" />
+    <None Include="Database\MsSql\Tables\bx_NotifyTypes.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Notify_After_Insert.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Notify_After_Delete.sql" />
+    <None Include="Database\MsSql\Triggers\bx_Notify_After_Update.sql" />
+    <Content Include="Database\MsSql\Tables\bx_PointLogTypes.sql" />
+    <Content Include="Database\MsSql\Tables\bx_PointLogs.sql" />
+    <None Include="Database\MsSql\Tables\bx_ThreadWords.sql" />
+    <Content Include="Documents\Tips.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\MsSql\Data\" />
+    <Folder Include="Database\MsSql\Procedures\MsAccess\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

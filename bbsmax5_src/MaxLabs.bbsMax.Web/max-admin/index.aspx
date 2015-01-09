@@ -1,0 +1,1 @@
+﻿<% Response.Redirect("~/max-admin/default.aspx"); %>

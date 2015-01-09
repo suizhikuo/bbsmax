@@ -1,0 +1,1 @@
+﻿<%@ Application Language="C#" Inherits="MaxLabs.bbsMax.Web._Global" %>

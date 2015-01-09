@@ -1,0 +1,14 @@
+/*µ≠µ≠«Âœ„*/
+
+body{padding-bottom:50px;background:url(body_bg.gif) fixed repeat;}
+.logo{overflow:hidden;background:url(logo.png) no-repeat;}
+.logo img{margin-left:-9999px;}
+#wrap{padding:15px;border:1px solid #CED4CA;background:#FFF;}
+#ubar h2,#space_page .feed_header,.sidebox h2.title{border-bottom:1px solid #DDE5D9;background: #EFF3ED;}
+.ulist,.tabs_header,#space_page .feed li,#space_page .comments_list li,.foot{border-color:#DDE5D9;}
+.tabs_header ul.tabs li.active a,.tabs_header ul.tabs li.active a span,.tabs_header ul.tabs li a,.tabs_header ul.tabs li a span{background:#FFF;}
+.tabs_header ul.tabs li a{border:1px solid #DDE5D9;border-bottom: none;background:#EFF3ED;}
+.tabs_header ul.tabs li a span{background:#EFF3ED;}
+.tabs_header ul.tabs li.active a span{padding-bottom:1px;}
+.tabs_header{height:31px;}
+.ulist{background:#EFF3ED;}

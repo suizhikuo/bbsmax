@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="alipay_notify.aspx.cs" Inherits="MaxLabs.bbsMax.Web.max_api.alipay.alipay_notify" %>

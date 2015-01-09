@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        .style1
+        {
+            color: #3333FF;
+        }
+        .style2
+        {
+            color: #FF0066;
+        }
+        .style3
+        {
+            width: 1218px;
+            height: 704px;
+        }
+        .style5
+        {
+            color: #0000FF;
+        }
+    </style>
+</head>
+<body>
+
+    <p>
+        BBSMAX不是所有的目录都支持模板语法的，支持模板的目录分别为:<br />
+        1、max-templates：bbsmax皮肤所在目录 对应的.aspx.cs后台代码文件需要放在_codes目录下的对用文件夹内<br />
+        2、max-dialogs：所有系统前、后台用的对话框均放在这个目录底下，.aspx.cs代码文件放在相同的位置<br />
+        3、max-admin：bbsmax管理控制台目录，.aspx.cs代码文件放在相同的位置</p>
+    <p>
+        bbsmax的模板变量、标签、函数均不区分大小写均以美元号(<span class="style1">$</span>)开头，之后跟上变量名<br />
+        <br />
+        <span class="style2">一、模板变量：</span><br />
+        例如:<br />
+        $hello&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        $user.username<br />
+        $datetime.now&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        <span class="style2">二、模板调用函数：</span><br />
+        命名规则如上，函数后面紧跟括号，括号内是参数，比如：<br />
+        $outputdatetime(post.postdate)&nbsp;&nbsp;
+        <br />
+        $getlist()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        $HasInPostTopAD(1,false)&nbsp;&nbsp;
+        <br />
+        <br />
+        函数和变量在模板文件里的调用方式和实际运行效果：<br />
+        <img alt="" class="style3" src="images/moban1.png" /><br />
+        </p>
+    <p>
+        &nbsp;</p>
+    <p>
+        <span class="style2">三、模板里的判断代码：</span><br />
+        <span class="style5">&lt;!--[if $rndmax > 5000]--&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    if&nbsp;&nbsp;&nbsp; 部分
+        <div>好大的数字</div>
+    <span class="style5">&lt;!--[else if $rndmax < 1000]--&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   else if 部分
+         <div>好小的数字</div>
+    <span class="style5">&lt;!--[else]--&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                     else 部分
+         <div>错误的数字</div>
+    <span class="style5">&lt;!--[/if]--&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                      if&nbsp;&nbsp;&nbsp;&nbsp; 闭合
+
+    </p>
+    <p>
+        &nbsp;</p>
+    <p><span class="style2"> 四、模板里的循环：</span><br />
+    1）集合枚举循环
+    
+        ：<br />
+&nbsp;&nbsp; <span class="style5">&lt;!--[loop $u in $UserList]--&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        循环开始，通过变量 $u 逐个枚举集合 $UserList（已定义的一个页面级变量）里的每一项<br />
+        &nbsp;&lt;div&gt;&nbsp; $u.username &lt;/div&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        此时在循环体内部就可以 通过变量 $u 输出每个 User对象的属性<br />
+&nbsp;&nbsp; <span class="style5">&lt;!--[/loop]--&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           循环闭合<br />
+        <br />
+        2）集合枚举循环，带索引<br />
+&nbsp; <span class="style5">&lt;!--[loop $u in $UserList with $i]--&gt;</span>&nbsp;&nbsp; 
+        枚举集合中的每一项的同时通过变量 $i （也可以是其他变量名）获得该项的索引值(从0开始)<br />
+        &nbsp;&lt;div&gt;序号 $i ,&nbsp; $u.username &lt;/div&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+&nbsp;&nbsp; <span class="style5">&lt;!--[/loop]--&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+</body>
+</html>

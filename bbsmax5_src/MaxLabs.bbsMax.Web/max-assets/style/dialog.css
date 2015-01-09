@@ -1,0 +1,527 @@
+﻿/*==========================================================
+    (c) BBSMAX - Dialog
+==========================================================*/
+/*= Dialog =*/
+.dialogcontent{width:500px;}
+.dialogcontent .nodata{padding:20px 0;color:#999;text-align:center;}
+
+.dialoghead{position:relative;height:50px;padding:0 50px 0 10px;background:#def1ff url(../images/dialog_bg.png) repeat-x;cursor:move;}
+.dialogtitle{font-size:133%;float:left;height:50px;line-height:50px;white-space:nowrap;text-shadow:0 1px 0 #fff;}
+.dialogstatus{float:right;height:50px;line-height:50px;color:#666;white-space:nowrap;}
+.dialogclose{position:absolute;top:-1px;right:5px;width:25px;height:20px;}
+.dialogclose a{float:right;width:25px;height:20px;overflow:hidden;text-indent:-9999px;background:url(../images/dialog_closer.png) no-repeat;cursor:pointer;}
+.dialogclose a:hover{background-position:-60px 0;}
+
+.dialogmsg{padding:6px 10px 6px 30px;}
+.dialogmsg-error{background:#ffebe8 url(../images/icons/error.gif) no-repeat 10px 50%;}
+.dialogmsg-alert{background:#fff8bb url(../images/icons/alert.gif) no-repeat 10px 50%;}
+.dialogmsg-success{background:#f2ffcf url(../images/icons/valid.gif) no-repeat 10px 50%;}
+
+.dialogtabwrap{height:35px;padding:0 10px 0 5px;background:url(../images/dialog_bg.png) repeat-x 0 -180px;}
+.dialogtab{float:left;padding-top:5px;}
+.dialogtab li{float:left;line-height:30px;}
+.dialogtab a{float:left;height:30px;padding-right:5px;background:url(../images/dialog_button.png) no-repeat 9999px 0;}
+.dialogtab a span{float:left;height:30px;padding:0 3px 0 8px;background:url(../images/dialog_button.png) no-repeat 9999px 0;}
+.dialogtab a:link,.dialogtab a:visited{color:#000;text-decoration:none;}
+.dialogtab a.current,.dialogtab a:hover,.dialogtab a:active{background-position:100% -750px;}
+.dialogtab a.current span,.dialogtab a:hover span,.dialogtab a:active span{background-position:0 -720px;}
+
+.dialogadditem{float:right;padding-top:6px;}
+.dialogadditem a,
+.dialogback a{float:left;height:22px;padding-right:5px;background:url(../images/dialog_button.png) no-repeat 100% -570px;}
+.dialogadditem a:hover,
+.dialogback a:hover{background-position:100% -630px;}
+.dialogadditem a span,
+.dialogback a span{float:left;line-height:22px;padding:0 3px 0 8px;background:url(../images/dialog_button.png) no-repeat 0 -540px;}
+.dialogback a span{padding-left:15px;background-position:0 -660px;}
+.dialogadditem a:hover span{background-position:0 -600px;}
+.dialogback a:hover span{background-position:0 -690px;}
+.dialogback a:link,.dialogback a:visited,
+.dialogadditem a:link,.dialogadditem a:visited{color:#036;text-decoration:none;}
+
+.dialogsearch{float:right;margin-top:4px;height:26px;padding-right:12px;background:url(../images/dialog_search.png) no-repeat 100% -26px;}
+.dialogsearch-inner{float:left;height:26px;padding-left:25px;background:url(../images/dialog_search.png) no-repeat;}
+.dialogsearch input{color:#999;width:100px;height:26px;padding:0;border:0;background:transparent;}
+.dialogsearch input:focus{color:#000;}
+.dialogsearch:hover{background-position:100% -78px;}
+.dialogsearch:hover .dialogsearch-inner{background-position:0 -52px;}
+
+.dialogsubheadwrap{height:35px;padding:0 100px;background: url(../images/dialog_bg.png) repeat-x 0 -180px;}
+.dialogsubhead{float:left;width:100%;margin:0;font-size:117%;font-weight:normal;line-height:35px;text-align:center;white-space:nowrap;color:#245;text-shadow:0 1px 0 #fff;}
+.dialogback{float:left;display:inline;width:80px;margin-left:-90px;padding-top:6px;}
+
+.dialogbody{padding:10px 10px 0;}
+
+.dialogfoot{padding:10px;text-align:center;background:#dfeefa url(../images/dialog_bg.png) repeat-x 0 -90px;}
+.dialogfoot form{display:inline;}
+
+/*= Dialog extra widgets =*/
+.dialogloader{width:80px;background:url(../images/dialog_bg.png) repeat-x 0 -240px;}
+.dialogloader span{display:block;width:80px;height:80px;text-indent:-9999px;overflow:hidden;background:url(../images/ajaxloading_big.gif) no-repeat 50% 50%;}
+
+.dialoginfowrap{position:relative;padding:30px 30px 10px;background:url(../images/dialog_bg.png) repeat-x 0 -240px;zoom:1;}
+.dialoginfo{padding-left:70px;min-height:48px;}
+* html .dialoginfo{height:auto !important;height:48px;}
+.dialoginfo h3{font-size:133%;font-weight:normal;margin-bottom:5px;}
+.dialoginfo p{color:#666;}
+.dialoginfo-error{background:url(../images/icons/error_48.png) no-repeat;}
+.dialoginfo-alert{background:url(../images/icons/alert_48.png) no-repeat;}
+.dialoginfo-success{background:url(../images/icons/success_48.png) no-repeat;}
+
+.dialoginfowrap .dialogfoot{background:none;}
+
+.dialogconfirm{padding:10px 10px 20px 80px;min-height:48px;background:url(../images/icons/alert_48.png) no-repeat 10px 10px;height:auto !important;height:48px;}
+.dialogconfirm h3{font-size:133%;font-weight:normal;margin-bottom:10px;}
+.dialogconfirm p{color:#666;}
+.dialogconfirm-success{background-image:url(../images/icons/success_48.png);}
+
+/*= Dialog 2 Column layout =*/
+.dialogcolumnlayout-content{float:right;width:100%;}
+.dialogcolumnlayout-content-inner{margin-left:160px;}
+.dialogcolumnlayout-sidebar{float:left;width:150px;margin-right:-150px;}
+
+/*= Dialog form =*/
+.dialogform{margin-bottom:0;zoom:1;}
+.dialogform .formrow{margin-bottom:10px;}
+.dialogform .formrow .label .form-note{color:#999;margin-left:10px;}
+.dialogform .formrow .form-enter .captcha img{vertical-align:top;border:1px solid #b4b4b4;}
+.dialogform .formrow .form-enter .optionlist li{float:left;width:150px;margin:0 10px 10px 0;}
+.dialogform .formrow .form-enter .optionlist-lite li{width:50px;}
+.dialogform .formrow .form-note{color:#999;margin-top:5px;}
+
+.dialogform-horizontal .formrow .label{margin-bottom:0;}
+.dialogform-horizontal .formrow{padding-left:100px;}
+.dialogform-horizontal .formrow .label{float:left;display:inline;width:90px;margin-left:-100px;}
+.dialogform-horizontal .formrow .form-enter{float:left;width:100%;}
+.dialogform-horizontal .formrow .form-note{float:left;clear:left;width:100%;}
+
+.dialogfluidform{margin-bottom:10px;padding:10px 10px 0;background:#daeaee;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+.dialogfluidform .formrow{display:inline-block;margin:0 5px 5px 0;padding:0;vertical-align:top;background:transparent none;}
+* html .dialogfluidform .formrow{float:left;}
+.dialogfluidform .formrow .label,
+.dialogfluidform .formrow .form-enter{margin-bottom:5px;}
+.dialogfluidform .formrow .form-note{color:#999;margin-bottom:5px;max-width:200px;}
+.dialogfluidform .formrow-action{padding-top:1.8em;}
+
+.dialogbody .formrow .requisite{color:#c00;font-style:normal;cursor:help;}
+.dialogbody .form-enter textarea{width:90%;}
+.dialogbody .form-enter input.validcode{width:5em;}
+.dialogbody .form-enter input.number{width:6em;}
+.dialogbody .form-enter input.longtext{width:20em;}
+.dialogbody .form-enter input.username{width:8em;}
+
+.formrow .form-tip{line-height:1.8;padding-left:18px;background-repeat:no-repeat;background-position:0 50%;zoom:1;}
+.formrow .tip-error{color:#c00;background-image:url(../images/icons/error.gif);}
+.formrow .tip-success{color:#090;background-image:url(../images/icons/valid.gif);}
+.formrow .tip-alert{color:#c60;background-image:url(../images/icons/alert.gif);}
+
+.formrow{zoom:1;}
+.formrow:after{content:".";display:block;clear:both;height:0;font:0/0 sans-serif;visibility:hidden;}
+
+.imagepicker,.datepicker,.colorpicker,.numerictextbox{display:inline-block;padding:1px;border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;background:#fff;white-space:nowrap;}
+.imagepicker input.text,.datepicker input.text,.colorpicker input.text,.numerictextbox input.text{padding:0;border:0;width:6em;}
+.imagepicker input.text{width:200px;}
+.colorpicker input.text{width:60px;}
+.imagepicker a,.datepicker a,.colorpicker a{display:inline-block;width:20px;height:20px;text-indent:-9999px;overflow:hidden;vertical-align:middle;}
+.imagepicker a{background:url(../images/imagepicker.gif) no-repeat;}
+.datepicker a{background:url(../images/datepicker.gif) no-repeat;}
+.colorpicker a{background:url(../images/colorpicker.gif) no-repeat;}
+.numerictextbox input.text{width:60px;}
+.numerictextbox .trigger{display:inline-block;width:10px;height:20px;overflow:hidden;font:0/0 sans-serif;vertical-align:middle;}
+.numerictextbox .plus,.numerictextbox .minus{display:block;width:10px;height:10px;margin:0;overflow:hidden;text-indent:-9999px;background:url(../images/numerictextbox_trigger.png) no-repeat;}
+.numerictextbox .minus{background-position:0px -10px;}
+.numerictextbox .plus:hover{background-position:-10px 0;}
+.numerictextbox .minus:hover{background-position:-10px -10px;}
+.numerictextbox .plus-disable{background-position:-20px 0;}
+.numerictextbox .minus-disable{background-position:-20px -10px;}
+
+.scroller{width:100%;margin-bottom:10px;height:200px;overflow:auto;overflow-x:hidden;}
+
+.dialogbody .datatablewrap{width:100%;margin-bottom:10px;overflow:auto;-overflow-x:hidden;}
+.dialogbody .datatable{margin-bottom:10px;width:100%;background:#fff;}
+.dialogbody .datatable td,.dialog .datatable th{padding:5px;border-bottom:1px solid #ddd;}
+.dialogbody .datatable thead tr{color:#fff;background:#464646;}
+.dialogbody .datatable thead td,.dialog .datatable thead th{color:#fff;border-bottom-color:#222;white-space:nowrap;}
+.dialogbody .datatable .even{background:#f5f5f5;}
+.dialogbody .datatable .datatable-rowerror td{padding:5px 0 0;border:0; background:transparent;}
+.dialogbody .datatable .datatable-rowerror .dialogmsg-error{border:1px solid #eb7f6f;}
+.dialogbody .datatable .datatable-rowerrorarrow td{padding:0 0 5px;border:0;height:5px;text-align:center; vertical-align:top;font:0/0 serif; background:transparent;}
+.dialogbody .datatable .datatable-rowerrorarrow .errorarrow{position:relative;top:-1px; display:block;width:10px;height:6px;margin:auto;overflow:hidden;background:url(../images/errorarrow.gif) no-repeat;}
+
+.dialogbody .progressbar{position:relative;float:none;margin-bottom:10px;width:300px;height:30px;line-height:30px;color:#555;background:url(../images/progressbar.png) no-repeat;}
+.dialogbody .progressbar .progressing{margin-left:-1px;height:30px;background:url(../images/progressbar.png) no-repeat 1px -30px;}
+.dialogbody .progressbar .progressing p,.dialogbody .progressbar .progressing div{float:right;display:inline;margin-right:-1px;height:30px;width:50%;overflow:hidden;background:url(../images/progressbar.png) no-repeat 100% -30px;text-indent:-9999px;}
+.dialogbody .progressbar-text{position:absolute;height:30px;width:280px;top:0;left:10px;overflow:hidden;text-shadow:0 1px 0 #fff;}
+
+/*= File list View =*/
+.filelistview{margin-bottom:10px;border:1px solid #bcd0e0;background:#fff;}
+.filelist-table{width:100%;table-layout:fixed;}
+.filelist-table td{padding:5px;}
+.filelist-table td.filename{width:230px;}
+.filelist-table td.filename .filename-wrap{width:230px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.filelist-table td.filename .filename-wrap span{zoom:1;}
+.filelist-table td.filesize{width:60px;text-align:right;}
+.filelist-table td.fileaddtime{width:60px;}
+.filelist-table td.fileaction{width:auto;}
+.filelist-table td.fileaction .tip{color:#c60;}
+.filelist-table td.album{width:150px;}
+.filelist-table td.photo{width:auto;}
+.filelistview-head .filelist-table td{color:#999;border-bottom:1px solid #ccc;background:#f5f5f5 url(../images/highlight_1.gif) repeat-x;}
+.filelistview-wrap{width:100%;height:200px;overflow:auto;overflow-x:hidden;overflow-y:scroll;}
+.filelistview-wrap .filelist-table td{border-bottom:1px solid #eee;}
+.filelistview-wrap .filelist-table td.filesize,
+.filelistview-wrap .filelist-table td.fileaddtime{font-size:92%;color:#999;white-space:nowrap;}
+.filelistview-wrap .filelist-table td.fileaction a:link,
+.filelistview-wrap .filelist-table td.fileaction a:visited{color:#000;white-space:nowrap;}
+
+.filelist-nodata{height:200px;color:#999;text-align:center;}
+.filelist-nodata p{padding-top:50px;}
+
+/*= File thumb view =*/
+.filethumbview{margin-bottom:10px;height:200px;border:1px solid #bcd0e0;background:#fff;overflow:auto;overflow-x:hidden;overflow-y:scroll;}
+.filethumbview .filethumb-list{padding:5px;}
+.filethumbview .thumbitem{float:left;width:134px;height:154px;margin:0 5px 5px 0;}
+.filethumbview .thumb-entry{display:block;width:134px;height:154px;margin-bottom:5px;text-align:center;overflow:hidden;background:url(../images/albumphoto_bg.png) no-repeat 0 999px;cursor:pointer;}
+.filethumbview .thumb-entry:hover{background-position:0 -154px;}
+.filethumbview .selected,
+.filethumbview .selected:hover{background-position:0 0;}
+.filethumbview .thumb-entry .thumb{display:block;width:104px;height:104px;margin:10px auto 5px;line-height:104px;font-size:0;}
+.filethumbview .thumb-entry .thumb img{padding:1px;border:1px solid #ddd;background:#fff;vertical-align:middle;}
+.filethumbview .thumb-entry:hover .thumb img{border-color:#bddbe3;}
+.filethumbview .thumb-entry .title{width:114px;margin:0 auto;color:#666;white-space:nowrap;overflow:hidden;}
+.filethumbview a:link,.filethumbview a:visited{color:#666;}
+.filethumbview a:hover,.filethumbview a:active{text-decoration:none;}
+
+/*= SWFupload =*/
+.fileupload-operate,
+.fileupload-prompt{margin-bottom:10px;}
+.fileupload-button{float:left;margin-right:10px;}
+.fileupload-tip{float:left;color:#999;line-height:30px;}
+
+.fileuploadlist{margin-bottom:10px;border:1px solid #cae5ec;background:#fff;}
+.fileuploadlist-head{height:2.5em;line-height:2.5;border-bottom:1px solid #cae5ec;color:#86bfd3;background:#f2f7fb url(../images/highlight_1.gif) repeat-x;}
+.fileuploadlist-head .icon{float:left;width:26px;}
+.fileuploadlist-head .title{float:left;width:320px;}
+.fileuploadlist-head .title span{padding:0 5px;}
+.fileuploadlist-head .filesize{float:left;width:60px;text-align:right;}
+.fileuploadlist-head .action{float:right;display:inline;margin-right:20px;}
+
+.fileuploadlist-items{height:200px;overflow:auto;overflow-x:hidden;overflow-y:scroll;}
+.fileuploaditem{border-bottom:1px solid #ddd;}
+.fileuploaditem li{float:left;height:30px;line-height:30px;}
+.fileuploaditem .status{width:100%;margin-bottom:-30px;}
+.fileuploaditem .status span{display:block;width:0;height:30px;text-indent:-999px;overflow:hidden;background:#c3f676 url(../images/processing.gif) repeat-x 0 50%;}
+.fileuploaditem .icon{width:26px;}
+.fileuploaditem .icon span{display:block;width:16px;height:16px;text-indent:-999px;overflow:hidden;margin:7px 0 0 10px;background:url(../images/swfupload_fileicon.gif) no-repeat 0 0;}
+.fileuploaditem .title{width:320px;color:#333;overflow:hidden;white-space:nowrap;}
+.fileuploaditem .title span{padding:0 5px;text-shadow:0 1px 0 #fff;}
+.fileuploaditem .title .tip{color:#666;font-style:normal;margin-left:5px;text-shadow:none;}
+.fileuploaditem .filesize{font-size:92%;width:60px;color:#999;text-align:right;}
+.fileuploaditem .action{float:right;width:25px;}
+.fileuploaditem .action a{display:block;width:16px;height:16px;margin:7px 0;overflow:hidden;text-indent:-999px;background:url(../images/actions.png) no-repeat 0 0;}
+.fileuploaditem .action a:hover{background-position:-16px 0;}
+
+/*= HTML editor =*/
+.dialogsection-htmleditor{background:none transparent;}
+
+.editordialoghead{position:relative;padding:10px;}
+.editordialoghead .editordialogtitle{font-size:117%;float:left;line-height:21px;padding-right:30px;}
+.editordialoghead .editordialogaction{position:absolute;top:10px;right:10px;width:20px;height:20px;}
+.editordialoghead .editordialogaction a{float:right;width:22px;cursor:pointer;text-align:center;}
+.editordialoghead .editordialogaction a span{position:absolute;top:0;left:0;width:20px;height:20px;overflow:hidden;text-indent:-999px;background:url(../images/dialog_close.png) no-repeat;}
+.editordialoghead .editordialogaction a:hover span{background-position:0 -20px;}
+
+.editordialogbody,.editordialogfoot{padding:0 10px 10px;}
+
+.editordialogtab{padding:0 30px 0 5px;border-bottom:1px solid #a0ceda;}
+.editordialogtab li{float:left;line-height:25px;margin-right:2px;}
+.editordialogtab a,.editordialogtab a:link,.editordialogtab a:visited{float:left;border:1px solid #a0ceda;margin-bottom:-1px;padding:0 10px;color:#666;background:#fff;position:relative;}
+.editordialogtab a:hover,.editordialogtab a.current:link,.editordialogtab a.current:visited{border-bottom-color:#fff;text-decoration:none;color:#000;font-weight:normal;}
+
+.editordialogbody .dialogform .formrow{margin-bottom:10px;padding-bottom:0;background:none;}
+.editordialogbody .dialogform .formrow-action{margin-bottom:0;}
+.editordialogbody .dialogform .form-note{margin:5px 0 0;}
+.editordialogbody .dialogform .form-enter .form-note{float:none;margin:0;}
+
+/*= Insert file from url =*/
+.remoteinsert input.url{width:98%;}
+.remoteinsert input.number{width:4em;}
+
+/*= Insert file from webdisk =*/
+.diskinsert-operate{margin-bottom:10px;line-height:1.8;}
+.diskinsert-dir{float:left;}
+.diskinsert-dir .flodericon{float:left;width:20px;height:1.8em;text-indent:-999px;overflow:hidden;background:url(../images/icons/folder.gif) no-repeat 0 50%;}
+.diskinsert-dir select{float:left;width:200px;}
+.diskinsert-action{float:right;}
+
+/*= Insert file from history =*/
+.historyinsert{margin-bottom:10px;line-height:1.8;}
+.historyinsert-time{float:left;}
+.historyinsert-search{float:right;width:180px;height:20px;border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;overflow:hidden;}
+.historyinsert-search input.text{float:left;border:0;margin:0 2px;padding:3px 0;width:156px;background:transparent;}
+.historyinsert-search .text[type="text"]{color:#999;}
+.historyinsert-search .text[type="text"]:focus{color:#000;}
+.historyinsert-search input.button{float:left;border:0;width:20px;height:20px;overflow:hidden;text-indent:-999px;background:url(../images/friend_search.gif) no-repeat 0 50%;}
+
+/*= Insert file from album =*/
+.albuminsert{margin-bottom:10px;line-height:1.8;}
+.albuminsert-mode{float:left;}
+.albuminsert-mode li{float:left;margin-right:20px;}
+
+/*= Insert file from album layout =*/
+.albuminsert-layout{margin-bottom:10px;border:1px solid #bcd0e0;background:#fff;}
+.albuminsert-layout .filelist-table{table-layout:fixed;}
+.albuminsert-layout .filelist-table td{padding:0;border-bottom:0;vertical-align:top;}
+.albuminsert-layout .filelist-table td.album{width:150px;border-right:1px solid #bcd0e0;}
+.albuminsert-layout .filelist-table td.photo{width:auto;}
+.albuminsert-layout .filelist-table .filethumbview{margin:0;border:0;}
+
+.albuminsert-dir{width:150px;height:200px;overflow:auto;}
+.albuminsert-dir-inner{padding:5px;}
+.albuminsert-dir li{overflow:hidden;zoom:1;}
+.albuminsert-dir a{display:block;white-space:nowrap;line-height:2;padding:1px 6px;overflow:hidden;}
+.albuminsert-dir li a:link,.albuminsert-dir li a:visited{color:#000;text-decoration:none;}
+.albuminsert-dir li a.current,.albuminsert-dir li a:hover,.albuminsert-dir li a:active{padding:0 5px;border:1px solid #86bfd3;background:#e2f5ff;}
+
+/*= Emoticon dialog =*/
+.dialogsection-emoticon .editordialoghead{padding:5px;}
+.dialogsection-emoticon .editordialogbody{padding:0 5px 5px;}
+
+.dialoghead-emoticongroup{position:relative;}
+.dialoghead-emoticongroup .dialogtab-wrap{overflow:hidden;}
+.dialoghead-emoticongroup .dialogtab ul{position:relative;}
+
+.dialoghead-emoticongroup .emoticongroup-control{position:absolute;top:2px;right:5px;width:42px;height:29px;background:#fff;}
+.dialoghead-emoticongroup .emoticongroup-control a{float:left;width:16px;height:16px;overflow:hidden;text-indent:-999px;margin:7px 0 0 5px;background:url(../images/emoticon_control.gif) no-repeat;}
+.dialoghead-emoticongroup .emoticongroup-control .emoticongroup-prev{background-position:0 0;}
+.dialoghead-emoticongroup .emoticongroup-control .emoticongroup-prev:hover{background-position:0 -20px;}
+.dialoghead-emoticongroup .emoticongroup-control .emoticongroup-next{background-position:-20px 0;}
+.dialoghead-emoticongroup .emoticongroup-control .emoticongroup-next:hover{background-position:-20px -20px;}
+
+.dialogsection-emoticon .emoticon-preview{position:absolute;margin:0 5px;z-index:990;visibility:hidden;border:1px solid #ccc;background:#f0f0f0;}
+.dialogsection-emoticon .emoticon-preview div{padding:20px;}
+
+.dialogsection-emoticon .emoticons{margin-bottom:5px;height:233px;background:#fff;overflow:hidden;zoom:1;}
+.dialogsection-emoticon .emoticons div{float:left;margin:0 -1px -1px 0;width:28px;height:28px;overflow:hidden;border:1px solid #dee7f7;}
+.dialogsection-emoticon .emoticons p{width:24px;height:24px;margin:2px;overflow:hidden;}
+
+.dialogsection-emoticon .emoticons-nodata{margin-bottom:5px;height:233px;color:#999;text-align:center;}
+.dialogsection-emoticon .emoticons-nodata p{padding-top:80px;}
+
+.dialogsection-emoticon .emoticon-bottom{height:20px;line-height:20px;background:#fff;margin-top:-1px;padding:5px 0 0 0;border-top:1px solid #adcfef;}
+.dialogsection-emoticon .emoticon-action{float:left;}
+.dialogsection-emoticon .emoticon-action a{float:left;margin-right:5px;padding-left:16px;}
+.dialogsection-emoticon .emoticon-action a:link,.dialogsection-emoticon .emoticon-action a:visited{color:#000;text-decoration:none;}
+
+.dialogsection-emoticon .emoticon-bottom .pagination{float:right;margin-bottom:0;}
+.dialogsection-emoticon .emoticon-bottom .pagination-inner{float:right;}
+.dialogsection-emoticon .emoticon-bottom .pagination a{padding:0 3px;border:0;background:transparent;line-height:20px;}
+.dialogsection-emoticon .emoticon-bottom .pagination a.current{background:transparent;text-decoration:underline;}
+.dialogsection-emoticon .emoticon-bottom .pagination a:link,.dialogsection-emoticon .emoticon-bottom .pagination a:visited{color:#000;}
+
+/*= Editor Paste, Hide, Code form =*/
+.editorpasteform .form-enter .pasteinput,
+.editorhideform .form-enter .hideipunt,
+.editorcodeform .form-enter .codeipunt{width:99%;height:200px;border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;}
+.editorcodeform .form-enter .codeipunt{font-family:Consolas,"Courier New",Monospace;}
+
+/*= Editor Link form =*/
+.editorlinkform input.url{width:98%;}
+
+/*= Dialog Chat =*/
+.dialogchat-user{font-size:117%;padding-top:5px;}
+.dialogchat-user a:link,.dialogchat-user a:visited{color:#000;}
+.dialogchat-userstatus{color:#666;overflow:hidden;white-space:nowrap;}
+
+.dialogchatlayout{position:relative;margin-top:-1px;padding:0 5px 5px;background:url(../images/dialogchat_bg.png) repeat-x;}
+.dialogchatlayout .dialogchatcontent{float:left;width:100%;}
+.dialogchatlayout .dialogchatcontent-inner{margin-right:131px;}
+.dialogchatlayout .dialogchatuser{float:left;display:inline;width:126px;margin-left:-126px;}
+
+.dialogchatmsg-wrap{position:relative;padding-left:4px;border-bottom:1px solid #bcd4e7;background:url(../images/dialogchat_msg.png) no-repeat;}
+.dialogchatmsg{padding-right:4px;background:url(../images/dialogchat_msg.png) no-repeat 100% -800px;}
+.dialogchatmsg-inner{padding:4px 0 4px 4px;background:url(../images/dialogchat_msg.png) repeat-x 0 -400px;}
+.dialogchatmsg-scroll{padding:0 4px 0 0;height:270px;overflow:auto;overflow-x:hidden;}
+.dialogchaterror{position:absolute;bottom:0;left:0px;width:100%;}
+.dialogchaterror div{margin:0 1px;padding:6px 10px 6px 30px;border-top:1px solid #f9aca0;background:#ffebe8 url(../images/icons/error.gif) no-repeat 10px 50%;}
+
+.chatmsgdate{clear:both;margin-bottom:10px;text-align:center;color:#999;}
+
+.chatmsgitem{float:left;clear:both;margin:10px 10px 0 0;*float:none;}
+.chatmsgitem .bubble-top{padding-right:15px;background:url(../images/dialogchat_bubble.png) no-repeat 100% -15px;}
+.chatmsgitem .bubble-top div{font:0/0 sans-serif;height:15px;background:url(../images/dialogchat_bubble.png) no-repeat;}
+.chatmsgitem .bubble-bottom{padding-right:15px;background:url(../images/dialogchat_bubble.png) no-repeat 100% -45px;}
+.chatmsgitem .bubble-bottom div{font-size:0/0 sans-serif;height:15px;background:url(../images/dialogchat_bubble.png) no-repeat 0 -30px;}
+.chatmsgitem .bubble-middle{margin-left:3px;padding:1px 10px;border:1px solid #d8d8d8;border-width:0 1px;background:#e9e9e9;zoom:1;}
+
+.chatmsgitem .chatmsgentry{margin:-8px 0;max-width:340px;overflow-x:hidden;word-wrap:break-word;zoom:1;*margin:-3px 0;}
+.chatmsgitem-my{float:right;margin:10px 0 0 10px;*float:none;}
+.chatmsgitem-my .bubble-top,
+.chatmsgitem-my .bubble-top div,
+.chatmsgitem-my .bubble-bottom,
+.chatmsgitem-my .bubble-bottom div{background-image:url(../images/dialogchat_bubble_alt.png);}
+.chatmsgitem-my .bubble-middle{margin:0 3px 0 0;border-color:#f0d35d;background:#fff39f;}
+
+.chatmsgitem .date{color:#999;margin-left:5px;}
+
+.dialogchattool{height:25px;line-height:25px;}
+.dialogchattool ul{overflow:hidden;}
+.dialogchattool li{float:left;display:inline;margin-right:22px;margin-left:-12px;padding-left:12px;background:url(../images/dialogchat_line.png) no-repeat 0 50%;}
+.dialogchattool a{float:left;display:block;padding-left:20px;}
+.dialogchattool a.emoticon{background:url(../images/icons/emoticons.gif) no-repeat 0 50%;}
+.dialogchattool a.chatlog{background:url(../images/icons/task.gif) no-repeat 0 50%;}
+.dialogchattool a:link,.dialogchattool a:visited{color:#666;}
+
+.dialogchatform{padding-right:56px;}
+.dialogchatform .textarea{position:relative;float:left;width:100%;height:50px;overflow:hidden;background:url(../images/dialogchat_form.png) no-repeat;}
+.dialogchatform .textarea .inner{height:50px;margin:0 5px;padding-right:5px;background:url(../images/dialogchat_form.png) no-repeat 100% -50px;}
+.dialogchatform .textarea .inner div{height:50px;background:url(../images/dialogchat_form.png) repeat-x 0 -100px;}
+.dialogchatform .textarea textarea{margin:4px 0;width:100%;height:40px;border:0;background:transparent;}
+.dialogchatform .sendmsgbutton{float:right;display:inline;margin-right:-56px;width:56px;}
+.dialogchatform .sendmsgbutton input{font-size:117%;width:56px;height:50px;padding:0;border:0;color:#1d678e;background:url(../images/dialogchat_form.png) no-repeat 0 -150px;cursor:pointer;text-shadow:0 1px 0 rgba(255,255,255,0.5);}
+.dialogchatform .sendmsgbutton input:active{background-position:0 -200px;}
+.dialogchatform .sendmsgbutton input.disable{background-position:0 -250px;color:#999;text-shadow:0 1px 0 #fff;}
+
+.dialogchatcaptcha{margin-top:10px;}
+.dialogchatcaptcha .validcode{width:80px;}
+.dialogchatcaptcha .captcha img{vertical-align:top;border:1px solid #ddd;}
+.dialogchatcaptcha .note{color:#999;}
+
+.dialogchat-avatar{width:126px;height:126px;margin-bottom:10px;overflow:hidden;background:url(../images/dialogchat_avatar.png) no-repeat;}
+.dialogchat-avatar img{display:block;margin:3px;}
+
+.dialogchat-useraction li{line-height:1.8;}
+.dialogchat-useraction a{padding-left:20px;}
+.dialogchat-useraction .addfriend{background:url(../images/icons/friend_add.gif) no-repeat 0 50%;}
+.dialogchat-useraction .space{background:url(../images/icons/space.gif) no-repeat 0 50%;}
+.dialogchat-useraction .backlist{background:url(../images/icons/user_ban.gif) no-repeat 0 50%;}
+.dialogchat-useraction a:link,.dialogchat-useraction a:visited{color:#000;}
+
+/*= Dialog user profile =*/
+.dialoguserprofile{position:relative;margin-top:-1px;padding:1px 10px 5px 120px;background:url(../images/dialogchat_bg.png) repeat-x;}
+.dialoguserprofile .dialoguser-sidebar{float:left;display:inline;width:100px;margin-left:-110px;}
+.dialoguserprofile .dialoguser-content{float:left;width:100%;height:320px;overflow:auto;}
+
+.dialoguserprofile .dialoguser-avatar{margin:0 auto 10px;}
+.dialoguserprofile .dialoguser-avatar a{display:block;width:54px;height:54px;margin:auto;}
+.dialoguserprofile .dialoguser-avatar img{display:block;background:#fff;padding:2px;width:48px;height:48px;border:1px solid #ddd;}
+
+.dialoguserprofile .dialoguser-menu li{margin-bottom:1px;zoom:1;}
+.dialoguserprofile .dialoguser-menu a{display:block;padding:3px 5px 3px 25px;background-repeat:no-repeat;background-position:5px 50%;}
+.dialoguserprofile .dialoguser-menu a.icon-profile{background-image:url(../images/icons/vcard.gif);}
+.dialoguserprofile .dialoguser-menu a.icon-impression{background-image:url(../images/icons/user_edit.gif);}
+
+.dialoguserprofile .dialoguser-menu a:link,.dialoguserprofile .dialoguser-menu a:visited{color:#000;}
+.dialoguserprofile .dialoguser-menu a:hover,.dialoguserprofile .dialoguser-menu a:active,
+.dialoguserprofile .dialoguser-menu a.current:link,.dialoguserprofile .dialoguser-menu a.current:visited{color:#fff;background-color:#4ea7e8;text-decoration:none;}
+
+.dialoguser-profilelist-info li{float:left;width:50%;white-space:nowrap;line-height:2;}
+* html .dialoguser-profilelist-info li{width:49.9%;}
+.dialoguser-profilelist-info img{vertical-align:middle;}
+.dialoguser-profilelist-info .label{margin-right:5px;}
+.dialoguser-profilelist-info .user-name{margin-right:10px;}
+.dialoguser-profilelist-info .user-id{color:#999;margin-right:10px;}
+.dialoguser-profilelist-info li.user-title,
+.dialoguser-profilelist-info li.user-status,
+.dialoguser-profilelist-info li.user-group,
+.dialoguser-profilelist-info li.user-contact{width:100%;}
+.dialoguser-profilelist-info li.user-status{margin-bottom:10px;padding-bottom:12px;background:url(../images/line_1.gif) repeat-x 0 100%;}
+
+.dialoguser-profilelist-medal{margin-top:10px;padding-top:12px;background:url(../images/line_1.gif) repeat-x;}
+
+/*= User impression =*/
+.dialoguserimpression-head{margin-bottom:10px;}
+.dialoguserimpression-head .impression-title{float:left;}
+.dialoguserimpression-head .impression-action{float:right;}
+.dialoguserimpression-body .impression-word{margin-bottom:10px;}
+.dialoguserimpression-body .impression-log ul,
+.dialoguserimpression-body .impression-log li{border:none;}
+.dialoguserimpression-body .impression-log li.odd{background:#fff;}
+.dialoguserimpression-body .impressionform-suggest .form-enter a{margin-right:1em;}
+
+/*= Buttons =*/
+.dialog .button{position:relative;border:0;margin:0 5px 0 0;padding:0 5px 0 0;height:27px;background:url(../images/dialog_button.png) no-repeat 100% -210px;vertical-align:middle;}
+.dialog .button span{position:relative;display:block;padding:0 5px 0 10px;height:27px;line-height:27px;color:#036;white-space:nowrap;background:url(../images/dialog_button.png) no-repeat 0 -180px;text-shadow:0 0 0 rgba(0,0,0,0),0 1px 0 rgba(255,255,255,0.5);}
+.dialog a.button,.dialog a.button span{display:inline-block;}
+.dialog a.button:hover,.dialog a.button:visited{text-decoration:none;}
+.dialog .button:hover,.dialog .button-hover{background-position:100% -270px;}
+.dialog .button:hover span,.dialog .button-hover span{background-position:0 -240px;}
+.dialog .button:active,.dialog .button-active{background-position:100% -330px;cursor:progress;}
+.dialog .button:active span,.dialog .button-active span{background-position:0 -300px;}
+
+.dialog .button-highlight{background-position:100% -30px;}
+.dialog .button-highlight span{background-position:0 0;}
+.dialog .button-highlight:hover,.dialog .button-highlight-hover{background-position:100% -90px;}
+.dialog .button-highlight:hover span,.dialog .button-highlight-hover span{background-position:0 -60px;}
+.dialog .button-highlight:active,.dialog .button-highlight-active{background-position:100% -150px;}
+.dialog .button-highlight:active span,.dialog .button-highlight-active span{background-position:0 -120px;}
+
+.dialog .button::-moz-focus-inner{border:0;padding:0;/*Firefox*/}
+@media screen and (-webkit-min-device-pixel-ratio:0){
+.dialog .button span{margin:-1px -3px 0 0;}/*Webkit*/}
+@media all and (resolution=0dpi){
+.dialog .button span:active {top:-1px;left:-1px;}/*Opera exclude 10.5*/}
+
+.dialog .button:active,.dialog .button-active{padding-right:6px\9;margin-right:4px\9;/*IE8*/}
+.dialog .button:active,.dialog .button-active{-ms-background-position-y:-329px;/*IE8*/}
+.dialog .button-highlight:active,.dialog .button-highlight-active{-ms-background-position-y:-149px;/*IE8*/}
+
+.dialog .button-disable,.dialog .button-disable:hover{background-position:100% -390px;cursor:default;}
+.dialog .button-disable:active{-ms-background-position-y:-329px;/*IE8*/}
+.dialog .button-disable span,.dialog .button-disable:hover span{color:#999;background-position:0 -360px;text-shadow:0 1px 0 #fff;}
+
+.dialogform .button{height:25px;background-position:100% -510px;}
+.dialogform .button span{height:25px;line-height:25px;background-position:0 -480px;}
+.dialogform .button:hover{background-position:100% -450px;}
+.dialogform .button:hover span{background-position:0 -420px;}
+.dialogform .button:active{-ms-background-position-y:-449px;/*IE8*/}
+
+/*= Agreement =*/
+.dialogagreement{margin-bottom:10px;border:1px solid #ccc;background:#fff;height:350px;overflow:auto;}
+.dialogagreement-inner{padding:10px;}
+
+/*= Share =*/
+.sharepreview{padding:10px;background:#ffd;border:1px solid #fe0;border-width:1px 0;}
+.sharepreview a:link,.sharepreview a:visited{color:#666;}
+.sharepreview-title{margin-bottom:10px;}
+.sharepreview-title input.text{width:95%;}
+
+/*= Site manage - update thumbnail =*/
+.websitethumb-wrap{margin-bottom:10px;padding:10px;text-align:center;}
+.websitethumb-wrap .dialogloader{margin:0 auto;background:none;}
+.websitethumb-wrap img{padding:3px;border:1px solid #ccc;background:#fff;}
+
+/*= Site manage - website verify =*/
+.websiteverity-title{font-size:117%;margin-bottom:10px;}
+
+.websiteverity-step-title{margin-bottom:10px;}
+.websiteverity-step-list{padding-left:30px;list-style-type:decimal;}
+.websiteverity-step-list li{margin-bottom:10px;}
+.websiteverity-step-list .download{padding-left:18px;background:url(../images/icons/file_down.gif) no-repeat}
+.websiteverity-step-list em{color:#c00;font-style:normal;}
+.websiteverity-step-tip{margin-top:10px;padding:10px;border:1px solid #ffea86;color:#666;background:#ffffcc;}
+.websiteverity-file{color:#000;}
+
+.form-enter .websiteverity-code input.longtext{width:99%;font-family:Consolas,"Courier New",monospace;}
+.websiteverity-code label{display:block;margin-top:5px;}
+
+/*= Add navigator =*/
+.addnavigator{margin-bottom:10px;}
+.addnavigator .item{float:left;xxxxxxxxxxxxxxxxxxxxxposition:relative;margin-right:10px;}
+.addnavigator .add-button{padding-left:20px;background:url(../icon/add.gif) no-repeat 0 50%;}
+
+.navigatorlist .dropdownmenu{width:300px;}
+.navigatorlist .dropdownmenu .scroller{margin:0;height:200px;}
+.navigatorlist .dropdownmenu ul{padding:10px;}
+.navigatorlist .dropdownmenu li{float:left;width:49.9%;line-height:2;white-space:nowrap;}
+.navigatorlist .dropdownmenu .forumlist li{width:100%;}
+.navigatorlist .dropdownmenu .forumlist li span{float:left;width:16px;height:16px;overflow:hidden;}
+.navigatorlist .addnavigator-title{padding:10px;}
+.navigatorlist .addnavigator-title h3{float:left;}
+.navigatorlist .addnavigator-title .close{float:right;}
+
+
+.unusedidlist{margin:10px 0 5px 0;}
+.unusedidlist li{float:left;width:20%;*width:19.9%;white-space:nowrap;}
+.unusedidlist a:link,.unusedidlist a:visited{display:block;color:#000;margin:0 5px 5px 0;padding:0 5px;}
+.unusedidlist a:hover,.unusedidlist a:active{font-weight:bold;color:#fff;background:#39628c;text-decoration:none;}

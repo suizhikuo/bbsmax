@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9ED331A4-22AF-436E-8FF0-5CC138E73B86}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MaxLabs.bbsMax.RegExp</RootNamespace>
+    <AssemblyName>MaxLabs.bbsMax.RegExp</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Publish|AnyCPU' ">
+    <OutputPath>bin\Publish\</OutputPath>
+    <DefineConstants>TRACE;Publish</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AngleBracketRegex.cs" />
+    <Compile Include="CheckBoxNameRegex.cs" />
+    <Compile Include="CheckBoxRegex.cs" />
+    <Compile Include="CSharpPageClassRegex.cs" />
+    <Compile Include="CSharpNameSpaceRegex.cs" />
+    <Compile Include="EmailActiveCodeRegex.cs" />
+    <Compile Include="EmailValidateCodeRegex.cs" />
+    <Compile Include="EmoticonRegex.cs" />
+    <Compile Include="FormRegex.cs" />
+    <Compile Include="HtmlEndBodyRegex.cs" />
+    <Compile Include="InvalidFileNameRegex.cs" />
+    <Compile Include="IPRegex.cs" />
+    <Compile Include="EmailRegex.cs" />
+    <Compile Include="ImageRegex.cs" />
+    <Compile Include="JavascriptRegex.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropFlagRegex.cs" />
+    <Compile Include="SplitLineRegex.cs" />
+    <Compile Include="TemplateAttributeListRegex.cs" />
+    <Compile Include="TemplateCodeBlockRegex.cs" />
+    <Compile Include="TemplateCodeSnippetRegex.cs" />
+    <Compile Include="TemplateDoubleQuteStringRegex.cs" />
+    <Compile Include="TemplateLoopExpressionParamRegex.cs" />
+    <Compile Include="TemplateLoopExpressionParamRegex2.cs" />
+    <Compile Include="TemplateMemberInvokeRegex.cs" />
+    <Compile Include="TemplateSingleQuteStringRegex.cs" />
+    <Compile Include="TemplateTagBeginRegex.cs" />
+    <Compile Include="TemplateTagEndRegex.cs" />
+    <Compile Include="TemplateMSIncludeTagRegex.cs" />
+    <Compile Include="TemplateIncludeTagRegex.cs" />
+    <Compile Include="TemplateTagUrlRegex.cs" />
+    <Compile Include="SiteFeedTitleRegex.cs" />
+    <Compile Include="SiteFeedContentRegex.cs" />
+    <Compile Include="SiteFeedDescriptionRegex.cs" />
+    <Compile Include="SiteFeedImageRegex.cs" />
+    <Compile Include="RootRegex.cs" />
+    <Compile Include="AttachRegex.cs" />
+    <Compile Include="LocalAttachRegex.cs" />
+    <Compile Include="MaxTmpVarRegex.cs" />
+    <Compile Include="TemplateNoteRegex.cs" />
+    <Compile Include="InvokerJsTemplateRegex.cs" />
+    <Compile Include="LinkUrlRegex.cs" />
+    <Compile Include="ScriptRegex.cs" />
+    <Compile Include="IframeRegex.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

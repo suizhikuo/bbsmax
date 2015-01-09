@@ -1,0 +1,37 @@
+#
+# robots.txt for bbsmax
+# Version 5.0
+#
+
+User-agent: *
+
+Disallow: /max-admin/
+Disallow: /max-assets/
+Disallow: /max-dialogs/
+Disallow: /max-plugins/
+Disallow: /max-spacestyles/
+Disallow: /max-temp/
+Disallow: /max-templates/
+Disallow: /UserFiles/
+Disallow: /my/
+Disallow: /register.aspx
+Disallow: /register.html
+Disallow: /register
+Disallow: /login.aspx
+Disallow: /login.html
+Disallow: /login
+Disallow: /logout.aspx
+Disallow: /logout.html
+Disallow: /logout
+Disallow: /passwordrecovery.aspx
+Disallow: /passwordrecovery.html
+Disallow: /passwordrecovery
+Disallow: /my.aspx
+Disallow: /my.html
+Disallow: /my
+Disallow: /members.aspx
+Disallow: /members.html
+Disallow: /members
+Disallow: /space.aspx
+Disallow: /space.html
+Disallow: /space

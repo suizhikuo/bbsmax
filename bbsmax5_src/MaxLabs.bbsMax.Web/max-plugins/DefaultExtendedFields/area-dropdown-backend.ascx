@@ -1,0 +1,1 @@
+﻿<!--[Page Inherits="MaxLabs.bbsMax.Web.ExtendedFieldSettingControlBase" /]-->

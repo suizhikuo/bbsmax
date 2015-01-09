@@ -1,0 +1,98 @@
+/*
+    Kindeditor skin
+    (c) BBSMAX 5
+*/
+
+/*= Toolbar =*/
+.webeditor-inner{border:1px solid #b4b4b4;background:#fff;}
+.webeditor-toolbar{font-size:12px;background:#dadada url(editor5/editor_bg.png) repeat-x 0 100%;}
+.webeditor-toolbar-inner{padding:5px 5px 0;background:url(editor5/editor_bg.png) repeat-x 0 -100px;}
+.webeditor-toolbar .linebreak{display:block;clear:both;height:0;width:0;overflow:hidden;text-indent:-999px;}
+.webeditor-toolbar a:link,.webeditor-toolbar a:visited{color:#333;text-decoration:none;text-shadow:0 1px 0 #fff;cursor:pointer;}
+.webeditor-toolbar a:hover,.webeditor-toolbar a:active,
+.webeditor-toolbar a.selected{background:#fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.webeditor-toolbar b{font-weight:normal;}
+.webeditor-toolbar .smallbuttons,
+.webeditor-toolbar .largebuttons{float:left;margin:0 2px 5px 0;padding-right:4px;background:url(editor5/editor_bg.png) no-repeat 100% 0;}
+.webeditor-toolbar .smallbuttons a{float:left;width:20px;height:20px;overflow:hidden;}
+.webeditor-toolbar .smallbuttons a b{float:left;width:20px;height:20px;overflow:hidden;text-indent:-999px;background-image:url(editor5/editor_icons.png);background-repeat:no-repeat;}
+
+.webeditor-toolbar .largebuttons a{position:relative;float:left;display:block;height:40px;padding:0 4px;overflow:hidden;text-align:center;}
+.webeditor-toolbar .largebuttons a em{display:block;width:24px;height:24px;margin:1px auto 0;overflow:hidden;text-indent:-999px;background-image:url(editor5/editor_icons.png);background-repeat:no-repeat;}
+.webeditor-toolbar .largebuttons a b{display:block;line-height:1.2;text-align:center;white-space:nowrap;}
+.webeditor-toolbar .largebuttons a em.tipicon{position:absolute;top:0;right:0;width:8px;height:7px;background-position:-40px -360px;}
+
+.smallbuttons a.fontname b{background-position:0 0;}
+.smallbuttons a.fontsize b{background-position:0 -20px;}
+.smallbuttons a.textcolor b{background-position:0 -40px;}
+.smallbuttons a.bgcolor b{background-position:0 -60px;}
+.smallbuttons a.bold b{background-position:0 -80px;}
+.smallbuttons a.italic b{background-position:0 -100px;}
+.smallbuttons a.underline b{background-position:0 -120px;}
+.smallbuttons a.strikethrough b{background-position:0 -140px;}
+.smallbuttons a.justifyleft b{background-position:0 -160px;}
+.smallbuttons a.justifycenter b{background-position:0 -180px;}
+.smallbuttons a.justifyright b{background-position:0 -200px;}
+.smallbuttons a.indent b{background-position:0 -220px;}
+.smallbuttons a.outdent b{background-position:0 -240px;}
+.smallbuttons a.insertunorderedlist b{background-position:0 -260px;}
+.smallbuttons a.insertorderedlist b{background-position:0 -280px;}
+.smallbuttons a.removeformat b{background-position:0 -300px;}
+.smallbuttons a.plainpaste b{background-position:0 -320px;}
+.smallbuttons a.wordpaste b{background-position:0 -340px;}
+.smallbuttons a.link b{background-position:0 -360px;}
+.smallbuttons a.unlink b{background-position:0 -380px;}
+.smallbuttons a.table b{background-position:0 -400px;}
+.smallbuttons a.hide b{background-position:0 -420px;}
+.smallbuttons a.free b{background-position:0 -440px;}
+.smallbuttons a.quote b{background-position:0 -460px;}
+
+.largebuttons a.emoticons em{background-position:-40px 0;}
+.largebuttons a.photo em{background-position:-40px -40px;}
+.largebuttons a.attachment em{background-position:-40px -80px;}
+.largebuttons a.video em{background-position:-40px -120px;}
+.largebuttons a.audio em{background-position:-40px -160px;}
+.largebuttons a.flash em{background-position:-40px -200px;}
+.largebuttons a.code em{background-position:-40px -240px;}
+.largebuttons a.fullscreen em{background-position:-40px -280px;}
+.largebuttons a.mode em{background-position:-40px -320px;}
+
+.webeditor-entrybox{padding:5px;}
+.webeditor-entrybox .ke-textarea{border:0;font-size:14px;}
+
+.webeditor-bottom{height:25px;background:#eee;overflow:hidden;}
+.webeditor-bottom-inner{border-top:1px solid #ddd;}
+
+.webeditor-modechange{float:left;display:inline;margin:-1px 0 0 5px;}
+.webeditor-modechange li{float:left;}
+.webeditor-modechange a{position:relative;float:left;height:21px;line-height:21px;margin:0 -1px 0 0;padding:0 10px 0 5px;border:1px solid #ddd;background:#f5f5f5;}
+.webeditor-modechange a:link,.webeditor-modechange a:visited{color:#666;text-decoration:none;}
+.webeditor-modechange a.current{background:#fff;border-top-color:#fff;color:#333;}
+.webeditor-modechange a em{float:left;display:block;width:20px;height:20px;text-indent:-999px;overflow:hidden;background-image:url(editor5/editor_icons.png);background-repeat:no-repeat;}
+.webeditor-modechange .modechange-visual a em{background-position:0 -480px;}
+.webeditor-modechange .modechange-code a em{background-position:0 -500px;}
+
+.webeditor-sizechange{float:right;display:inline;margin-top:6px;}
+.webeditor-sizechange li{float:left;}
+.webeditor-sizechange a{float:left;width:10px;height:10px;overflow:hidden;text-indent:-999px;margin-right:5px;background-image:url(editor5/editor_icons.png);background-repeat:no-repeat;}
+.webeditor-sizechange .sizechange-less a{background-position:-40px -400px;}
+.webeditor-sizechange .sizechange-more a{background-position:-50px -400px;}
+
+.webeditor-resize{float:right;height:25px;overflow:hidden;}
+.webeditor-resize a{float:right;width:8px;height:8px;margin-top:16px;overflow:hidden;text-indent:-999px;background:url(editor5/editor_resize.gif) no-repeat 0 0;cursor:se-resize;}
+
+/*= Webeditor menu =*/
+.ke-menu{background:#fff;padding:1px;border:1px solid #64adcd;}
+.ke-menu .ke-menu-selected,
+.ke-menu .ke-menu-noselected{padding:2px 10px;cursor:pointer;}
+.ke-menu .ke-menu-selected{background:#eef7fa;}
+
+.ke-picker-cell{width:12px;height:12px;font-size:0;}
+
+/*= IE 6, 7 =*/
+* html .webeditor-toolbar .smallbuttons a b,
+* html .webeditor-toolbar .largebuttons a em,
+* html .webeditor-modechange a em,
+* html .webeditor-sizechange a{background-image:url(editor5/editor_icons_2bitalpha.png);}
+.webeditor-toolbar-inner{*padding:5px;}
+.webeditor-toolbar .largebuttons a{*width:26px;}

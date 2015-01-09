@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Installs", "Installs\Installs.csproj", "{A0F4CB48-FB96-46FC-A1B1-8AEB2BE892A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUI", "WinUI\WinUI.csproj", "{3A7D2598-0FA8-4B1B-A72D-11D89C84DE01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUI", "WebUI\WebUI.csproj", "{EE589390-08E8-4123-8510-6E4020BE57FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxLabs.bbsMax", "..\..\MaxLabs.bbsMax\MaxLabs.bbsMax.csproj", "{7BB4B70C-E194-47F9-989A-72A222FE6D2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxLabs.bbsMax.RegExp", "..\..\MaxLabs.bbsMax.RegExp\MaxLabs.bbsMax.RegExp.csproj", "{9ED331A4-22AF-436E-8FF0-5CC138E73B86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxLabs.bbsMax.Rescourses", "..\..\MaxLabs.bbsMax.Rescourses\MaxLabs.bbsMax.Rescourses.csproj", "{035716FE-D39E-4CD8-8322-36DCAD488049}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Sqlite|Any CPU = Debug_Sqlite|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release_Sqlite|Any CPU = Release_Sqlite|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0F4CB48-FB96-46FC-A1B1-8AEB2BE892A1}.Debug_Sqlite|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F4CB48-FB96-46FC-A1B1-8AEB2BE892A1}.Debug_Sqlite|Any CPU.Build.0 = Release|Any CPU
+		{A0F4CB48-FB96-46FC-A1B1-8AEB2BE892A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0F4CB48-FB96-46FC-A1B1-8AEB2BE892A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0F4CB48-FB96-46FC-A1B1-8AEB2BE892A1}.Release_Sqlite|Any CPU.ActiveCfg = Release_Sqlite|Any CPU
+		{A0F4CB48-FB96-46FC-A1B1-8AEB2BE892A1}.Release_Sqlite|Any CPU.Build.0 = Release_Sqlite|Any CPU
+		{A0F4CB48-FB96-46FC-A1B1-8AEB2BE892A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0F4CB48-FB96-46FC-A1B1-8AEB2BE892A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A7D2598-0FA8-4B1B-A72D-11D89C84DE01}.Debug_Sqlite|Any CPU.ActiveCfg = Release|Any CPU
+		{3A7D2598-0FA8-4B1B-A72D-11D89C84DE01}.Debug_Sqlite|Any CPU.Build.0 = Release|Any CPU
+		{3A7D2598-0FA8-4B1B-A72D-11D89C84DE01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A7D2598-0FA8-4B1B-A72D-11D89C84DE01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A7D2598-0FA8-4B1B-A72D-11D89C84DE01}.Release_Sqlite|Any CPU.ActiveCfg = Release_Sqlite|Any CPU
+		{3A7D2598-0FA8-4B1B-A72D-11D89C84DE01}.Release_Sqlite|Any CPU.Build.0 = Release_Sqlite|Any CPU
+		{3A7D2598-0FA8-4B1B-A72D-11D89C84DE01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A7D2598-0FA8-4B1B-A72D-11D89C84DE01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE589390-08E8-4123-8510-6E4020BE57FC}.Debug_Sqlite|Any CPU.ActiveCfg = Release|Any CPU
+		{EE589390-08E8-4123-8510-6E4020BE57FC}.Debug_Sqlite|Any CPU.Build.0 = Release|Any CPU
+		{EE589390-08E8-4123-8510-6E4020BE57FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE589390-08E8-4123-8510-6E4020BE57FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE589390-08E8-4123-8510-6E4020BE57FC}.Release_Sqlite|Any CPU.ActiveCfg = Release_Sqlite|Any CPU
+		{EE589390-08E8-4123-8510-6E4020BE57FC}.Release_Sqlite|Any CPU.Build.0 = Release_Sqlite|Any CPU
+		{EE589390-08E8-4123-8510-6E4020BE57FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE589390-08E8-4123-8510-6E4020BE57FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BB4B70C-E194-47F9-989A-72A222FE6D2E}.Debug_Sqlite|Any CPU.ActiveCfg = Publish|Any CPU
+		{7BB4B70C-E194-47F9-989A-72A222FE6D2E}.Debug_Sqlite|Any CPU.Build.0 = Publish|Any CPU
+		{7BB4B70C-E194-47F9-989A-72A222FE6D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB4B70C-E194-47F9-989A-72A222FE6D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BB4B70C-E194-47F9-989A-72A222FE6D2E}.Release_Sqlite|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB4B70C-E194-47F9-989A-72A222FE6D2E}.Release_Sqlite|Any CPU.Build.0 = Release|Any CPU
+		{7BB4B70C-E194-47F9-989A-72A222FE6D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BB4B70C-E194-47F9-989A-72A222FE6D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED331A4-22AF-436E-8FF0-5CC138E73B86}.Debug_Sqlite|Any CPU.ActiveCfg = Publish|Any CPU
+		{9ED331A4-22AF-436E-8FF0-5CC138E73B86}.Debug_Sqlite|Any CPU.Build.0 = Publish|Any CPU
+		{9ED331A4-22AF-436E-8FF0-5CC138E73B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED331A4-22AF-436E-8FF0-5CC138E73B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED331A4-22AF-436E-8FF0-5CC138E73B86}.Release_Sqlite|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED331A4-22AF-436E-8FF0-5CC138E73B86}.Release_Sqlite|Any CPU.Build.0 = Release|Any CPU
+		{9ED331A4-22AF-436E-8FF0-5CC138E73B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED331A4-22AF-436E-8FF0-5CC138E73B86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{035716FE-D39E-4CD8-8322-36DCAD488049}.Debug_Sqlite|Any CPU.ActiveCfg = Publish|Any CPU
+		{035716FE-D39E-4CD8-8322-36DCAD488049}.Debug_Sqlite|Any CPU.Build.0 = Publish|Any CPU
+		{035716FE-D39E-4CD8-8322-36DCAD488049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{035716FE-D39E-4CD8-8322-36DCAD488049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{035716FE-D39E-4CD8-8322-36DCAD488049}.Release_Sqlite|Any CPU.ActiveCfg = Release|Any CPU
+		{035716FE-D39E-4CD8-8322-36DCAD488049}.Release_Sqlite|Any CPU.Build.0 = Release|Any CPU
+		{035716FE-D39E-4CD8-8322-36DCAD488049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{035716FE-D39E-4CD8-8322-36DCAD488049}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

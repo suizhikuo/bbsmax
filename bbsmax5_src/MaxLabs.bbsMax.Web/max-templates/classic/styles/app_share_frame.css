@@ -1,0 +1,46 @@
+﻿/*==========================================================
+    BBSMAX Classic Theme for BBSMAX 5
+==========================================================*/
+html{height:100%;}
+body{height:100%;overflow:hidden;background:transparent none;}
+.framelayout{width:100%;height:100%;height:100%;}
+.framelayout .topframe{height:45px;border-bottom:1px solid #a0a0a0;vertical-align:middle;background:url(../images/frame_bg.gif) repeat-x 0 100%;}
+.framelayout .topframe-inner{padding:10px;}
+.framelayout .mainframe{height:100%;vertical-align:top;}
+
+.topframe .logo{float:left;width:300px;margin-right:10px;}
+.topframe .logo a{float:left;height:25px;}
+.topframe .logo a img{display:block;}
+
+.sharelovehate .sharelovehate-love,
+.sharelovehate .sharelovehate-hate{float:left;height:25px;line-height:25px;margin-right:10px;padding-left:23px;letter-spacing:-2px;background-image:url(../images/frame_share_lovehate.png);background-repeat:no-repeat;}
+.sharelovehate .sharelovehate-love span,
+.sharelovehate .sharelovehate-hate span{float:left;height:25px;padding-right:10px;background-image:url(../images/frame_share_lovehate.png);background-repeat:no-repeat;}
+.sharelovehate .sharelovehate-love{background-position:0 0;}
+.sharelovehate .sharelovehate-love span{background-position:100% 0;}
+.sharelovehate .sharelovehate-love:hover{background-position:0 -25px;}
+.sharelovehate .sharelovehate-love:hover span{background-position:100% -25px;}
+.sharelovehate .sharelovehate-love-checked,.sharelovehate .sharelovehate-love-checked:hover{background-position:0 -50px;}
+.sharelovehate .sharelovehate-love-checked span,.sharelovehate .sharelovehate-love-checked:hover span{background-position:100% -50px;}
+.sharelovehate .sharelovehate-hate{background-position:0 -75px;}
+.sharelovehate .sharelovehate-hate span{background-position:100% -75px;}
+.sharelovehate .sharelovehate-hate:hover{background-position:0 -100px;}
+.sharelovehate .sharelovehate-hate:hover span{background-position:100% -100px;}
+.sharelovehate .sharelovehate-hate-checked,.sharelovehate .sharelovehate-hate-checked:hover{background-position:0 -125px;}
+.sharelovehate .sharelovehate-hate-checked span,.sharelovehate .sharelovehate-hate-checked:hover span{background-position:100% -125px;}
+.sharelovehate a:link,.sharelovehate a:visited{color:#f30;text-decoration:none;}
+
+.sharecount{float:left;margin-right:10px;}
+.sharecount .sharecount-button,
+.sharecount .sharecount-inner,
+.sharecount .sharecount-text{float:left;height:25px;line-height:25px;background:url(../images/share_count.png) no-repeat;}
+.sharecount .sharecount-button{padding-left:20px;}
+.sharecount .sharecount-inner{padding-left:2px;background-position:-148px -25px;}
+.sharecount .sharecount-text{padding:0 8px 0 5px;background-position:100% -50px;}
+.sharecount .sharecount-stat{color:#c00;letter-spacing:-1px;}
+.sharecount .sharecount-button:hover .sharecount-text{background-position:100% -75px;}
+.sharecount a:link,.sharecount a:visited{color:#178eb9;text-decoration:none;}
+
+.closeframe{float:right;line-height:25px;}
+.closeframe span{float:left;width:20px;height:20px;overflow:hidden;text-indent:-999px;margin:2px 5px 2px 0;background:url(../images/dialog_close.png) no-repeat;}
+.closeframe a:hover span{background-position:0 -20px;}

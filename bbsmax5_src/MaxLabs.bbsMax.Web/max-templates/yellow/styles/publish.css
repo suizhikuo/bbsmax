@@ -1,0 +1,137 @@
+﻿/*==========================================================
+    BBSMAX Yellow Theme
+    (c) www.bbsmax.com
+==========================================================*/
+/*= Layout =*/
+.section-publish .content-inner{background:#fff;border:solid #dfd0a3;border-width:0 1px;}
+
+.section-publish .content-main-inner{padding:0 10px;zoom:1;}
+.section-publish .content-main{overflow:hidden;}
+
+.section-publish .publishcaption{display:none;}
+
+/*= Textarea wrap =*/
+.textarea-wrap{padding:2px;border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;background:#fff;}
+.textarea-wrap textarea{width:100%;border:0;}
+
+/*= Form caption =*/
+.publishtype-list{margin-bottom:10px;border-bottom:1px solid #dfd0a3;}
+.publishtype-list ul{padding:0 5px;}
+.publishtype-list li{float:left;margin-right:2px;}
+.publishtype-list li a{float:left;padding:5px 15px;border:1px solid #dfd0a3;border-bottom:0;background:#fdfee8;}
+.publishtype-list li a.checked{font-weight:bold;position:relative;margin-bottom:-1px;padding-bottom:6px;background:#fff;}
+.publishtype-list a:link,.publishtype-list a:visited{color:#000;text-decoration:none;}
+
+/*= Optionlist =*/
+.optionlist li{clear:both;margin-bottom:5px;}
+
+/*= Publishform (inherit: common.css - .formrow) =*/
+.section-publish .formrow{margin-bottom:10px;}
+.section-publish .formrow .label{margin-bottom:3px;}
+.section-publish .formrow .form-note{margin-top:5px;}
+.section-publish .formrow .label .form-note{margin-top:0;font-weight:normal;}
+.section-publish .formrow input.number{width:4em;}
+.section-publish .formrow input.validcode{width:5em;}
+.section-publish .formrow-action{position:relative;line-height:25px;}
+.section-publish .formrow-action .formrowsubmit-tip{float:left;color:#999;}
+.section-publish .formrow-action .formrowsubmit-tip-ajax{position:absolute;top:0;left:50%;padding:0 10px;color:#fff;background:#ab0000;}
+
+.section-publish .combineformrow{margin-bottom:10px;}
+.section-publish .combineformrow .combineformrow-col-1{float:left;width:50%;}
+.section-publish .combineformrow .combineformrow-col-2{float:left;width:50%;*width:49.9%;}
+.section-publish .combineformrow .combineformrow-col-1 .formrow{padding-right:10px;}
+.section-publish .combineformrow .formrow{margin-bottom:0;}
+
+.publishform-guestname .form-enter input.text,
+.publishform-guestmail .form-enter input.text{width:200px;}
+
+.topic-moodicon,
+.topic-category{float:left;height:21px;line-height:21px;margin-right:5px;border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;background:#fff;}
+.topic-moodicon a.dropdown-trigger,
+.topic-category a.dropdown-trigger{float:left;width:auto;height:20px;padding:0 20px 0 5px;overflow:hidden;background:url(../images/dropdown_trigger.gif) no-repeat 100% -20px;}
+.topic-moodicon a.dropdown-trigger:hover,
+.topic-category a.dropdown-trigger:hover{background-position:100% 0;text-decoration:none;}
+.topic-moodicon img{float:left;margin-top:1px;}
+.topic-category span{float:left;width:5em;overflow:hidden;color:#666;}
+
+.topic-title{float:left;}
+.topic-title input.text{width:350px;}
+
+.topic-moodicon-list .dropdownmenu{width:145px;}
+.topic-moodicon-list .dropdownmenu-list{padding:10px 5px 5px 10px;}
+.topic-moodicon-list a{float:left;width:20px;height:20px;margin:0 5px 5px 0;}
+.topic-moodicon-list a:hover{background:#fffcd8;}
+.topic-moodicon-list a img{margin:2px;width:16px;height:16px;}
+
+.topic-category-list .dropdownmenu{width:140px;}
+
+.publishform-tag input.text{width:200px;}
+.publishform-tag .form-enter{float:left;margin-right:5px;}
+.publishform-tag .tag-suggest{float:left;color:#666;line-height:1.8;}
+.publishform-tag .tag-suggest a:link,.publishform-tag .tag-suggest a:visited{color:#666;}
+
+.publishform-datetime .datetime-wrap{float:left;height:21px;line-height:21px;padding-left:5px;border:1px solid;border-color:#b4b4b4 #e8e8e8 #e8e8e8 #b4b4b4;background:#fff;}
+.publishform-datetime .datetime-wrap input.text{float:left;border:0;width:120px;}
+
+/*= Attachmentlist =*/
+.attachmentlist{border:1px solid #b4b4b4;}
+.attachmentlist-table{width:100%;}
+.attachmentlist-table td{padding:5px;}
+.attachmentlist-table td.fileicon{width:16px;}
+.attachmentlist-table td.filename{width:200px;}
+.attachmentlist-table td.filename input.text{width:10em;}
+.attachmentlist-table td.filesize{width:100px;text-align:right;}
+.attachmentlist-table td.fileprice{width:80px;}
+
+.attachmentlist-head .attachmentlist-table td{color:#999;border-bottom:1px solid #ccc;background:#eee url(../images/highlight_1.gif) repeat-x;}
+
+.attachmentlist-wrap{height:200px;background:#fff;overflow:auto;}
+.attachmentlist-wrap .attachmentlist-table td{border-top:1px solid #eee;}
+.attachmentlist-wrap .attachmentlist-table td.filesize{color:#999;}
+.attachmentlist-wrap .attachmentlist-table td.fileaction a:link,.attachmentlist-warp .attachmentlist-table td.fileaction a:visited{color:#000;}
+
+/*= Publishform topic =*/
+.publishform-topicprice input.number{width:4em;}
+
+/*= Publishform poll =*/
+.pollitemrow{margin-bottom:5px;line-height:22px;}
+.pollitemrow .number{float:left;width:30px;margin-right:5px;color:#999;}
+.pollitemrow .title{float:left;margin-right:5px;}
+.pollitemrow .title input.text{width:280px;}
+.pollitemrow .action{overflow:hidden;}
+.pollitemrow .action a{display:block;width:16px;height:16px;margin-top:3px;text-indent:-999px;overflow:hidden;background:url(../images/actions.png) no-repeat;}
+.pollitemrow .action a:hover{background-position:-16px 0;}
+.addpollitem{margin-left:35px;padding-left:20px;background:url(../images/icons/s_add.gif) no-repeat 0 50%;}
+
+.publishform-polloptional-min,
+.publishform-polloptional-max{margin:5px 0 0 25px;color:#666;}
+.publishform-polloptional-min input.number,
+.publishform-polloptional-max input.number{width:3em;}
+
+/*= Publishform ask =*/
+.publishform-askaward input.number,
+.publishform-askawardpost input.number{width:4em;}
+
+/*= Publishform debate =*/
+.publishform-debate .debate-right,
+.publishform-debate .debate-left{float:left;width:50%;}
+.publishform-debate .debate-right-inner{margin-right:5px;}
+.publishform-debate .debate-left-inner{margin-left:5px;}
+.publishform-debate .textarea-wrap textarea{height:80px;}
+
+.publishform-debatereferee .form-enter input.text{width:180px;}
+
+/*= Content-sub sidebar =*/
+.content-sub .content-sub-inner{margin:0;}
+.content-sub .formgroup .formrow{padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid #dfd0a3;}
+
+.publishpreview{margin-bottom:10px;padding:10px;background:#fff;}
+
+.publishtip{width:400px;background:url(../images/dialog_bg.png) repeat-x 0 -240px;}
+.publishtip .publishtip-info{padding:20px 20px 10px;}
+.publishtip .publishtip-info h3{font-size:117%;font-weight:normal;line-height:32px;text-align:center;}
+.publishtip .publishtip-info span{display:block;margin:0 auto;width:64px;height:64px;text-align:left;text-indent:-9999px;overflow:hidden;background:url(../images/publishtip.png) no-repeat;}
+.publishtip .publishtip-info span.info-success{background-position:0 0;}
+.publishtip .publishtip-info span.info-alert{background-position:-64px 0;}
+.publishtip .publishtip-link{padding:17px 20px 20px;line-height:2;text-align:center;background:url(../images/publishtip.png) no-repeat 50% -100px;}
+.publishtip .publishtip-link a:link,.publishtip .publishtip-link a:visited{color:#666;}

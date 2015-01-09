@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" Class="MaxLabs.Passport.Server.Service" %>

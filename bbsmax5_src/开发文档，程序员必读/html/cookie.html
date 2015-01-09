@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        .style1
+        {
+            color: #3333FF;
+        }
+        .style2
+        {
+            color: #0099CC;
+        }
+        .style3
+        {
+            color: #0000FF;
+        }
+    </style>
+</head>
+<body>
+
+    <p>
+        一、Cookie的名称和域<br />
+        bbsmax 4.X以及之前版本的Cookie名称为user，bbsmax5.0以后将改统一为bbsmax_user<br />
+        cookie的域为当前域名的主域。比如说bbs.bbsmax.com论坛的cookie在所有bbsmax.com的二级域名下均能取到。<br />
+        <br />
+        二、cookie的验证方式<br />
+        <br />
+&nbsp;&nbsp; 配置好Web Service并且注册了Passport客户端能访问Web Service的API以后可以通过，读取到COOKIE的值通过函数:<br />
+&nbsp;&nbsp; User_ValidateTicket可以获取当前已登录用户的用户信息。<br />
+&nbsp;&nbsp; 函数原型&nbsp; <span class="style1">public</span> <span class="style2">
+        DataForLogin</span> User_ValidateTicket(<span class="style3">string</span> 
+        value);<br />
+        <br />
+        具体的实例请参见 MaxLabs.Passport.ClientKit项目下的<br />
+&nbsp;&nbsp; UserUtil.cs 文件。</p>
+
+</body>
+</html>
