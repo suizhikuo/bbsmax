@@ -4217,6 +4217,7 @@
     <Content Include="max-templates\default\_inc\_editor_.aspx" />
     <Content Include="robots.txt" />
     <Content Include="max-templates\yellow\_skin.config" />
+    <None Include="Properties\PublishProfiles\BBSMAXRelease.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MaxLabs.bbsMax.DataAccess.SqlServer\MaxLabs.bbsMax.DataAccess.SqlServer.csproj">
